@@ -67,3 +67,16 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities {
+  .thelatest-title::after {
+    position: absolute;
+    content: "";
+    width: 90%;
+    height: 12px;
+    top: 60%;
+    left: -6%;
+    z-index: -1;
+    background: linear-gradient(90deg, #fce586 0, #edfbd7 100%);
+  }
+}

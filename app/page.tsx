@@ -1,9 +1,9 @@
-import Image from "next/image";
+import MainPage from "@/components/MainPage";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      Full Recipes
+    <main className="flex min-h-screen flex-col items-center mx-auto p-4 w-full max-w-7xl font-lora">
+      <MainPage />
     </main>
   );
 }
