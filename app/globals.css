@@ -79,4 +79,18 @@
     z-index: -1;
     background: linear-gradient(90deg, #fce586 0, #edfbd7 100%);
   }
+  .top-stories::after {
+    position: absolute;
+    content: "";
+    width: 90%;
+    height: 6px;
+    top: 108%;
+    left: 0%;
+    z-index: -1;
+    background: linear-gradient(90deg, #fce586 0, #edfbd7 100%);
+  }
+
+  .logo-text {
+    font-size: 32px;
+  }
 }

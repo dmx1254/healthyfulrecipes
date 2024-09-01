@@ -55,6 +55,7 @@ const config = {
       },
       fontFamily: {
         lora: "var(--font-lora)",
+        poppins: "var(--font-poppins)",
       },
       borderRadius: {
         lg: "var(--radius)",

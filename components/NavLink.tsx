@@ -23,7 +23,7 @@ const NavLink = () => {
   };
 
   return (
-    <div className="w-full flex items-center gap-4 antialiased">
+    <div className="w-full flex items-center gap-4">
       {navUrls.map(({ id, title, linkUrl }) => (
         <div
           key={id}
@@ -31,7 +31,7 @@ const NavLink = () => {
           onMouseEnter={() => handleMouseRecupTitle(id)}
           onMouseLeave={handleResetNavAndItem}
         >
-          <Link className="font-semibold text-sm uppercase pb-2" href={`/${linkUrl}`}>
+          <Link className="font-[500] text-sm uppercase pb-2" href={`/${linkUrl}`}>
             {title}
           </Link>
           {id === item ? (

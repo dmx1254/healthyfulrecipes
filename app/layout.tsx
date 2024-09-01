@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Lora } from "next/font/google";
+import { Inter, Lora, Poppins } from "next/font/google";
 import "./globals.css";
 import clsx from "clsx";
 import Navbar from "@/components/Navbar";
@@ -9,6 +9,11 @@ const lora = Lora({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
   variable: "--font-lora",
+});
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "900"],
+  variable: "--font-poppins",
 });
 
 export const metadata: Metadata = {
@@ -23,7 +28,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={clsx(lora.variable, "h-full w-full bg-white font-sans")}>
+      <body
+        className={clsx(
+          poppins.variable,
+          lora.variable,
+          "h-full w-full bg-white font-sans antialiased"
+        )}
+      >
         <Navbar />
         {children}
       </body>

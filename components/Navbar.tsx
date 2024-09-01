@@ -12,9 +12,9 @@ const Navbar = () => {
         boxShadow: "rgba(0, 0, 0, 0.1) 0px 1px 10px 0px",
       }}
     >
-      <div className="max-w-7xl z-50 bg-white flex flex-col gap-0 items-start mx-auto p-4 font-lora">
+      <div className="max-w-7xl z-50 bg-white flex flex-col gap-4 items-start mx-auto p-4 font-poppins">
         <div className="flex w-full items-center justify-between">
-          <Image
+          {/* <Image
             src="/logorm.png"
             alt="healthyfulrecipes logo"
             width={100}
@@ -23,7 +23,8 @@ const Navbar = () => {
               objectFit: "cover",
               objectPosition: "center",
             }}
-          />
+          /> */}
+          <span className="logo-text">HealthyFulRecipes</span>
           <div className="flex items-center gap-2">
             <button>
               <Search size={22} className="text-gray-500" />
