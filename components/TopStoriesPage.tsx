@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const TopStoriesPage = () => {
   return (
-    <div className="w-full flex flex-col items-start gap-4">
+    <div className="w-full max-w-7xl flex flex-col items-start gap-4 p-4">
       <h2 className="w-full relative font-bold text-3xl top-stories">
         Top Stories
       </h2>

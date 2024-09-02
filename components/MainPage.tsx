@@ -4,7 +4,7 @@ import { Separator } from "./ui/separator";
 
 const MainPage = () => {
   return (
-    <div className="w-full flex items-start gap-4">
+    <div className="w-full max-w-7xl flex items-start gap-4 p-4">
       <div className="flex flex-col items-start gap-2">
         <Image
           src="/assets/foods/maindishe.jpg"

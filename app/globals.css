@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -90,7 +92,28 @@
     background: linear-gradient(90deg, #fce586 0, #edfbd7 100%);
   }
 
-  .logo-text {
-    font-size: 32px;
+  .logo-text .letter {
+    font-size: 40px;
+    font-family: "SUSE", sans-serif;
+    color: #16a34a;
+  }
+  .logo-text .letter:nth-child(1),
+  .letter:nth-child(8),
+  .letter:nth-child(11) {
+    font-size: 50px;
+    font-family: "SUSE", sans-serif;
+  }
+  .logo-text .letter-icon{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    font-size: 4px;
+    justify-content: center;
+    border: 1px solid #16a34a;
+    border-radius: 50%;
+    width: 5px;
+    height: 5px;
+    top: 65%;
+    left: 100%;
   }
 }

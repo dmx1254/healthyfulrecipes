@@ -24,7 +24,28 @@ const Navbar = () => {
               objectPosition: "center",
             }}
           /> */}
-          <span className="logo-text">HealthyFulRecipes</span>
+          {/* <span className="logo-text">HealthyFulRecipes</span> */}
+          <span className="relative logo-text">
+            <span className="letter">H</span>
+            <span className="letter">e</span>
+            <span className="letter">a</span>
+            <span className="letter">l</span>
+            <span className="letter">t</span>
+            <span className="letter">h</span>
+            <span className="letter">y</span>
+            <span className="letter">F</span>
+            <span className="letter">u</span>
+            <span className="letter">l</span>
+            <span className="letter">R</span>
+            <span className="letter">e</span>
+            <span className="letter">c</span>
+            <span className="letter">i</span>
+            <span className="letter">p</span>
+            <span className="letter">e</span>
+            <span className="letter">s</span>
+            <span className="letter-icon">r</span>
+          </span>
+
           <div className="flex items-center gap-2">
             <button>
               <Search size={22} className="text-gray-500" />
