@@ -1,17 +1,17 @@
-import React from "react";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
+import React from "react";
 
-const News = () => {
+const HealthyLifestyle = () => {
   return (
     <div className="w-full max-w-6xl flex flex-col gap-6 items-center p-4">
       <h2 className="flex items-center gap-1 text-3xl font-bold">
-        News <ArrowRight className="text-green-700" size={26} />
+        Healthy Lifestyle <ArrowRight className="text-green-700" size={26} />
       </h2>
       <div className="w-full flex items-center gap-8 justify-between">
         <div className="flex flex-col items-start gap-2">
           <Image
-            src="/assets/news/news1.webp"
+            src="/assets/healthy/healthy1.webp"
             alt="news1"
             width={300}
             height={300}
@@ -22,20 +22,20 @@ const News = () => {
           />
           <div className="flex flex-col items-start gap-2">
             <p className="text-xs text-zinc-500 uppercase -mb-1 whitespace-normal">
-              Recalls
+              Weight Loss
             </p>
             <p className="text-lg font-bold whitespace-normal max-w-[300px]">
-              Over 30,000 Jars of Kimchi Recalled in 10 States Due to High
-              Levels of Yeast
+              5 Health Markers That Are More Important Than Your Weight,
+              According to Experts
             </p>
             <p className="text-xs text-zinc-500 font-lora">
-              By Danielle DeAngelis
+              By Caroline Thomason, RD, CDCES
             </p>
           </div>
         </div>
         <div className="flex flex-col items-start gap-2">
           <Image
-            src="/assets/news/news2.webp"
+            src="/assets/healthy/healthy2.webp"
             alt="news1"
             width={300}
             height={300}
@@ -46,20 +46,17 @@ const News = () => {
           />
           <div className="flex flex-col items-start gap-2">
             <p className="text-xs text-zinc-500 uppercase -mb-1 whitespace-normal">
-              Studies & Experts
+              Best Healthy Foods
             </p>
             <p className="text-lg font-bold whitespace-normal max-w-[300px]">
-              The Mediterranean Diet May Reduce Your Risk of COVID-19, According
-              to New Study
+              These 7 Best Foods for Managing Migraines, According to Dietitians
             </p>
-            <p className="text-xs text-zinc-500 font-lora">
-              By Carrie Myers, M.S.
-            </p>
+            <p className="text-xs text-zinc-500 font-lora">By Adam Meyer</p>
           </div>
         </div>
         <div className="flex flex-col items-start gap-2">
           <Image
-            src="/assets/news/news3.webp"
+            src="/assets/healthy/healthy3.webp"
             alt="news1"
             width={300}
             height={300}
@@ -70,21 +67,17 @@ const News = () => {
           />
           <div className="flex flex-col items-start gap-2">
             <p className="text-xs text-zinc-500 uppercase -mb-1 whitespace-normal">
-              Recalls
+              Kitchen Essentials
             </p>
             <p className="text-lg font-bold whitespace-normal max-w-[300px]">
-              Ashwagandha Supplements Are Being Recalled In Canada—Here's What
-              to Know
+              The Best Ceramic Cookware Sets, According to Our Tests
             </p>
-            <p className="text-xs text-zinc-500 font-lora">
-              By Danielle DeAngelis
-            </p>
+            <p className="text-xs text-zinc-500 font-lora">By Marisa Olsen</p>
           </div>
         </div>
-        
       </div>
     </div>
   );
 };
 
-export default News;
+export default HealthyLifestyle;

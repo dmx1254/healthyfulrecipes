@@ -1,4 +1,7 @@
 import DiabeteDiet from "@/components/DiabeteDiet";
+import HealthyLifestyle from "@/components/HealthyLifestyle";
+import HealthyRecipes from "@/components/HealthyRecipes";
+import HeroBottom from "@/components/HeroBottom";
 import MainPage from "@/components/MainPage";
 import MealPlans from "@/components/MealPlans";
 import News from "@/components/News";
@@ -12,6 +15,9 @@ export default function Home() {
       <News />
       <MealPlans />
       <DiabeteDiet />
+      <HealthyLifestyle />
+      <HeroBottom />
+      <HealthyRecipes />
     </main>
   );
 }

@@ -4,22 +4,22 @@ import { Separator } from "./ui/separator";
 
 const MainPage = () => {
   return (
-    <div className="w-full max-w-7xl flex items-start gap-4 p-4">
+    <div className="w-full max-w-6xl flex items-start gap-8 p-4">
       <div className="flex flex-col items-start gap-2">
         <Image
           src="/assets/foods/maindishe.jpg"
           alt="Butternet Squash Steaks"
-          width={800}
-          height={800}
+          width={700}
+          height={700}
           style={{
             objectFit: "cover",
             objectPosition: "center",
           }}
         />
         <div className="flex flex-col items-start gap-2">
-            <p className="text-xs text-zinc-500 uppercase -mb-1 whitespace-normal">Healthy butternut recipes</p>
-            <p className="text-xl font-bold whitespace-normal">Marry Me Butternut Squash Steaks</p>
-            <p className="text-sm max-w-[810px]">Savor this plant-based take on Marry Me Chicken, featuring butternut squash steaks in place of chicken, all nestled in a creamy sun-dried tomato sauce.</p>
+            <p className="text-xs text-zinc-500 uppercase -mb-1 whitespace-normal max-w-[700px]">Healthy butternut recipes</p>
+            <p className="text-xl font-bold whitespace-normal max-w-[700px]">Marry Me Butternut Squash Steaks</p>
+            <p className="text-sm max-w-[700px]">Savor this plant-based take on Marry Me Chicken, featuring butternut squash steaks in place of chicken, all nestled in a creamy sun-dried tomato sauce.</p>
         </div>
       </div>
       <div className="flex flex-col items-start gap-2">

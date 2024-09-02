@@ -12,7 +12,7 @@ const DiabeteDiet = () => {
         Diabets Diet Center <ArrowRight className="text-green-700" size={26} />
       </h2>
 
-      <div className="w-full max-w-7xl flex items-start gap-20">
+      <div className="w-full max-w-6xl flex items-start gap-20">
         <div className="flex flex-col items-start gap-6">
           <div className="flex items-start gap-2">
             <Image
