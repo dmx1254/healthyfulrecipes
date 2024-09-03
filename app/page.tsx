@@ -9,15 +9,15 @@ import TopStoriesPage from "@/components/TopStoriesPage";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center gap-12 mx-auto w-full font-poppins">
+    <main className="w-full min-h-screen flex flex-col items-center justify-center gap-12 mx-auto font-poppins">
       <MainPage />
       <TopStoriesPage />
-      <News />
+      {/* <News />
       <MealPlans />
       <DiabeteDiet />
       <HealthyLifestyle />
       <HeroBottom />
-      <HealthyRecipes />
+      <HealthyRecipes /> */}
     </main>
   );
 }

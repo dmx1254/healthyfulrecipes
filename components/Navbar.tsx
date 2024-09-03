@@ -10,9 +10,10 @@ const Navbar = () => {
     <div
       style={{
         boxShadow: "rgba(0, 0, 0, 0.1) 0px 1px 10px 0px",
+        display: "none",
       }}
     >
-      <div className="max-w-7xl z-50 bg-white flex flex-col gap-4 items-start mx-auto p-4 font-poppins">
+      <div className="max-w-6xl z-50 bg-white flex flex-col gap-4 items-start mx-auto p-4 font-poppins">
         <div className="flex w-full items-center justify-between">
           {/* <Image
             src="/logorm.png"
