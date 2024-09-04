@@ -31,7 +31,7 @@ const NavLink = () => {
           onMouseEnter={() => handleMouseRecupTitle(id)}
           onMouseLeave={handleResetNavAndItem}
         >
-          <Link className="font-[500] text-sm uppercase pb-2" href={`/${linkUrl}`}>
+          <Link className="font-[500] text-sm uppercase" href={`/${linkUrl}`}>
             {title}
           </Link>
           {id === item ? (

@@ -3,7 +3,7 @@ import React from "react";
 
 const HeroBottom = () => {
   return (
-    <div className="relative flex items-center justify-center w-full mx-0">
+    <div className="relative flex max-sm:flex-col items-center justify-center w-full mx-0">
       <Image
         src="/assets/hero/herob.webp"
         alt="Melting Cherry Tomato & Mozzarella Pasta in a bowl up-close overhead"
@@ -12,7 +12,7 @@ const HeroBottom = () => {
         sizes="100vw"
         style={{ width: "100%", height: "auto" }}
       />
-      <div className="absolute w-full max-w-[370px] z-10 flex flex-col items-start gap-2 p-5 bg-white top-[25%] left-[10%]">
+      <div className="static sm:absolute w-full sm:max-w-[370px] z-10 flex flex-col items-start gap-2 p-5 bg-white sm:top-[25%] sm:left-[10%]">
         <p className="text-xs uppercase text-zinc-500">
           High-Protein Dinner Recipes
         </p>

@@ -3,6 +3,7 @@ import { Inter, Lora, Poppins } from "next/font/google";
 import "./globals.css";
 import clsx from "clsx";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 const lora = Lora({
@@ -37,6 +38,7 @@ export default function RootLayout({
       >
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

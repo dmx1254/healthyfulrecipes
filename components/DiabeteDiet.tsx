@@ -7,13 +7,13 @@ import { TbClockHour3 } from "react-icons/tb";
 
 const DiabeteDiet = () => {
   return (
-    <div className="w-full flex flex-col gap-4 items-center justify-center bg-[#E4F1EF] p-4">
-      <h2 className="flex items-center gap-1 text-3xl font-bold -ml-36">
+    <div className="w-full flex flex-col gap-4 items-center justify-center bg-[#E4F1EF] p-4 mx-auto">
+      <h2 className="flex items-center gap-1 text-3xl font-bold">
         Diabets Diet Center <ArrowRight className="text-green-700" size={26} />
       </h2>
 
-      <div className="w-full max-w-6xl flex items-start gap-20">
-        <div className="flex flex-col items-start gap-6">
+      <div className="w-full max-w-6xl max-lg:flex-col-reverse flex items-start gap-10 lg:gap-20">
+        <div className="max-lg:w-full max-lg:max-w-[750px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-6 max-lg:self-center">
           <div className="flex items-start gap-2">
             <Image
               src="/assets/foods/dishe4.webp"
@@ -26,11 +26,11 @@ const DiabeteDiet = () => {
               }}
             />
             <div className="flex flex-col items-start gap-2">
-              <p className="text-sm max-w-[180px] whitespace-normal text-black font-bold border-b border-transparent">
+              <p className="text-sm w-full md:max-w-[180px] whitespace-normal text-black font-bold border-b border-transparent">
                 The 7 Best Antioxidant-Rich Veggies for Diabetes, According to
                 Dietitians
               </p>
-              <p className="text-xs text-gray-500 max-w-[180px]">
+              <p className="text-xs text-gray-500 w-full md:max-w-[180px]">
                 By Deborah Murphy, M.S., RDN
               </p>
             </div>
@@ -47,11 +47,11 @@ const DiabeteDiet = () => {
               }}
             />
             <div className="flex flex-col items-start gap-2">
-              <p className="text-sm max-w-[180px] whitespace-normal text-black font-bold border-b border-transparent">
+              <p className="text-sm w-full md:max-w-[180px] whitespace-normal text-black font-bold border-b border-transparent">
                 7-Day Mediterranean Diet Meal Plan for Better Blood Sugar,
                 Created by a Dietitian
               </p>
-              <p className="text-xs text-gray-500 max-w-[180px]">
+              <p className="text-xs text-gray-500 w-full md:max-w-[180px]">
                 By Emily Lachtrupp, M.S., RD
               </p>
             </div>
@@ -68,11 +68,11 @@ const DiabeteDiet = () => {
               }}
             />
             <div className="flex flex-col items-start gap-2">
-              <p className="text-sm max-w-[180px] whitespace-normal text-black font-bold border-b border-transparent">
+              <p className="text-sm w-full md:max-w-[180px] whitespace-normal text-black font-bold border-b border-transparent">
                 The 5 Carbs You Should Be Eating for Insulin Resistance,
                 According to Dietitians
               </p>
-              <p className="text-xs text-gray-500 max-w-[180px]">
+              <p className="text-xs text-gray-500 w-full md:max-w-[180px]">
                 By Lauren Manaker M.S., RDN, LD, CLEC
               </p>
             </div>
@@ -89,17 +89,17 @@ const DiabeteDiet = () => {
               }}
             />
             <div className="flex flex-col items-start gap-2">
-              <p className="text-sm max-w-[180px] whitespace-normal text-black font-bold border-b border-transparent">
+              <p className="text-sm w-full md:max-w-[180px] whitespace-normal text-black font-bold border-b border-transparent">
                 7 Best No-Added-Sugar Drinks to Keep You Healthy & Hydrated,
                 According to Dietitians
               </p>
-              <p className="text-xs text-gray-500 max-w-[180px]">
+              <p className="text-xs text-gray-500 w-full md:max-w-[180px]">
                 By Roxana Ehsani, M.S., RD, CSSD, LDN
               </p>
             </div>
           </div>
         </div>
-        <div className="flex flex-col items-start gap-2">
+        <div className="flex flex-col items-start gap-2 max-lg:self-center">
           <Image
             src="/assets/foods/dishmain.webp"
             alt="The High-Protein Dip Formula That Will Help You Eat More Produce"
@@ -112,7 +112,7 @@ const DiabeteDiet = () => {
           />
           <div className="flex flex-col items-start gap-2 max-w-[750px]">
             <p className="text-xs text-zinc-500">Healthy Salad Recipes</p>
-            <p className="text-xl font-bold">
+            <p className="text-xl font-bold w-full">
               The Only High-Protein Mason Jar Salad Formula You Need
             </p>
             <div className="flex gap-2 items-center">

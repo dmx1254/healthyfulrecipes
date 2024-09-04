@@ -7,7 +7,7 @@ import Image from "next/image";
 
 const HealthyRecipes = () => {
   return (
-    <div className="w-full max-w-6xl flex flex-col gap-6 items-center p-4">
+    <div className="w-full max-w-6xl flex flex-col gap-6 items-center max-sm:mt-0 max-md:mt-8 p-4">
       <h2 className="flex items-center gap-1 text-3xl font-bold">
         Healthy Recipes <ArrowRight className="text-green-700" size={26} />
       </h2>
@@ -18,6 +18,7 @@ const HealthyRecipes = () => {
             alt="a recipe photo of the Potato Curry"
             width={230}
             height={230}
+           className="max-sm:max-w-[150px] max-sm:h-auto"
             style={{
               objectFit: "cover",
               objectPosition: "center",
@@ -27,7 +28,7 @@ const HealthyRecipes = () => {
             <p className="text-xs text-zinc-500">
               Healthy Curry Main Dish Recipes
             </p>
-            <p className="text-xl font-bold max-w-[500px]">
+            <p className="text-lg sm:text-xl font-bold w-full sm:max-w-[500px]">
               One-Pot Potato Curry Is Like a Hug in a Bowl
             </p>
             <div className="flex gap-2 items-center">
@@ -57,6 +58,7 @@ const HealthyRecipes = () => {
             alt="a recipe photo of the Potato Curry"
             width={230}
             height={230}
+           className="max-sm:max-w-[150px] max-sm:h-auto"
             style={{
               objectFit: "cover",
               objectPosition: "center",
@@ -66,7 +68,7 @@ const HealthyRecipes = () => {
             <p className="text-xs text-zinc-500">
               Healthy Pasta Main Dish Recipes
             </p>
-            <p className="text-xl font-bold max-w-[500px]">
+            <p className="text-lg sm:text-xl font-bold w-full sm:max-w-[500px]">
               Baked Feta-Mushroom Pasta Is Pure Comfort in a Bowl
             </p>
             <div className="flex gap-2 items-center">
@@ -96,6 +98,7 @@ const HealthyRecipes = () => {
             alt="a recipe photo of the Potato Curry"
             width={230}
             height={230}
+           className="max-sm:max-w-[150px] max-sm:h-auto"
             style={{
               objectFit: "cover",
               objectPosition: "center",
@@ -105,7 +108,7 @@ const HealthyRecipes = () => {
             <p className="text-xs text-zinc-500">
               Healthy Portobello Mushroom Recipes
             </p>
-            <p className="text-xl font-bold max-w-[500px]">
+            <p className="text-lg sm:text-xl font-bold w-full sm:max-w-[500px]">
               Garlic-Butter Mushroom Steaks Are the Best Way to Eat Mushrooms
             </p>
             <div className="flex gap-2 items-center">
@@ -133,6 +136,7 @@ const HealthyRecipes = () => {
             alt="a recipe photo of the Potato Curry"
             width={230}
             height={230}
+           className="max-sm:max-w-[150px] max-sm:h-auto"
             style={{
               objectFit: "cover",
               objectPosition: "center",
@@ -140,7 +144,7 @@ const HealthyRecipes = () => {
           />
           <div className="flex flex-col items-start gap-2">
             <p className="text-xs text-zinc-500">Overnight Oatmeal</p>
-            <p className="text-xl font-bold max-w-[500px]">
+            <p className="text-lg sm:text-xl font-bold w-full sm:max-w-[500px]">
               High-Protein Peanut Butter, Banana & Blueberry Overnight Oats
             </p>
             <div className="flex gap-2 items-center">
@@ -168,6 +172,7 @@ const HealthyRecipes = () => {
             alt="a recipe photo of the Potato Curry"
             width={230}
             height={230}
+           className="max-sm:max-w-[150px] max-sm:h-auto"
             style={{
               objectFit: "cover",
               objectPosition: "center",
@@ -175,7 +180,7 @@ const HealthyRecipes = () => {
           />
           <div className="flex flex-col items-start gap-2">
             <p className="text-xs text-zinc-500">Healthy Broccoli Recipes</p>
-            <p className="text-xl font-bold max-w-[500px]">
+            <p className="text-lg sm:text-xl font-bold w-full sm:max-w-[500px]">
               Loaded Broccoli Steaks
             </p>
             <div className="flex gap-2 items-center">
@@ -203,6 +208,7 @@ const HealthyRecipes = () => {
             alt="a recipe photo of the Potato Curry"
             width={230}
             height={230}
+            className="max-sm:max-w-[150px] max-sm:h-auto"
             style={{
               objectFit: "cover",
               objectPosition: "center",
@@ -210,7 +216,7 @@ const HealthyRecipes = () => {
           />
           <div className="flex flex-col items-start gap-2">
             <p className="text-xs text-zinc-500">Healthy Potato Recipes</p>
-            <p className="text-xl font-bold max-w-[500px]">
+            <p className="text-lg sm:text-xl font-bold w-full sm:max-w-[500px]">
               Garlic-Parmesan-Rosemary Bubble Potatoes Are "Delightfully Crispy"
             </p>
             <div className="flex gap-2 items-center">

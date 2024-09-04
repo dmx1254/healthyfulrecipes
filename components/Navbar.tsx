@@ -1,20 +1,42 @@
-import Image from "next/image";
-import React from "react";
-import { CircleUserRound, Search } from "lucide-react";
+"use client";
+import React, { useEffect, useState } from "react";
+import { CircleUserRound, Search, X } from "lucide-react";
 import { Separator } from "./ui/separator";
 import Link from "next/link";
 import NavLink from "./NavLink";
+import SearchComp from "./SearchComp";
+import Mobilesheet from "./MobileSheet";
 
 const Navbar = () => {
+  const [screenHeight, setScreenHeight] = useState<number>(0);
+  const [isSearchActive, setIsSearchActive] = useState<boolean>(false);
+
+  useEffect(() => {
+    const handleHeight = () => {
+      const scrolling = window.scrollY;
+      setScreenHeight(scrolling);
+    };
+    window.addEventListener("scroll", handleHeight);
+
+    return () => {
+      window.removeEventListener("scroll", handleHeight);
+    };
+  });
+
   return (
     <div
       style={{
         boxShadow: "rgba(0, 0, 0, 0.1) 0px 1px 10px 0px",
-        display: "none",
       }}
+      className="sticky top-0 left-0 right-0 z-[50] bg-white select-none"
     >
-      <div className="max-w-6xl z-50 bg-white flex flex-col gap-4 items-start mx-auto p-4 font-poppins">
-        <div className="flex w-full items-center justify-between">
+      <div className="max-lg:hidden max-w-6xl z-50 bg-white flex flex-col gap-4 items-start mx-auto p-4 font-poppins">
+        <div
+          style={{
+            display: screenHeight > 50 ? "none" : "flex",
+          }}
+          className="w-full items-center justify-between transition duration-300 ease-in-out"
+        >
           {/* <Image
             src="/logorm.png"
             alt="healthyfulrecipes logo"
@@ -25,52 +47,94 @@ const Navbar = () => {
               objectPosition: "center",
             }}
           /> */}
-          {/* <span className="logo-text">HealthyFulRecipes</span> */}
-          <span className="relative logo-text">
-            <span className="letter">H</span>
-            <span className="letter">e</span>
-            <span className="letter">a</span>
-            <span className="letter">l</span>
-            <span className="letter">t</span>
-            <span className="letter">h</span>
-            <span className="letter">y</span>
-            <span className="letter">F</span>
-            <span className="letter">u</span>
-            <span className="letter">l</span>
-            <span className="letter">R</span>
-            <span className="letter">e</span>
-            <span className="letter">c</span>
-            <span className="letter">i</span>
-            <span className="letter">p</span>
-            <span className="letter">e</span>
-            <span className="letter">s</span>
-            <span className="letter-icon">r</span>
-          </span>
+          <h2 className="logo-text text-4xl font-bold text-green-600 mb-4">
+            HealthyFulRecipes
+          </h2>
 
           <div className="flex items-center gap-2">
-            <button>
-              <Search size={22} className="text-gray-500" />
-            </button>
-            <Separator orientation="vertical" />
-            <div className="flex items-center gap-1">
-              <button>
-                <CircleUserRound size={22} className="text-gray-500" />
+            {isSearchActive ? (
+              ""
+            ) : (
+              <button onClick={() => setIsSearchActive(true)}>
+                <Search size={20} className="text-gray-500" />
               </button>
-              <span className="text-sm">Log In</span>
-            </div>
-            <Separator orientation="vertical" />
-            <Link href="/newsletters" className="capitalize text-sm">
-              newsletters
-            </Link>
-            <Separator orientation="vertical" />
-            <Link href="/sweepstakes" className="capitalize text-sm">
-              sweepstakes
-            </Link>
+            )}
+            {isSearchActive ? (
+              <>
+                <SearchComp isSearchActive={isSearchActive} />
+                <button onClick={() => setIsSearchActive(false)}>
+                  <X size={22} className="text-gray-800" />
+                </button>
+              </>
+            ) : (
+              <div className="flex items-center gap-2">
+                <Separator
+                  orientation="vertical"
+                  style={{
+                    display: screenHeight >= 50 ? "none" : "flex",
+                  }}
+                />
+                <div className="flex items-center gap-1.5">
+                  <button>
+                    <CircleUserRound size={20} className="text-gray-500" />
+                  </button>
+                  <span className="text-sm">Log In</span>
+                </div>
+                <Separator orientation="vertical" />
+                <Link href="/newsletters" className="capitalize text-sm">
+                  newsletters
+                </Link>
+                <Separator orientation="vertical" />
+                <Link href="/sweepstakes" className="capitalize text-sm">
+                  sweepstakes
+                </Link>
+              </div>
+            )}
           </div>
         </div>
-        <div className="w-full">
-          <NavLink />
+        <div className="max-lg:hidden flex items-center w-full">
+          <h2
+            className="logo-text text-2xl font-bold text-green-600 mb-1 mr-6"
+            style={{
+              display: screenHeight >= 50 ? "flex" : "none",
+            }}
+          >
+            HealthyFulRecipes
+          </h2>
+          {isSearchActive && screenHeight >= 50 ? (
+            <>
+              <SearchComp isSearchActive={isSearchActive} />
+              <button onClick={() => setIsSearchActive(false)}>
+                <X size={22} className="text-gray-800 ml-2" />
+              </button>
+            </>
+          ) : (
+            <NavLink />
+          )}
+          {isSearchActive ? (
+            ""
+          ) : (
+            <button
+              className="mb-0.5 mr-5"
+              style={{
+                display: screenHeight >= 50 ? "flex" : "none",
+              }}
+            >
+              <Search
+                size={18}
+                className="text-gray-500"
+                onClick={() => setIsSearchActive(true)}
+              />
+            </button>
+          )}
         </div>
+      </div>
+      <div className="flex lg:hidden w-full items-center justify-between p-4">
+        <Mobilesheet />
+        <h2 className="logo-text text-2xl font-bold text-green-600 mb-1 mr-6">
+          HealthyFulRecipes
+        </h2>
+        <span className="invisible">n</span>
       </div>
     </div>
   );

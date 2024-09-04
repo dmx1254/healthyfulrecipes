@@ -12,12 +12,12 @@ export default function Home() {
     <main className="w-full min-h-screen flex flex-col items-center justify-center gap-12 mx-auto font-poppins">
       <MainPage />
       <TopStoriesPage />
-      {/* <News />
+      <News />
       <MealPlans />
       <DiabeteDiet />
       <HealthyLifestyle />
       <HeroBottom />
-      <HealthyRecipes /> */}
+      <HealthyRecipes />
     </main>
   );
 }
