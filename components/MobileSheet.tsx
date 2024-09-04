@@ -50,22 +50,22 @@ const Mobilesheet = () => {
           <h3 className="text-sm">Follow Us</h3>
           <div className="flex space-x-4">
             <Link href="#" className="text-gray-600 hover:text-blue-800">
-              <FaFacebookF size={20} />
+              <FaFacebookF size={18} />
             </Link>
-            <Link href="#" className="text-gray-600 hover:text-red-600">
-              <FaFlipboard size={20} />
+            <Link href="#" className="text-gray-600 hover:text-red-800">
+              <FaFlipboard size={18} />
             </Link>
             <Link href="#" className="text-gray-600 hover:text-pink-600">
-              <FaInstagram size={20} />
+              <FaInstagram size={18} />
             </Link>
             <Link href="#" className="text-gray-600 hover:text-red-600">
-              <FaPinterestP size={20} />
+              <FaPinterestP size={18} />
             </Link>
             <Link href="#" className="text-gray-600 hover:text-black">
-              <FaXTwitter size={20} />
+              <FaXTwitter size={18} />
             </Link>
             <Link href="#" className="text-gray-600 hover:text-red-600">
-              <FaYoutube size={20} />
+              <FaYoutube size={18} />
             </Link>
           </div>
         </div>
