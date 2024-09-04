@@ -10,6 +10,28 @@ import Mobilesheet from "./MobileSheet";
 const Navbar = () => {
   const [screenHeight, setScreenHeight] = useState<number>(0);
   const [isSearchActive, setIsSearchActive] = useState<boolean>(false);
+  const [isTransitioning, setIsTransitioning] = useState<boolean>(false);
+
+  console.log(screenHeight);
+
+  useEffect(() => {
+    const handleHeight = () => {
+      const scrolling = window.scrollY;
+      if (
+        (scrolling >= 50 && screenHeight < 50) ||
+        (scrolling < 50 && screenHeight >= 50)
+      ) {
+        setIsTransitioning(true);
+        setTimeout(() => setIsTransitioning(false), 300); // 300ms matches your transition duration
+      }
+      setScreenHeight(scrolling);
+    };
+    window.addEventListener("scroll", handleHeight);
+
+    return () => {
+      window.removeEventListener("scroll", handleHeight);
+    };
+  }, [screenHeight]);
 
   useEffect(() => {
     const handleHeight = () => {
