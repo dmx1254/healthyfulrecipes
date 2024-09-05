@@ -15,15 +15,15 @@ import { FaXTwitter } from "react-icons/fa6";
 import { IoMdMail } from "react-icons/io";
 import Link from "next/link";
 
-const RecipePage = () => {
+const MealPlans = () => {
   return (
     <div className="w-full max-w-6xl flex flex-col items-center mx-auto p-4">
       <div className="w-full flex flex-col items-center gap-2">
-        <h2 className="text-4xl font-bold">Healthy Recipes</h2>
+        <h2 className="text-4xl font-bold">Meal Plans</h2>
         <p className="text-center">
-          Healthy, delicious recipes, including quick dinner, easy lunch ideas,
-          snacks, breakfast, soup and more, from the food and nutrition experts
-          at EatingWell.
+          Our delicious meal plans are designed by registered dietitians and
+          food experts to help you lose weight, eat more fiber, go vegan and
+          more. Browse dozens of meal plans to find one that's right for you.
         </p>
         <div className="mt-4 text-center text-sm/10">
           <span className="uppercase text-gray-800 font-semibold mx-6">
@@ -217,10 +217,6 @@ const RecipePage = () => {
         </div>
       </div>
 
-
-
-
-      
       <div className="w-full my-12 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         <div className="max-lg:w-full flex lg:flex-col items-start gap-4 border-b max-sm:pb-6 max-sm:border-gray-300 sm:border-transparent md:border-transparent lg:border lg:border-zinc-500">
           <Image
@@ -484,4 +480,4 @@ const RecipePage = () => {
   );
 };
 
-export default RecipePage;
+export default MealPlans;

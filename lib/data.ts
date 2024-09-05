@@ -66,7 +66,7 @@ export const navUrls: NavUrls<SubCatUrl>[] = [
   {
     id: "hyaq78",
     title: "Special Diets",
-    linkUrl: "recipes",
+    linkUrl: "special-diets",
     subcategory: [
       {
         name: "Mediterannean Diet",
@@ -128,7 +128,7 @@ export const navUrls: NavUrls<SubCatUrl>[] = [
   {
     id: "lwze47",
     title: "Diabetes",
-    linkUrl: "recipes",
+    linkUrl: "diabetes-diet-center",
     subcategory: [
       {
         name: "Meal Plans For Diabetes",
@@ -191,7 +191,7 @@ export const navUrls: NavUrls<SubCatUrl>[] = [
   {
     id: "hywr35",
     title: "Meal Plans",
-    linkUrl: "recipes",
+    linkUrl: "meal-plans",
     subcategory: [
       {
         name: "Dinner Plans",
@@ -253,7 +253,7 @@ export const navUrls: NavUrls<SubCatUrl>[] = [
   {
     id: "oxdk09",
     title: "News",
-    linkUrl: "recipes",
+    linkUrl: "news",
     subcategory: [
       {
         name: "Studies & Experts",
@@ -315,7 +315,7 @@ export const navUrls: NavUrls<SubCatUrl>[] = [
   {
     id: "fr14pl",
     title: "Healthy Eating",
-    linkUrl: "recipes",
+    linkUrl: "healthy-eating",
     subcategory: [
       {
         name: "How to Eat Healthy",
@@ -377,7 +377,7 @@ export const navUrls: NavUrls<SubCatUrl>[] = [
   {
     id: "zg27kt",
     title: "Healthy Lifestyle",
-    linkUrl: "recipes",
+    linkUrl: "healthy-lifestyle",
     subcategory: [
       {
         name: "Healthy Habits",
@@ -439,7 +439,7 @@ export const navUrls: NavUrls<SubCatUrl>[] = [
   {
     id: "qm82yx",
     title: "About Us",
-    linkUrl: "recipes",
+    linkUrl: "about-us",
     subcategory: [
       {
         name: "Our Food & Nutrition Phylosophy",

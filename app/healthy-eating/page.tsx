@@ -15,64 +15,45 @@ import { FaXTwitter } from "react-icons/fa6";
 import { IoMdMail } from "react-icons/io";
 import Link from "next/link";
 
-const RecipePage = () => {
+const HealthyEating = () => {
   return (
     <div className="w-full max-w-6xl flex flex-col items-center mx-auto p-4">
       <div className="w-full flex flex-col items-center gap-2">
-        <h2 className="text-4xl font-bold">Healthy Recipes</h2>
+        <h2 className="text-4xl font-bold">Healthy Eating</h2>
         <p className="text-center">
-          Healthy, delicious recipes, including quick dinner, easy lunch ideas,
-          snacks, breakfast, soup and more, from the food and nutrition experts
-          at EatingWell.
+          Learn to eat healthy with our expert tips and delicious inspiration to
+          help you prepare healthy food for you and your family.
         </p>
         <div className="mt-4 text-center text-sm/10">
           <span className="uppercase text-gray-800 font-semibold mx-6">
-            Diabetes-Friendly Dinner Recipes
+            Best Healthy Foods
           </span>
           <span className="uppercase text-gray-800 font-semibold mx-6">
-            Best of the Best
+            How to Eat Healthy
           </span>
           <span className="uppercase text-gray-800 font-semibold mx-6">
-            Healthy Side Dish Recipes
+            Healthy Cooking How-Tos
           </span>
           <span className="uppercase text-gray-800 font-semibold mx-6">
-            Healthy Salad Recipes
+            Healthy Eating for Kids
           </span>
           <span className="uppercase text-gray-800 font-semibold mx-6">
-            Healthy Appetizer Recipes
+            Ask the Test Kitchen
           </span>
           <span className="uppercase text-gray-800 font-semibold mx-6">
-            Dietary Restrictions
+            Wine, Beer & Spirits Guide
           </span>
           <span className="uppercase text-gray-800 font-semibold mx-6">
-            Nutrient-Focused Diets
+            Budget Cooking Guide
           </span>
           <span className="uppercase text-gray-800 font-semibold mx-6">
-            Healthy Holiday & Occasion Recipes
+            Eat More Vegetables
           </span>
           <span className="uppercase text-gray-800 font-semibold mx-6">
-            Recipes for Weight Loss & Diet
+            Good Food Fast
           </span>
           <span className="uppercase text-gray-800 font-semibold mx-6">
-            Healthy Low-Calorie Recipes
-          </span>
-          <span className="uppercase text-gray-800 font-semibold mx-6">
-            Healthy Bread Recipes
-          </span>
-          <span className="uppercase text-gray-800 font-semibold mx-6">
-            Healthy Cooking Methods & Styles
-          </span>
-          <span className="uppercase text-gray-800 font-semibold mx-6">
-            Healthy Ingredient Recipes
-          </span>
-          <span className="uppercase text-gray-800 font-semibold mx-6">
-            Healthy Cookie & Dessert Recipes
-          </span>
-          <span className="uppercase text-gray-800 font-semibold mx-6">
-            Healthy Kids Recipes
-          </span>
-          <span className="uppercase text-gray-800 font-semibold mx-6">
-            Recipes for Specific Health Condition
+            Vitamins & Supplements
           </span>
         </div>
       </div>
@@ -217,10 +198,6 @@ const RecipePage = () => {
         </div>
       </div>
 
-
-
-
-      
       <div className="w-full my-12 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         <div className="max-lg:w-full flex lg:flex-col items-start gap-4 border-b max-sm:pb-6 max-sm:border-gray-300 sm:border-transparent md:border-transparent lg:border lg:border-zinc-500">
           <Image
@@ -484,4 +461,4 @@ const RecipePage = () => {
   );
 };
 
-export default RecipePage;
+export default HealthyEating;

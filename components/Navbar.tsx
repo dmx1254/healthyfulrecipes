@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { CircleUserRound, Search, X } from "lucide-react";
 import { Separator } from "./ui/separator";
 import Link from "next/link";
@@ -10,28 +10,6 @@ import Mobilesheet from "./MobileSheet";
 const Navbar = () => {
   const [screenHeight, setScreenHeight] = useState<number>(0);
   const [isSearchActive, setIsSearchActive] = useState<boolean>(false);
-  const [isTransitioning, setIsTransitioning] = useState<boolean>(false);
-
-  console.log(screenHeight);
-
-  useEffect(() => {
-    const handleHeight = () => {
-      const scrolling = window.scrollY;
-      if (
-        (scrolling >= 50 && screenHeight < 50) ||
-        (scrolling < 50 && screenHeight >= 50)
-      ) {
-        setIsTransitioning(true);
-        setTimeout(() => setIsTransitioning(false), 300); // 300ms matches your transition duration
-      }
-      setScreenHeight(scrolling);
-    };
-    window.addEventListener("scroll", handleHeight);
-
-    return () => {
-      window.removeEventListener("scroll", handleHeight);
-    };
-  }, [screenHeight]);
 
   useEffect(() => {
     const handleHeight = () => {
@@ -45,6 +23,22 @@ const Navbar = () => {
     };
   });
 
+  // useEffect(() => {
+  //   if (screenHeight >= 30 && screenHeight <= 50) {
+  //     window.scrollTo({
+  //       top: 70,
+  //       behavior: "smooth",
+  //     });
+  //   }
+
+  //   if (screenHeight >= 50 && screenHeight <= 70) {
+  //     window.scrollTo({
+  //       top: 0,
+  //       behavior: "smooth",
+  //     });
+  //   }
+  // }, [screenHeight]);
+
   return (
     <div
       style={{
@@ -55,9 +49,10 @@ const Navbar = () => {
       <div className="max-lg:hidden max-w-6xl z-50 bg-white flex flex-col gap-4 items-start mx-auto p-4 font-poppins">
         <div
           style={{
-            display: screenHeight > 50 ? "none" : "flex",
+            // transform: screenHeight > 50 ? "translateY(-150px)" : "translateY(0px)",
+            display: screenHeight >= 50 ? "none" : "flex",
           }}
-          className="w-full items-center justify-between transition duration-300 ease-in-out"
+          className="w-full flex items-center justify-between transition duration-300 ease-in-out"
         >
           {/* <Image
             src="/logorm.png"

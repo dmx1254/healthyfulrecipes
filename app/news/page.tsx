@@ -15,15 +15,18 @@ import { FaXTwitter } from "react-icons/fa6";
 import { IoMdMail } from "react-icons/io";
 import Link from "next/link";
 
-const RecipePage = () => {
+const NewsPage = () => {
   return (
     <div className="w-full max-w-6xl flex flex-col items-center mx-auto p-4">
       <div className="w-full flex flex-col items-center gap-2">
-        <h2 className="text-4xl font-bold">Healthy Recipes</h2>
+        <h2 className="text-4xl font-bold">News</h2>
         <p className="text-center">
-          Healthy, delicious recipes, including quick dinner, easy lunch ideas,
-          snacks, breakfast, soup and more, from the food and nutrition experts
-          at EatingWell.
+          EatingWell covers what's happening in the world of food & nutrition
+          news. You'll find our expert take on the latest health studies, food
+          recalls, new grocery items and products we're loving right now, people
+          doing good things in the world of food, and so much more. Our
+          science-based journalism will help you make better-informed food
+          choices.
         </p>
         <div className="mt-4 text-center text-sm/10">
           <span className="uppercase text-gray-800 font-semibold mx-6">
@@ -37,42 +40,6 @@ const RecipePage = () => {
           </span>
           <span className="uppercase text-gray-800 font-semibold mx-6">
             Healthy Salad Recipes
-          </span>
-          <span className="uppercase text-gray-800 font-semibold mx-6">
-            Healthy Appetizer Recipes
-          </span>
-          <span className="uppercase text-gray-800 font-semibold mx-6">
-            Dietary Restrictions
-          </span>
-          <span className="uppercase text-gray-800 font-semibold mx-6">
-            Nutrient-Focused Diets
-          </span>
-          <span className="uppercase text-gray-800 font-semibold mx-6">
-            Healthy Holiday & Occasion Recipes
-          </span>
-          <span className="uppercase text-gray-800 font-semibold mx-6">
-            Recipes for Weight Loss & Diet
-          </span>
-          <span className="uppercase text-gray-800 font-semibold mx-6">
-            Healthy Low-Calorie Recipes
-          </span>
-          <span className="uppercase text-gray-800 font-semibold mx-6">
-            Healthy Bread Recipes
-          </span>
-          <span className="uppercase text-gray-800 font-semibold mx-6">
-            Healthy Cooking Methods & Styles
-          </span>
-          <span className="uppercase text-gray-800 font-semibold mx-6">
-            Healthy Ingredient Recipes
-          </span>
-          <span className="uppercase text-gray-800 font-semibold mx-6">
-            Healthy Cookie & Dessert Recipes
-          </span>
-          <span className="uppercase text-gray-800 font-semibold mx-6">
-            Healthy Kids Recipes
-          </span>
-          <span className="uppercase text-gray-800 font-semibold mx-6">
-            Recipes for Specific Health Condition
           </span>
         </div>
       </div>
@@ -217,10 +184,6 @@ const RecipePage = () => {
         </div>
       </div>
 
-
-
-
-      
       <div className="w-full my-12 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         <div className="max-lg:w-full flex lg:flex-col items-start gap-4 border-b max-sm:pb-6 max-sm:border-gray-300 sm:border-transparent md:border-transparent lg:border lg:border-zinc-500">
           <Image
@@ -484,4 +447,4 @@ const RecipePage = () => {
   );
 };
 
-export default RecipePage;
+export default NewsPage;
