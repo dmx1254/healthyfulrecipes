@@ -6,10 +6,16 @@ import MainPage from "@/components/MainPage";
 import MealPlans from "@/components/MealPlans";
 import News from "@/components/News";
 import TopStoriesPage from "@/components/TopStoriesPage";
+// import { auth, currentUser } from "@clerk/nextjs/server";
 
-export default function Home() {
+export default async function Home() {
+  // const { userId } = auth();
+  // const user = await currentUser();
+
+  // console.log("userId: " + userId);
+  // console.log("user: ", JSON.stringify(user, null, 2));
   return (
-    <main className="w-full min-h-screen flex flex-col items-center justify-center gap-12 mx-auto font-poppins">
+    <main className="w-full min-h-screen flex flex-col items-center justify-center gap-12 mx-auto font-poppins mb-14">
       <MainPage />
       <TopStoriesPage />
       <News />

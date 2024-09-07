@@ -6,3 +6,7 @@ export type NavUrls<T> = {
 };
 
 export type SubCatUrl = { name: string; subCatUrl: string; subCatId: string };
+
+export type Params = {
+  [key: string]: string | string[] | undefined;
+};

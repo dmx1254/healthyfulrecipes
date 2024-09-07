@@ -5,6 +5,14 @@ import clsx from "clsx";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
+import {
+  ClerkProvider,
+  SignInButton,
+  SignedIn,
+  SignedOut,
+  UserButton,
+} from "@clerk/nextjs";
+
 const inter = Inter({ subsets: ["latin"] });
 const lora = Lora({
   subsets: ["latin"],
@@ -27,19 +35,41 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const localization = {
+    signUp: {
+      start: {
+        subtitle:
+          "Sign up to rate and review your favorite HealthyFulRecipes recipes.",
+      },
+    },
+    signIn: {
+      start: {
+        subtitle:
+          "Welcome back! Please sign in to rate and review your favorite HealthyFulRecipes recipes.",
+      },
+    },
+  };
   return (
-    <html lang="en">
-      <body
-        className={clsx(
-          poppins.variable,
-          lora.variable,
-          "h-full w-full bg-white font-sans antialiased"
-        )}
-      >
-        <Navbar />
-        {children}
-        <Footer />
-      </body>
-    </html>
+    <ClerkProvider localization={localization}>
+      <html lang="en">
+        <body
+          className={clsx(
+            poppins.variable,
+            lora.variable,
+            "h-full w-full bg-white font-sans antialiased"
+          )}
+        >
+          {/* <SignedOut>
+            <SignInButton />
+          </SignedOut>
+          <SignedIn>
+            <UserButton />
+          </SignedIn> */}
+          <Navbar />
+          {children}
+          <Footer />
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }

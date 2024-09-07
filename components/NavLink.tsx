@@ -23,7 +23,7 @@ const NavLink = () => {
   };
 
   return (
-    <div className="w-full flex items-center gap-4">
+    <div className="font-poppins w-full flex items-center gap-4">
       {navUrls.map(({ id, title, linkUrl }) => (
         <div
           key={id}

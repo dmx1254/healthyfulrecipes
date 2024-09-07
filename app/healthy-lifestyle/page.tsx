@@ -17,7 +17,7 @@ import Link from "next/link";
 
 const HealthyLifestyle = () => {
   return (
-    <div className="w-full max-w-6xl flex flex-col items-center mx-auto p-4">
+    <div className="font-poppins w-full max-w-6xl flex flex-col items-center mx-auto p-4">
       <div className="w-full flex flex-col items-center gap-2">
         <h2 className="text-4xl font-bold">Healthy Lifestyle</h2>
         <p className="text-center">

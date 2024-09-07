@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -82,7 +82,7 @@
     font-size: 50px;
     font-family: "SUSE", sans-serif;
   }
-  .logo-text .letter-icon{
+  .logo-text .letter-icon {
     position: absolute;
     display: flex;
     align-items: center;
