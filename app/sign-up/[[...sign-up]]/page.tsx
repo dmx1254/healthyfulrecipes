@@ -65,18 +65,6 @@ export default function SignupPage() {
                 socialButtonsVariant: "blockButton",
               },
             }}
-            // localization={{
-            //   socialButtonsBlockButton: {
-            //     google: "Continue with Google",
-            //     facebook: "Continue with Facebook",
-            //     apple: "Continue with Apple",
-            //     github: "Continue with GitHub",
-            //   },
-            //   signUp: {
-            //     subtitle: "Create an account to get started",
-            //   },
-            // }}
-
             signInFallbackRedirectUrl="/sign-in"
           />
           {/* <div className="absolute w-full h-[90px] sm:top-[71%] bg-white z-50 rounded"></div> */}
