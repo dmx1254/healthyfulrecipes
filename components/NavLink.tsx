@@ -5,7 +5,7 @@ import { navUrls } from "@/lib/data";
 import Link from "next/link";
 import { SubCatUrl } from "@/lib/type";
 
-const NavLink = () => {
+const NavLink = ({ screenHeight }: { screenHeight: number }) => {
   const [item, setItem] = useState<string>("");
   const [subcategories, setSubcategories] = useState<SubCatUrl[] | null>(null);
   //   console.log(subcategories);
@@ -23,15 +23,23 @@ const NavLink = () => {
   };
 
   return (
-    <div className="font-poppins w-full flex items-center gap-4">
+    <div
+      className="font-poppins w-full flex items-center gap-4"
+      style={{
+        marginLeft: screenHeight >= 50 ? "20px" : "8px",
+      }}
+    >
       {navUrls.map(({ id, title, linkUrl }) => (
         <div
           key={id}
-          className="relative flex flex-col"
+          className="relative flex flex-col "
           onMouseEnter={() => handleMouseRecupTitle(id)}
           onMouseLeave={handleResetNavAndItem}
         >
-          <Link className="font-[500] text-sm uppercase" href={`/${linkUrl}`}>
+          <Link
+            className="font-[500] text-sm uppercase mt-2"
+            href={`/${linkUrl}`}
+          >
             {title}
           </Link>
           {id === item ? (

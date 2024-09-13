@@ -15,7 +15,7 @@ export default async function Home() {
   // console.log("userId: " + userId);
   // console.log("user: ", JSON.stringify(user, null, 2));
   return (
-    <main className="w-full min-h-screen flex flex-col items-center justify-center gap-12 mx-auto font-poppins mb-14">
+    <main className="w-full min-h-screen flex flex-col items-center justify-center gap-12 mx-auto my-2 font-poppins mb-14">
       <MainPage />
       <TopStoriesPage />
       <News />

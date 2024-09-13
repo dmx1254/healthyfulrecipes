@@ -71,19 +71,19 @@ const Navbar = () => {
             }}
             className="w-full flex items-center justify-between transition duration-300 ease-in-out"
           >
-            {/* <Image
-            src="/logorm.png"
-            alt="healthyfulrecipes logo"
-            width={100}
-            height={100}
-            style={{
-              objectFit: "cover",
-              objectPosition: "center",
-            }}
-          /> */}
-            <h2 className="logo-text text-4xl font-bold text-green-600 mb-4">
-              HealthyFulRecipes
-            </h2>
+            <Link href="/">
+              <Image
+                src="/healthyfulrecipes-logo.png"
+                alt="healthyfulrecipes logo"
+                width={150}
+                height={150}
+                style={{
+                  objectFit: "cover",
+                  objectPosition: "center",
+                }}
+                className="w-[115] h-[50px]"
+              />
+            </Link>
 
             <div className="flex items-center gap-2">
               {isSearchActive ? (
@@ -149,14 +149,20 @@ const Navbar = () => {
             </div>
           </div>
           <div className="max-lg:hidden flex items-center w-full">
-            <h2
-              className="logo-text text-2xl font-bold text-green-600 mb-1 mr-6"
-              style={{
-                display: screenHeight >= 50 ? "flex" : "none",
-              }}
-            >
-              HealthyFulRecipes
-            </h2>
+            <Link href="/">
+              <Image
+                src="/healthyfulrecipes-logo.png"
+                alt="healthyfulrecipes logo"
+                width={150}
+                height={150}
+                style={{
+                  objectFit: "cover",
+                  objectPosition: "center",
+                  display: screenHeight >= 50 ? "flex" : "none",
+                }}
+                className="w-[115] h-[50px]"
+              />
+            </Link>
             {isSearchActive && screenHeight >= 50 ? (
               <>
                 <SearchComp isSearchActive={isSearchActive} />
@@ -165,13 +171,13 @@ const Navbar = () => {
                 </button>
               </>
             ) : (
-              <NavLink />
+              <NavLink screenHeight={screenHeight} />
             )}
             {isSearchActive ? (
               ""
             ) : (
               <button
-                className="mb-0.5 mr-5"
+                className="-mb-1 mr-32"
                 style={{
                   display: screenHeight >= 50 ? "flex" : "none",
                 }}
@@ -187,9 +193,19 @@ const Navbar = () => {
         </div>
         <div className="flex lg:hidden w-full items-center justify-between p-4">
           <Mobilesheet />
-          <h2 className="logo-text text-2xl font-bold text-green-600 mb-1 mr-6">
-            HealthyFulRecipes
-          </h2>
+          <Link href="/">
+            <Image
+              src="/healthyfulrecipes-logo.png"
+              alt="healthyfulrecipes logo"
+              width={150}
+              height={150}
+              style={{
+                objectFit: "cover",
+                objectPosition: "center",
+              }}
+              className="w-[115] h-[50px]"
+            />
+          </Link>
           <span className="invisible">n</span>
         </div>
       </div>

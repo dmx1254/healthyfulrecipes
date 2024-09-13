@@ -8,6 +8,22 @@ const newslettersSchema = new mongoose.Schema(
       lowercase: true,
       trim: true,
     },
+    dealyrecipes:{
+      type: Boolean,
+      default: false,
+    },
+    nourishforweight:{
+      type: Boolean,
+      default: false,
+    },
+    plantPowered:{
+      type: Boolean,
+      default: false,
+    },
+    thePrep:{
+      type: Boolean,
+      default: false,
+    }
   },
   {
     timestamps: true,
