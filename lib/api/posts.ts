@@ -1,6 +1,8 @@
 import { ArticleModel, CategoryType, PostModel } from "../models/posts.models";
 import { CategoryModel } from "../models/posts.models";
 
+import { unstable_noStore as noStore } from "next/cache";
+
 import { connectDB } from "../db";
 import { ArticleBlog, CatType, PostBlog } from "../type";
 
@@ -65,6 +67,110 @@ export async function createArticle(articleData: ArticleBlog) {
     return {
       message: "Article created successfully",
     };
+  } catch (error: any) {
+    console.log(error);
+    throw new Error(error);
+  }
+}
+
+export async function getSingleNews(slug: string, slugId: string) {
+  noStore();
+  try {
+    const article = await ArticleModel.findOne({ slug });
+    return JSON.parse(JSON.stringify(article));
+  } catch (error: any) {
+    console.log(error);
+    throw new Error(error);
+  }
+}
+
+export async function getThreeLatestNews() {
+  noStore();
+  try {
+    const latestTrheeNews = await ArticleModel.find({
+      subCat: "news",
+    })
+      .sort({ createdAt: -1 })
+      .limit(3)
+      .select("_id")
+      .select("imageArt")
+      .select("title")
+      .select("createdAt")
+      .select("updatedAt")
+      .select("articleID")
+      .select("slug");
+
+    return JSON.parse(JSON.stringify(latestTrheeNews));
+  } catch (error: any) {
+    console.log(error);
+    throw new Error(error);
+  }
+}
+
+export async function getThreeLatestLifeStyles() {
+  noStore();
+  try {
+    const latestTrheeNews = await ArticleModel.find({
+      subCat: "healthy-lifestyle",
+    })
+      .sort({ createdAt: -1 })
+      .limit(3)
+      .select("_id")
+      .select("imageArt")
+      .select("title")
+      .select("createdAt")
+      .select("updatedAt")
+      .select("articleID")
+      .select("slug");
+
+    return JSON.parse(JSON.stringify(latestTrheeNews));
+  } catch (error: any) {
+    console.log(error);
+    throw new Error(error);
+  }
+}
+
+
+export async function getFiveLatestDiabetes() {
+  noStore();
+  try {
+    const latestTrheeNews = await ArticleModel.find({
+      subCat: "diabetes-diet-center",
+    })
+      .sort({ createdAt: -1 })
+      .limit(5)
+      .select("_id")
+      .select("imageArt")
+      .select("title")
+      .select("createdAt")
+      .select("updatedAt")
+      .select("articleID")
+      .select("slug");
+
+    return JSON.parse(JSON.stringify(latestTrheeNews));
+  } catch (error: any) {
+    console.log(error);
+    throw new Error(error);
+  }
+}
+
+export async function getAllNewsSkipFirstThree() {
+  noStore();
+  try {
+    const latestNews = await ArticleModel.find({
+      subCat: "news",
+    })
+      .sort({ createdAt: -1 })
+      .select("_id")
+      .select("imageArt")
+      .select("title")
+      .select("createdAt")
+      .select("updatedAt")
+      .select("articleID")
+      .select("slug")
+      .skip(3);
+
+    return JSON.parse(JSON.stringify(latestNews));
   } catch (error: any) {
     console.log(error);
     throw new Error(error);

@@ -26,6 +26,7 @@ interface IPost extends Document {
     amount: string;
     percent: number;
   }[];
+  perServing: string;
   nutritionFact: {
     nutriFact: string;
     amount: number;
@@ -34,6 +35,8 @@ interface IPost extends Document {
     activeTime: string;
     totalTime: string;
     servings: string;
+    prepTime: string;
+    yield: string;
   }[];
   steps: {
     title: { type: String; default: "" };
@@ -45,6 +48,8 @@ interface IPost extends Document {
 interface IArticle extends Document {
   title: string;
   desc: string;
+  imageArt: string;
+  imageDesc: string;
   slug: string;
   articleID: string;
   subCat: string;
@@ -55,6 +60,10 @@ interface IArticle extends Document {
     articleDesc: string;
     articleIngredients: string[];
     articleTotal: string;
+    articleSubTitle: {
+      title: string;
+      description: string;
+    };
   };
 }
 
@@ -67,23 +76,42 @@ interface ICategory extends Document {
   posts: mongoose.Types.ObjectId[];
 }
 
-const ArticleSchema: Schema = new Schema({
-  title: { type: String, required: true },
-  desc: { type: String, required: true },
-  slug: { type: String, required: true, unique: true },
-  articleID: { type: String, required: true, unique: true },
-  subCat: { type: String, required: true },
-  articlePosts: [
-    {
-      articleTitle: { type: String, default: "" },
-      subarticleTitle: { type: String, default: "" },
-      articleImage: { type: String, default: "" },
-      articleDesc: { type: String, default: "" },
-      articleIngredients: [{ type: String, default: "" }],
-      articleTotal: { type: String, default: "" },
-    },
-  ],
-});
+const ArticleSchema: Schema = new Schema(
+  {
+    title: { type: String, required: true },
+    desc: { type: String, required: true },
+    imageArt: { type: String, default: "" },
+    imageDesc: { type: String, default: "" },
+    slug: { type: String, required: true, unique: true },
+    articleID: { type: String, required: true, unique: true },
+    subCat: { type: String, required: true },
+    articlePosts: [
+      {
+        articleTitle: { type: String, default: "" },
+        subarticleTitle: { type: String, default: "" },
+        articleImage: { type: String, default: "" },
+        articleDesc: { type: String, default: "" },
+        articleIngredients: [{ type: String, default: "" }],
+        articleTotal: { type: String, default: "" },
+        articleSubTitle: [
+          {
+            title: {
+              type: String,
+              default: "",
+            },
+            description: {
+              type: String,
+              default: "",
+            },
+          },
+        ],
+      },
+    ],
+  },
+  {
+    timestamps: true,
+  }
+);
 
 // Schema for Post
 const PostSchema: Schema = new Schema(
@@ -92,6 +120,7 @@ const PostSchema: Schema = new Schema(
     category: { type: Schema.Types.ObjectId, ref: "category", required: true },
     postId: { type: String, required: true, unique: true },
     postCat: { type: String, required: true },
+    perServing: { type: String, default: "" },
     slug: { type: String, required: true, unique: true },
     postImage: { type: String, required: true },
     reviews: [
@@ -129,6 +158,8 @@ const PostSchema: Schema = new Schema(
         activeTime: { type: String, default: "" },
         totalTime: { type: String, default: "" },
         servings: { type: String, default: "" },
+        prepTime: { type: String, default: "" },
+        yield: { type: String, default: "" },
       },
     ],
 

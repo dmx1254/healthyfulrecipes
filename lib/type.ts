@@ -8,7 +8,7 @@ export type NavUrls<T> = {
 export type SubCatUrl = { name: string; subCatUrl: string; subCatId: string };
 
 export type Params = {
-  [key: string]: string | string[] | undefined;
+  [key: string]: string | undefined;
 };
 
 export type CatType = {
@@ -26,6 +26,7 @@ export type PostBlog = {
   postCat: string;
   slug: string;
   postImage: string;
+  perServing: string;
   nutritions: string[];
   nutritionsImage?: string[];
   descriptions: string[];
@@ -57,6 +58,8 @@ type ActiveInfo = {
   activeTime: string;
   totalTime: string;
   servings: string;
+  prepTime: string;
+  yield: string;
 };
 
 type NutritionFact = {
@@ -68,6 +71,8 @@ export type ArticleBlog = {
   title: string;
   desc: string;
   slug: string;
+  imageArt: string;
+  imageDesc: string;
   articleID: string;
   subCat: string;
   articlePosts: ISArticle[];
@@ -80,6 +85,12 @@ type ISArticle = {
   articleDesc: string;
   articleIngredients: string[];
   articleTotal: string;
+  articleSubTitle: SubArtType[];
+};
+
+type SubArtType = {
+  title: string;
+  description: string;
 };
 
 export type Position = {
@@ -88,4 +99,18 @@ export type Position = {
   bottom: number;
   left: number;
   right: number;
+};
+
+export type ArticleResponse = {
+  _id: string;
+  title: string;
+  desc: string;
+  slug: string;
+  imageArt: string;
+  imageDesc: string;
+  articleID: string;
+  subCat: string;
+  articlePosts: ISArticle[];
+  createdAt: Date;
+  updatedAt: Date;
 };

@@ -32,3 +32,43 @@ export function generateCode(): string {
 
   return code;
 }
+
+export const convertDate = (date: Date): string => {
+  const dateConvert = new Date(date).toLocaleDateString("en-Us", {
+    month: "long",
+    day: "numeric",
+    year: "numeric",
+  });
+  return dateConvert;
+};
+
+
+export function timeAgo(dateString: Date): string {
+  const now = new Date();
+  const pastDate = new Date(dateString);
+
+  const diffInMs = now.getTime() - pastDate.getTime();
+  const diffInMins = Math.floor(diffInMs / 1000 / 60);
+
+  if (diffInMins < 60) {
+    return `${diffInMins} mins`;
+  }
+
+  const diffInHours = Math.floor(diffInMins / 60);
+  const remainingMins = diffInMins % 60;
+
+  if (diffInHours < 24) {
+    return remainingMins > 0
+      ? `${diffInHours} hr${diffInHours > 1 ? "s" : ""} ${remainingMins} mins`
+      : `${diffInHours} hr${diffInHours > 1 ? "s" : ""}`;
+  }
+
+  const diffInDays = Math.floor(diffInHours / 24);
+  return `${diffInDays} day${diffInDays > 1 ? "s" : ""}`;
+}
+
+
+export function splitTextIntoParagraphs(text: string, chunkSize: number = 400): string[] {
+  return text.match(new RegExp(`.{1,${chunkSize}}`, 'g')) || [];
+}
+
