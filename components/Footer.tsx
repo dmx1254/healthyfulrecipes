@@ -24,9 +24,17 @@ export default function Footer() {
         <div className="w-full bg-[#F2F2F2] py-12 px-4">
           <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-start justify-around gap-12">
             <div className="flex flex-col items-start">
-              <h2 className="text-4xl font-bold text-green-800 mb-8">
-                HealthyFulRecipes
-              </h2>
+            <Image
+                src="/healthyfulrecipes-logo.png"
+                alt="healthyfulrecipes logo"
+                width={150}
+                height={150}
+                style={{
+                  objectFit: "cover",
+                  objectPosition: "center",
+                }}
+                className="w-[115] h-[50px] mb-8"
+              />
               <Button
                 variant="ghost"
                 className="border-[2px] py-3 px-8 rounded-none border-green-800 text-sm font-bold uppercase transition duration-200 ease-in-out hover:bg-green-800 hover:text-white"

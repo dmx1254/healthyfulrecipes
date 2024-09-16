@@ -1,18 +1,26 @@
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
-import React from "react";
+import React, { Suspense } from "react";
 import { Separator } from "./ui/separator";
 import { FaStar } from "react-icons/fa";
 import { TbClockHour3 } from "react-icons/tb";
+import Link from "next/link";
+import HomeDietDiabetesItem from "./HomeDietDiabetesItem";
 
 const DiabeteDiet = () => {
   return (
     <div className="w-full flex flex-col gap-4 items-center justify-center bg-[#E4F1EF] p-4 mx-auto">
-      <h2 className="flex items-center gap-1 text-3xl font-bold">
+      <Link
+        href="/diabetes-diet-center"
+        className="flex items-center gap-1 text-3xl font-bold"
+      >
         Diabets Diet Center <ArrowRight className="text-green-700" size={26} />
-      </h2>
+      </Link>
 
-      <div className="w-full max-w-6xl max-lg:flex-col-reverse flex items-start gap-10 lg:gap-20">
+      <Suspense fallback={<span>Loading...</span>}>
+        <HomeDietDiabetesItem />
+      </Suspense>
+      {/* <div className="w-full max-w-6xl max-lg:flex-col-reverse flex items-start gap-10 lg:gap-20">
         <div className="max-lg:w-full max-lg:max-w-[750px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-6 max-lg:self-center">
           <div className="flex items-start gap-2">
             <Image
@@ -136,7 +144,7 @@ const DiabeteDiet = () => {
             </p>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

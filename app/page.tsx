@@ -15,7 +15,11 @@ export default async function Home() {
   // console.log("userId: " + userId);
   // console.log("user: ", JSON.stringify(user, null, 2));
   return (
+<<<<<<< HEAD
     <main className="w-full min-h-screen flex flex-col items-center justify-center gap-12 mx-auto font-poppins mb-14 mt-4">
+=======
+    <main className="w-full min-h-screen flex flex-col items-center justify-center gap-12 mx-auto my-2 font-poppins mb-14">
+>>>>>>> b2a85656d058eaedc8d54c2034a3afac16ca3612
       <MainPage />
       <TopStoriesPage />
       <News />

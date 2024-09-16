@@ -1,34 +1,30 @@
-import React from "react";
+import React, { Suspense } from "react";
 
 import { Separator } from "@/components/ui/separator";
 import Image from "next/image";
 import { FaStar } from "react-icons/fa";
 import { TbClockHour3 } from "react-icons/tb";
 
-import {
-  FaFacebookF,
-  FaInstagram,
-  FaPinterestP,
-  FaYoutube,
-} from "react-icons/fa";
+import { FaFacebookF, FaPinterestP } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { IoMdMail } from "react-icons/io";
 import Link from "next/link";
+import NewsItem from "@/components/NewsItem";
 
 const NewsPage = () => {
   return (
     <div className="w-full max-w-6xl flex flex-col items-center mx-auto p-4">
       <div className="w-full flex flex-col items-center gap-2">
         <h2 className="text-4xl font-bold">News</h2>
-        <p className="text-center">
-          EatingWell covers what's happening in the world of food & nutrition
-          news. You'll find our expert take on the latest health studies, food
-          recalls, new grocery items and products we're loving right now, people
-          doing good things in the world of food, and so much more. Our
-          science-based journalism will help you make better-informed food
-          choices.
+        <p className="text-center text-base/7">
+          HealthyFulRecipes covers what's happening in the
+          world of food & nutrition news. You'll find our expert take on the
+          latest health studies, food recalls, new grocery items and products
+          we're loving right now, people doing good things in the world of food,
+          and so much more. Our science-based journalism will help you make
+          better-informed food choices.
         </p>
-        <div className="mt-4 text-center text-sm/10">
+        {/* <div className="mt-4 text-center text-sm/10">
           <span className="uppercase text-gray-800 font-semibold mx-6">
             Diabetes-Friendly Dinner Recipes
           </span>
@@ -41,9 +37,9 @@ const NewsPage = () => {
           <span className="uppercase text-gray-800 font-semibold mx-6">
             Healthy Salad Recipes
           </span>
-        </div>
+        </div> */}
       </div>
-      <div className="flex items-center justify-center my-4 gap-2">
+      <div className="flex items-center justify-center my-6 gap-2">
         {" "}
         <Link
           href="#"
@@ -71,117 +67,9 @@ const NewsPage = () => {
         </Link>
       </div>
       <div className="flex max-sm:flex-col items-start gap-6">
-        <div className="max-sm:w-full flex flex-col items-start gap-4 pt-4">
-          <Image
-            src="/assets/recipes/recipes7.webp"
-            alt="a recipe photo of the Potato Curry"
-            width={400}
-            height={400}
-            className="max-sm:w-full max-sm:h-auto"
-            style={{
-              objectFit: "cover",
-              objectPosition: "center",
-            }}
-          />
-          <div className="flex flex-col items-start gap-2">
-            <p className="text-xs text-zinc-500">Healthy Tofu Recipes</p>
-            <p className="text-lg sm:text-xl font-bold w-full sm:max-w-[400px]">
-              Honey-Chipotle Tofu Bites Are Sweet & Spicy Perfection
-            </p>
-            <div className="flex gap-2 items-center">
-              <span className="flex items-center gap-[1px] text-green-700">
-                <FaStar />
-                <FaStar />
-                <FaStar />
-                <FaStar />
-                <FaStar />
-              </span>
-              <Separator
-                orientation="vertical"
-                className="h-[18px] w-[0.5px] bg-gray-400"
-              />
-              <span className="flex items-center gap-1 text-xs text-zinc-500">
-                <TbClockHour3 className="text-green-700" /> 45 mins
-              </span>
-            </div>
-            <p className="font-lora text-xs text-zinc-500">By Julia Levy</p>
-          </div>
-        </div>
-        <div className="max-sm:w-full flex flex-col items-start gap-4 pt-4">
-          <Image
-            src="/assets/recipes/recipes8.webp"
-            alt="a recipe photo of the Potato Curry"
-            width={400}
-            height={400}
-            className="max-sm:w-full max-sm:h-auto"
-            style={{
-              objectFit: "cover",
-              objectPosition: "center",
-            }}
-          />
-          <div className="flex flex-col items-start gap-2">
-            <p className="text-xs text-zinc-500">Healthy Cauliflower Recipes</p>
-            <p className="text-lg sm:text-xl font-bold w-full sm:max-w-[400px]">
-              Carolina Gelen's Shaved Cauliflower Salad with Lemon Vinaigrette &
-              Parmesan
-            </p>
-            <div className="flex gap-2 items-center">
-              <span className="flex items-center gap-[1px] text-green-700">
-                <FaStar />
-                <FaStar />
-                <FaStar />
-                <FaStar />
-                <FaStar />
-              </span>
-              <Separator
-                orientation="vertical"
-                className="h-[18px] w-[0.5px] bg-gray-400"
-              />
-              <span className="flex items-center gap-1 text-xs text-zinc-500">
-                <TbClockHour3 className="text-green-700" /> 20 mins
-              </span>
-            </div>
-            <p className="font-lora text-xs text-zinc-500">By Carolina Gelen</p>
-          </div>
-        </div>
-        <div className="max-sm:w-full flex flex-col items-start gap-4 pt-4">
-          <Image
-            src="/assets/recipes/recipes9.webp"
-            alt="a recipe photo of the Potato Curry"
-            width={400}
-            height={400}
-            className="max-sm:w-full max-sm:h-auto"
-            style={{
-              objectFit: "cover",
-              objectPosition: "center",
-            }}
-          />
-          <div className="flex flex-col items-start gap-2 p-2">
-            <p className="text-xs text-zinc-500">Healthy Muffin Recipes</p>
-            <p className="text-lg sm:text-xl font-bold w-full sm:max-w-[400px]">
-              21 Healthy Muffin Recipes That Are Perfect For Back-To-School
-            </p>
-            <div className="flex gap-2 items-center">
-              <span className="flex items-center gap-[1px] text-green-700">
-                <FaStar />
-                <FaStar />
-                <FaStar />
-                <FaStar />
-                <FaStar />
-              </span>
-              <Separator
-                orientation="vertical"
-                className="h-[18px] w-[0.5px] bg-gray-400"
-              />
-              <span className="flex items-center gap-1 text-xs text-zinc-500">
-                <TbClockHour3 className="text-green-700" /> 1hrs 15 mins
-              </span>
-            </div>
-            <p className="font-lora text-xs text-zinc-500">
-              By Camryn Alexa Wimberly
-            </p>
-          </div>
-        </div>
+        <Suspense fallback={<span>Loading...</span>}>
+          <NewsItem />
+        </Suspense>
       </div>
 
       <div className="w-full my-12 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">

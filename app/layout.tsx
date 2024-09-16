@@ -12,6 +12,7 @@ import {
   SignedOut,
   UserButton,
 } from "@clerk/nextjs";
+import { localization } from "@/lib/utils";
 
 const inter = Inter({ subsets: ["latin"] });
 const lora = Lora({
@@ -35,20 +36,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const localization = {
-    signUp: {
-      start: {
-        subtitle:
-          "Sign up to rate and review your favorite HealthyFulRecipes recipes.",
-      },
-    },
-    signIn: {
-      start: {
-        subtitle:
-          "Welcome back! Please sign in to rate and review your favorite HealthyFulRecipes recipes.",
-      },
-    },
-  };
+  
   return (
     <ClerkProvider localization={localization}>
       <html lang="en">
