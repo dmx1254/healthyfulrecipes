@@ -10,7 +10,7 @@ import { IoMdMail } from "react-icons/io";
 
 const RecipeDetailPage = ({ params }: { params: Params }) => {
   const { recipeTitle } = params;
-  console.log(recipeTitle);
+  // console.log(recipeTitle);
   return (
     <div className="font-poppins w-full max-w-7xl flex flex-col items-center justify-center mx-auto p-4 my-12">
       <div className="flex flex-col items-start gap-8">
