@@ -31,24 +31,27 @@ export type PostBlog = {
   nutritionsImage?: string[];
   descriptions: string[];
   steps: Step[];
-  ingredients: Ingredien[];
+  ingredients: Ingredient[];
   nutritionInformations: NutritionInformation[];
   activeInfos: ActiveInfo[];
   nutritionFact: NutritionFact[];
 };
 
 type Step = {
+  _id?: string;
   title: string;
   descriptions: string;
   stepImage?: string;
 };
 
-type Ingredien = {
+type Ingredient = {
+  _id?: string;
   qty: string;
   title: string;
 };
 
-type NutritionInformation = {
+export type NutritionInformation = {
+  _id?: string;
   nutrition: string;
   amount: string;
   percent: number;
@@ -62,7 +65,8 @@ type ActiveInfo = {
   yield: string;
 };
 
-type NutritionFact = {
+export type NutritionFact = {
+  _id?: string;
   nutriFact: string;
   amount: number;
 };
@@ -79,6 +83,7 @@ export type ArticleBlog = {
 };
 
 type ISArticle = {
+  _id?: string;
   articleTitle: string;
   subarticleTitle: string;
   articleImage: string;
@@ -89,6 +94,7 @@ type ISArticle = {
 };
 
 type SubArtType = {
+  _id?: string;
   title: string;
   description: string;
 };
@@ -111,6 +117,27 @@ export type ArticleResponse = {
   articleID: string;
   subCat: string;
   articlePosts: ISArticle[];
+  createdAt: Date;
+  updatedAt: Date;
+};
+
+export type PostBlogResponse = {
+  _id: string;
+  title: string;
+  category: string;
+  postId: string;
+  postCat: string;
+  slug: string;
+  postImage: string;
+  perServing: string;
+  nutritions: string[];
+  nutritionsImage?: string[];
+  descriptions: string[];
+  steps: Step[];
+  ingredients: Ingredient[];
+  nutritionInformations: NutritionInformation[];
+  activeInfos: ActiveInfo[];
+  nutritionFact: NutritionFact[];
   createdAt: Date;
   updatedAt: Date;
 };

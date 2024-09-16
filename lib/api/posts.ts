@@ -74,7 +74,7 @@ export async function createArticle(articleData: ArticleBlog) {
 }
 
 export async function getSingleNews(slug: string, slugId: string) {
-  noStore();
+  // noStore();
   try {
     const article = await ArticleModel.findOne({ slug });
     return JSON.parse(JSON.stringify(article));
@@ -85,7 +85,7 @@ export async function getSingleNews(slug: string, slugId: string) {
 }
 
 export async function getThreeLatestNews() {
-  noStore();
+  // noStore();
   try {
     const latestTrheeNews = await ArticleModel.find({
       subCat: "news",
@@ -108,7 +108,7 @@ export async function getThreeLatestNews() {
 }
 
 export async function getThreeLatestLifeStyles() {
-  noStore();
+  // noStore();
   try {
     const latestTrheeNews = await ArticleModel.find({
       subCat: "healthy-lifestyle",
@@ -130,9 +130,8 @@ export async function getThreeLatestLifeStyles() {
   }
 }
 
-
 export async function getFiveLatestDiabetes() {
-  noStore();
+  // noStore();
   try {
     const latestTrheeNews = await ArticleModel.find({
       subCat: "diabetes-diet-center",
@@ -155,7 +154,7 @@ export async function getFiveLatestDiabetes() {
 }
 
 export async function getAllNewsSkipFirstThree() {
-  noStore();
+  // noStore();
   try {
     const latestNews = await ArticleModel.find({
       subCat: "news",
@@ -171,6 +170,56 @@ export async function getAllNewsSkipFirstThree() {
       .skip(3);
 
     return JSON.parse(JSON.stringify(latestNews));
+  } catch (error: any) {
+    console.log(error);
+    throw new Error(error);
+  }
+}
+
+export async function getSingleArticle(slug: string, slugId: string) {
+  // noStore();
+  try {
+    const article = await ArticleModel.findOne({ slug });
+    return JSON.parse(JSON.stringify(article));
+  } catch (error: any) {
+    console.log(error);
+    throw new Error(error);
+  }
+}
+
+// export async function getPostId() {
+//   try {
+//     const mealPlansID = await PostModel.find({
+//       category: "66e44e681aaa31356368db62",
+//     }).select("_id");
+//     return JSON.parse(JSON.stringify(mealPlansID));
+//   } catch (error) {
+//     console.log(error);
+//   }
+// }
+
+export async function getLastThreePostByUsingCat(slug: string, lim: number) {
+  try {
+    const threeLatestPost = await CategoryModel.findOne({
+      slug: slug,
+    }).populate({
+      path: "posts",
+      options: { limit: lim },
+    });
+    const articles = threeLatestPost.posts;
+    const posts = JSON.parse(JSON.stringify(articles));
+    // console.log(posts);
+    return posts;
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+export async function getSinglePost(slug: string, slugId: string) {
+  // noStore();
+  try {
+    const post = await PostModel.findOne({ slug });
+    return JSON.parse(JSON.stringify(post));
   } catch (error: any) {
     console.log(error);
     throw new Error(error);

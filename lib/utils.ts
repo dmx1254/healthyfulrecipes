@@ -51,7 +51,7 @@ export function timeAgo(dateString: Date): string {
   const diffInMins = Math.floor(diffInMs / 1000 / 60);
 
   if (diffInMins < 60) {
-    return `${diffInMins} mins`;
+    return `${diffInMins} min${diffInMins > 1 ? "s" : ""}`;
   }
 
   const diffInHours = Math.floor(diffInMins / 60);
@@ -59,13 +59,31 @@ export function timeAgo(dateString: Date): string {
 
   if (diffInHours < 24) {
     return remainingMins > 0
-      ? `${diffInHours} hr${diffInHours > 1 ? "s" : ""} ${remainingMins} mins`
+      ? `${diffInHours} hr${diffInHours > 1 ? "s" : ""} ${remainingMins} min${remainingMins > 1 ? "s" : ""}`
       : `${diffInHours} hr${diffInHours > 1 ? "s" : ""}`;
   }
 
   const diffInDays = Math.floor(diffInHours / 24);
-  return `${diffInDays} day${diffInDays > 1 ? "s" : ""}`;
+
+  if (diffInDays < 30) {
+    return `${diffInDays} day${diffInDays > 1 ? "s" : ""}`;
+  }
+
+  const diffInMonths = Math.floor(diffInDays / 30);
+  if (diffInMonths < 12) {
+    const remainingDays = diffInDays % 30;
+    return remainingDays > 0
+      ? `${diffInMonths} month${diffInMonths > 1 ? "s" : ""} ${remainingDays} day${remainingDays > 1 ? "s" : ""}`
+      : `${diffInMonths} month${diffInMonths > 1 ? "s" : ""}`;
+  }
+
+  const diffInYears = Math.floor(diffInMonths / 12);
+  const remainingMonths = diffInMonths % 12;
+  return remainingMonths > 0
+    ? `${diffInYears} year${diffInYears > 1 ? "s" : ""} ${remainingMonths} month${remainingMonths > 1 ? "s" : ""}`
+    : `${diffInYears} year${diffInYears > 1 ? "s" : ""}`;
 }
+
 
 
 export function splitTextIntoParagraphs(text: string, chunkSize: number = 400): string[] {

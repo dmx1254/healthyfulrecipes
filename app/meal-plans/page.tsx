@@ -5,15 +5,15 @@ import Image from "next/image";
 import { FaStar } from "react-icons/fa";
 import { TbClockHour3 } from "react-icons/tb";
 
-import {
-  FaFacebookF,
-  FaPinterestP,
-} from "react-icons/fa";
+import { FaFacebookF, FaPinterestP } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { IoMdMail } from "react-icons/io";
 import Link from "next/link";
+// import { getPostId } from "@/lib/api/posts";
 
-const MealPlans = () => {
+const MealPlans =  () => {
+  // const mealId = await getPostId();
+  // console.log(mealId);
   return (
     <div className="w-full max-w-6xl flex flex-col items-center mx-auto p-4">
       <div className="w-full flex flex-col items-center gap-2">
