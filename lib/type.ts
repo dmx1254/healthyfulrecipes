@@ -50,6 +50,13 @@ type Ingredient = {
   title: string;
 };
 
+export type ReviewRate = {
+  postID: string;
+  message?: string;
+  fullName: string;
+  rating: number;
+};
+
 export type NutritionInformation = {
   _id?: string;
   nutrition: string;
@@ -93,6 +100,11 @@ type ISArticle = {
   articleSubTitle: SubArtType[];
 };
 
+export type ReviewStar = {
+  indice: number;
+  title: string;
+};
+
 type SubArtType = {
   _id?: string;
   title: string;
@@ -134,10 +146,20 @@ export type PostBlogResponse = {
   nutritionsImage?: string[];
   descriptions: string[];
   steps: Step[];
+  reviews: ReviewResponse[];
   ingredients: Ingredient[];
   nutritionInformations: NutritionInformation[];
   activeInfos: ActiveInfo[];
   nutritionFact: NutritionFact[];
+  createdAt: Date;
+  updatedAt: Date;
+};
+
+export type ReviewResponse = {
+  _id: string;
+  fullName: string;
+  message: string;
+  rating: number;
   createdAt: Date;
   updatedAt: Date;
 };

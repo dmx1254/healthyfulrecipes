@@ -13,7 +13,7 @@ const MealPlansItem = async ({ slug, lim }: { slug: string; lim: number }) => {
 //   console.log(posts);
   return (
     <div className="flex max-sm:flex-col items-start gap-6">
-      {posts.map((post) => (
+      {posts?.map((post) => (
         <Link
           key={post._id}
           href={`${post.slug}-${post.postId}`}

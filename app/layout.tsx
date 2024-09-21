@@ -4,14 +4,9 @@ import "./globals.css";
 import clsx from "clsx";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { Toaster, toast } from "sonner";
 
-import {
-  ClerkProvider,
-  SignInButton,
-  SignedIn,
-  SignedOut,
-  UserButton,
-} from "@clerk/nextjs";
+import { ClerkProvider } from "@clerk/nextjs";
 import { localization } from "@/lib/utils";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -36,7 +31,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  
   return (
     <ClerkProvider localization={localization}>
       <html lang="en">
@@ -47,12 +41,8 @@ export default function RootLayout({
             "h-full w-full bg-white font-sans antialiased"
           )}
         >
-          {/* <SignedOut>
-            <SignInButton />
-          </SignedOut>
-          <SignedIn>
-            <UserButton />
-          </SignedIn> */}
+          <Toaster />
+
           <Navbar />
           {children}
           <Footer />

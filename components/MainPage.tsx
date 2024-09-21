@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import { Separator } from "./ui/separator";
+import Link from "next/link";
 
 const MainPage = () => {
   return (
@@ -144,9 +145,9 @@ const MainPage = () => {
             </div>
           </div>
         </div>
-        <button className="self-center border text-sm border-[#016646] py-2 px-4 text-center text-black font-semibold transition duration-200 ease-in-out hover:bg-[#016646] hover:text-white">
-          See More News
-        </button>
+        <Link href="/article" className="self-center border text-sm border-[#016646] py-2 px-4 text-center text-black font-semibold transition duration-200 ease-in-out hover:bg-[#016646] hover:text-white">
+          See More Articles
+        </Link>
       </div>
     </div>
   );

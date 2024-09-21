@@ -15,7 +15,7 @@ const HomeDietDiabetesItem = async () => {
   return (
     <div className="w-full max-w-6xl max-lg:flex-col-reverse flex items-start gap-10 lg:gap-20">
       <div className="max-lg:w-full max-lg:max-w-[750px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-6 max-lg:self-center">
-        {articles.slice(1, 5).map((art) => (
+        {articles?.slice(1, 5).map((art) => (
           <Link
             href={`/diabetes-diet-center/${art.slug}-${art.articleID}`}
             key={art._id}

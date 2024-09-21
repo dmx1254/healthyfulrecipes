@@ -13,7 +13,7 @@ const HomeNewsItem = async () => {
   //   console.log(articles);
   return (
     <div className="flex max-sm:flex-col items-start gap-6">
-      {articles.map((article) => (
+      {articles?.map((article) => (
         <Link
           key={article._id}
           href={`/news/${article.slug}-${article.articleID}`}

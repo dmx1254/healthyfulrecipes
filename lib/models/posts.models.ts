@@ -8,11 +8,11 @@ interface IPost extends Document {
   postCat: string;
   slug: string;
   postImage: string;
-  reviews: {
-    fullname: string;
-    message: string;
-    rating: number;
-  }[];
+  // reviews: {
+  //   fullname: string;
+  //   message: string;
+  //   rating: number;
+  // }[];
   recipes: string[];
   nutritions: string[];
   nutritionsImage: string[];
@@ -76,6 +76,23 @@ interface ICategory extends Document {
   posts: mongoose.Types.ObjectId[];
 }
 
+interface IReview extends Document {
+  fullname: string;
+  message: string;
+  rating: number;
+}
+
+const reviewSchema = new mongoose.Schema(
+  {
+    fullname: { type: String, default: "" },
+    message: { type: String, default: "" },
+    rating: { type: Number, default: 0 },
+  },
+  {
+    timestamps: true,
+  }
+);
+
 const ArticleSchema: Schema = new Schema(
   {
     title: { type: String, required: true },
@@ -123,13 +140,7 @@ const PostSchema: Schema = new Schema(
     perServing: { type: String, default: "" },
     slug: { type: String, required: true, unique: true },
     postImage: { type: String, required: true },
-    reviews: [
-      {
-        fullname: { type: String, default: "" },
-        message: { type: String, default: "" },
-        rating: { type: Number, default: 0 },
-      },
-    ],
+    reviews: [reviewSchema],
     recipes: [{ type: String }],
     nutritions: [{ type: String }],
     nutritionsImage: [{ type: String }],

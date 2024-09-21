@@ -4,7 +4,7 @@ import { CategoryModel } from "../models/posts.models";
 import { unstable_noStore as noStore } from "next/cache";
 
 import { connectDB } from "../db";
-import { ArticleBlog, CatType, PostBlog } from "../type";
+import { ArticleBlog, CatType, PostBlog, ReviewRate } from "../type";
 
 connectDB();
 
@@ -20,7 +20,7 @@ export async function getHomePosts(type: string, limitPost: number) {
     return getPostsHomes;
   } catch (error: any) {
     console.log(error);
-    throw new Error(error);
+    // throw new Error(error);
   }
 }
 
@@ -33,7 +33,7 @@ export async function getCategoriesPosts(category: string) {
     return getCategoriesPosts;
   } catch (error: any) {
     console.log(error);
-    throw new Error(error);
+    // throw new Error(error);
   }
 }
 
@@ -45,19 +45,31 @@ export async function createCategory(categoryData: CatType) {
     };
   } catch (error: any) {
     console.log(error);
-    throw new Error(error);
+    // throw new Error(error);
   }
 }
 
 export async function createPost(postData: PostBlog) {
   try {
-    await PostModel.create(postData);
+    const categoryId = postData.category;
+    const post = await PostModel.create(postData);
+    const savedPost = JSON.parse(JSON.stringify(post));
+    const postId = savedPost._id;
+    await CategoryModel.findByIdAndUpdate(
+      categoryId,
+      {
+        $push: { posts: postId },
+      },
+      {
+        new: true,
+      }
+    );
     return {
       message: "Post created successfully",
     };
   } catch (error: any) {
     console.log(error);
-    throw new Error(error);
+    // throw new Error(error);
   }
 }
 
@@ -69,7 +81,7 @@ export async function createArticle(articleData: ArticleBlog) {
     };
   } catch (error: any) {
     console.log(error);
-    throw new Error(error);
+    // throw new Error(error);
   }
 }
 
@@ -80,7 +92,7 @@ export async function getSingleNews(slug: string, slugId: string) {
     return JSON.parse(JSON.stringify(article));
   } catch (error: any) {
     console.log(error);
-    throw new Error(error);
+    // throw new Error(error);
   }
 }
 
@@ -103,7 +115,7 @@ export async function getThreeLatestNews() {
     return JSON.parse(JSON.stringify(latestTrheeNews));
   } catch (error: any) {
     console.log(error);
-    throw new Error(error);
+    // throw new Error(error);
   }
 }
 
@@ -126,7 +138,7 @@ export async function getThreeLatestLifeStyles() {
     return JSON.parse(JSON.stringify(latestTrheeNews));
   } catch (error: any) {
     console.log(error);
-    throw new Error(error);
+    // throw new Error(error);
   }
 }
 
@@ -149,7 +161,7 @@ export async function getFiveLatestDiabetes() {
     return JSON.parse(JSON.stringify(latestTrheeNews));
   } catch (error: any) {
     console.log(error);
-    throw new Error(error);
+    // throw new Error(error);
   }
 }
 
@@ -172,7 +184,7 @@ export async function getAllNewsSkipFirstThree() {
     return JSON.parse(JSON.stringify(latestNews));
   } catch (error: any) {
     console.log(error);
-    throw new Error(error);
+    // throw new Error(error);
   }
 }
 
@@ -183,14 +195,14 @@ export async function getSingleArticle(slug: string, slugId: string) {
     return JSON.parse(JSON.stringify(article));
   } catch (error: any) {
     console.log(error);
-    throw new Error(error);
+    // throw new Error(error);
   }
 }
 
 // export async function getPostId() {
 //   try {
 //     const mealPlansID = await PostModel.find({
-//       category: "66e44e681aaa31356368db62",
+//       category: "66e5b145026646bb9e5dbf62",
 //     }).select("_id");
 //     return JSON.parse(JSON.stringify(mealPlansID));
 //   } catch (error) {
@@ -222,6 +234,51 @@ export async function getSinglePost(slug: string, slugId: string) {
     return JSON.parse(JSON.stringify(post));
   } catch (error: any) {
     console.log(error);
-    throw new Error(error);
+    // throw new Error(error);
+  }
+}
+
+export async function getLastSixRecipesPost(slug: string, lim: number) {
+  try {
+    const threeLatestPost = await CategoryModel.findOne({
+      slug: slug,
+    }).populate({
+      path: "posts",
+      options: { limit: lim },
+    });
+    const newPosts = threeLatestPost.posts;
+    const posts = JSON.parse(JSON.stringify(newPosts));
+    // console.log(posts);
+    return posts;
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+export async function addReviewToPost(review: ReviewRate) {
+  try {
+    const post = await PostModel.findByIdAndUpdate(
+      review.postID,
+      {
+        $push: {
+          reviews: {
+            fullname: review.fullName,
+            message: review.message,
+            rating: review.rating,
+          },
+        },
+      },
+      {
+        new: true,
+      }
+    );
+    return {
+      slug: post.slug,
+      postId: post.postId,
+      message: "Thank you for adding a comment.!",
+    };
+  } catch (error: any) {
+    console.log(error);
+    // throw new Error(error);
   }
 }

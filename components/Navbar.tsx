@@ -206,7 +206,35 @@ const Navbar = () => {
               className="w-[115] h-[50px]"
             />
           </Link>
-          <span className="invisible">n</span>
+          <div className="">
+            {isSignedIn ? (
+              <HoverCard>
+                <HoverCardTrigger asChild>
+                  <div className="flex items-center gap-1.5 cursor-pointer">
+                    <Image
+                      src="/defaultUser.png"
+                      alt="user profile"
+                      width={20}
+                      height={20}
+                      style={{
+                        objectFit: "cover",
+                        objectPosition: "center",
+                      }}
+                      className="rounded-full"
+                    />
+                    <span className="flex text-xs items-center gap-1">
+                      My Account <GoTriangleDown />
+                    </span>
+                  </div>
+                </HoverCardTrigger>
+                <HoverCardContent className="w-44 shadow-xl select-none cursor-pointer">
+                  <SignOutButton>Log Out</SignOutButton>
+                </HoverCardContent>
+              </HoverCard>
+            ) : (
+              <span className="invisible">n</span>
+            )}
+          </div>
         </div>
       </div>
     )

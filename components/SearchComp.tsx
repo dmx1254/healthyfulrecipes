@@ -21,7 +21,7 @@ const SearchComp = ({ isSearchActive }: { isSearchActive: boolean }) => {
         <Input
           ref={inputRef}
           placeholder="What are you looking for?"
-          className="w-[230px] outline-none text-sm rounded-none shadow-none border-black p-5"
+          className="w-[230px] border-[1px] outline-none text-sm rounded-none shadow-none border-zinc-900 p-5"
         />
         <button className="flex items-center justify-center bg-green-900 text-white p-[14.5px] transition duration-150 hover:bg-black/80">
           <Search size={15} />
