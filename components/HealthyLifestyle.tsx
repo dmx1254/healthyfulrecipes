@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { Suspense } from "react";
 import HomeLifestyleItem from "./HomeLifestyleItem";
+import { MainLifeStyleSkeleton } from "./skelettons/MainLifeStyleSkeleton";
 
 const HealthyLifestyle = () => {
   return (
@@ -14,7 +15,7 @@ const HealthyLifestyle = () => {
         Healthy Lifestyle <ArrowRight className="text-green-700" size={26} />
       </Link>
       <div className="w-full flex max-md:flex-col max-md:items-center items-start gap-8 justify-between">
-        <Suspense fallback={<span>Loading...</span>}>
+        <Suspense fallback={<MainLifeStyleSkeleton />}>
           <HomeLifestyleItem />
         </Suspense>
       </div>

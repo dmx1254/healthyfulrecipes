@@ -10,6 +10,9 @@ import { FaXTwitter } from "react-icons/fa6";
 import { IoMdMail } from "react-icons/io";
 import Link from "next/link";
 import NewsItem from "@/components/NewsItem";
+import { MainNewsSkeletons } from "@/components/skelettons/MainNewsSkeletons";
+import BottomNewsItem from "@/components/BottomNewsItem";
+import BottomNewsSkeleton from "@/components/skelettons/BottomNewsSkeleton";
 
 const NewsPage = () => {
   return (
@@ -17,12 +20,12 @@ const NewsPage = () => {
       <div className="w-full flex flex-col items-center gap-2">
         <h2 className="text-4xl font-bold">News</h2>
         <p className="text-center text-base/7">
-          HealthyFulRecipes covers what's happening in the
-          world of food & nutrition news. You'll find our expert take on the
-          latest health studies, food recalls, new grocery items and products
-          we're loving right now, people doing good things in the world of food,
-          and so much more. Our science-based journalism will help you make
-          better-informed food choices.
+          HealthyFulRecipes covers what's happening in the world of food &
+          nutrition news. You'll find our expert take on the latest health
+          studies, food recalls, new grocery items and products we're loving
+          right now, people doing good things in the world of food, and so much
+          more. Our science-based journalism will help you make better-informed
+          food choices.
         </p>
         {/* <div className="mt-4 text-center text-sm/10">
           <span className="uppercase text-gray-800 font-semibold mx-6">
@@ -67,270 +70,14 @@ const NewsPage = () => {
         </Link>
       </div>
       <div className="flex max-sm:flex-col items-start gap-6">
-        <Suspense fallback={<span>Loading...</span>}>
+        <Suspense fallback={<MainNewsSkeletons />}>
           <NewsItem />
         </Suspense>
       </div>
 
-      <div className="w-full my-12 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div className="max-lg:w-full flex lg:flex-col items-start gap-4 border-b max-sm:pb-6 max-sm:border-gray-300 sm:border-transparent md:border-transparent lg:border lg:border-zinc-500">
-          <Image
-            src="/assets/recipes/recipe-cat1.webp"
-            alt="a recipe photo of the Potato Curry"
-            width={300}
-            height={300}
-            className="max-sm:max-w-[150px] max-sm:h-auto max-lg:max-w-[120] max-lg:h-[120px]"
-            style={{
-              objectFit: "cover",
-              objectPosition: "center",
-            }}
-          />
-          <div className="flex flex-col items-start gap-2 lg:p-2">
-            <p className="text-xs text-zinc-500">
-              Heart-Healthy Casserole Recipes
-            </p>
-            <p className="text-lg sm:text-xl font-bold w-full lg:max-w-[300px]">
-              Heart-Healthy Casserole Recipes
-            </p>
-
-            <p className="font-lora text-xs text-zinc-500">
-              By Camryn Alexa Wimberly
-            </p>
-          </div>
-        </div>
-        <div className="max-sm:w-full flex lg:flex-col items-start gap-4 border-b max-sm:pb-6 max-sm:border-gray-300 sm:border-transparent md:border-transparent lg:border lg:border-zinc-500">
-          <Image
-            src="/assets/recipes/recipe-cat2.webp"
-            alt="a recipe photo of the Potato Curry"
-            width={300}
-            height={300}
-            className="max-sm:max-w-[150px] max-sm:h-auto max-lg:max-w-[120] max-lg:h-[120px]"
-            style={{
-              objectFit: "cover",
-              objectPosition: "center",
-            }}
-          />
-          <div className="flex flex-col items-start gap-2 lg:p-2">
-            <p className="text-xs text-zinc-500">
-              Heart-Healthy Casserole Recipes
-            </p>
-            <p className="text-lg sm:text-xl font-bold w-full lg:max-w-[300px]">
-              Heart-Healthy Casserole Recipes
-            </p>
-            <p className="font-lora text-xs text-zinc-500">
-              By Camryn Alexa Wimberly
-            </p>
-          </div>
-        </div>
-        <div className="max-lg:w-full flex lg:flex-col items-start gap-4 border-b max-sm:pb-6 max-sm:border-gray-300 sm:border-transparent md:border-transparent lg:border lg:border-zinc-500">
-          <Image
-            src="/assets/recipes/recipe-cat3.webp"
-            alt="a recipe photo of the Potato Curry"
-            width={300}
-            height={300}
-            className="max-sm:max-w-[150px] max-sm:h-auto max-lg:max-w-[120] max-lg:h-[120px]"
-            style={{
-              objectFit: "cover",
-              objectPosition: "center",
-            }}
-          />
-          <div className="flex flex-col items-start gap-2 lg:p-2">
-            <p className="text-xs text-zinc-500">
-              Heart-Healthy Casserole Recipes
-            </p>
-            <p className="text-lg sm:text-xl font-bold w-full sm:max-w-[300px]">
-              Heart-Healthy Casserole Recipes
-            </p>
-            <div className="flex gap-2 items-center">
-              <span className="flex items-center gap-[1px] text-green-700">
-                <FaStar />
-                <FaStar />
-                <FaStar />
-                <FaStar />
-                <FaStar />
-              </span>
-              <Separator
-                orientation="vertical"
-                className="h-[18px] w-[0.5px] bg-gray-400"
-              />
-              <span className="flex items-center gap-1 text-xs text-zinc-500">
-                <TbClockHour3 className="text-green-700" />
-                40 mins
-              </span>
-            </div>
-            <p className="font-lora text-xs text-zinc-500">
-              By Camryn Alexa Wimberly
-            </p>
-          </div>
-        </div>
-        <div className="max-lg:w-full flex lg:flex-col items-start gap-4 border-b max-sm:pb-6 max-sm:border-gray-300 sm:border-transparent md:border-transparent lg:border lg:border-zinc-500">
-          <Image
-            src="/assets/recipes/recipe-cat4.webp"
-            alt="a recipe photo of the Potato Curry"
-            width={300}
-            height={300}
-            className="max-sm:max-w-[150px] max-sm:h-auto max-lg:max-w-[120] max-lg:h-[120px]"
-            style={{
-              objectFit: "cover",
-              objectPosition: "center",
-            }}
-          />
-          <div className="flex flex-col items-start gap-2 lg:p-2">
-            <p className="text-xs text-zinc-500">
-              Heart-Healthy Casserole Recipes
-            </p>
-            <p className="text-lg sm:text-xl font-bold w-full sm:max-w-[300px]">
-              Heart-Healthy Casserole Recipes
-            </p>
-            <div className="flex gap-2 items-center">
-              <span className="flex items-center gap-[1px] text-green-700">
-                <FaStar />
-                <FaStar />
-                <FaStar />
-                <FaStar />
-                <FaStar />
-              </span>
-              <Separator
-                orientation="vertical"
-                className="h-[18px] w-[0.5px] bg-gray-400"
-              />
-              <span className="flex items-center gap-1 text-xs text-zinc-500">
-                <TbClockHour3 className="text-green-700" /> 1hrs 15 mins
-              </span>
-            </div>
-            <p className="font-lora text-xs text-zinc-500">
-              By Camryn Alexa Wimberly
-            </p>
-          </div>
-        </div>
-
-        <div className="max-lg:w-full flex lg:flex-col items-start gap-4 border-b max-sm:pb-6 max-sm:border-gray-300 sm:border-transparent md:border-transparent lg:border lg:border-zinc-500">
-          <Image
-            src="/assets/recipes/recipe-cat5.webp"
-            alt="a recipe photo of the Potato Curry"
-            width={300}
-            height={300}
-            className="max-sm:max-w-[150px] max-sm:h-auto max-lg:max-w-[120] max-lg:h-[120px]"
-            style={{
-              objectFit: "cover",
-              objectPosition: "center",
-            }}
-          />
-          <div className="flex flex-col items-start gap-2 lg:p-2">
-            <p className="text-xs text-zinc-500">
-              Healthy Breakfast Meal Prep Recipes
-            </p>
-            <p className="text-lg sm:text-xl font-bold w-full sm:max-w-[300px]">
-              16 Make-Ahead Breakfast Recipes With 5 Ingredients Or Less
-            </p>
-
-            <p className="font-lora text-xs text-zinc-500">
-              By Camryn Alexa Wimberly
-            </p>
-          </div>
-        </div>
-        <div className="max-lg:w-full flex lg:flex-col items-start gap-4 border-b max-sm:pb-6 max-sm:border-gray-300 sm:border-transparent md:border-transparent lg:border lg:border-zinc-500">
-          <Image
-            src="/assets/recipes/recipe-cat6.webp"
-            alt="a recipe photo of the Potato Curry"
-            width={300}
-            height={300}
-            className="max-sm:max-w-[150px] max-sm:h-auto max-lg:max-w-[120] max-lg:h-[120px]"
-            style={{
-              objectFit: "cover",
-              objectPosition: "center",
-            }}
-          />
-          <div className="flex flex-col items-start gap-2 lg:p-2">
-            <p className="text-xs text-zinc-500">Diabetes-Friendly Dinners</p>
-            <p className="text-lg sm:text-xl font-bold w-full sm:max-w-[300px]">
-              20 20-Minute Dinners For Better Blood Sugar
-            </p>
-
-            <p className="font-lora text-xs text-zinc-500">
-              By Camryn Alexa Wimberly
-            </p>
-          </div>
-        </div>
-        <div className="max-lg:w-full flex lg:flex-col items-start gap-4 border-b max-sm:pb-6 max-sm:border-gray-300 sm:border-transparent md:border-transparent lg:border lg:border-zinc-500">
-          <Image
-            src="/assets/recipes/recipe-cat7.webp"
-            alt="a recipe photo of the Potato Curry"
-            width={300}
-            height={300}
-            className="max-sm:max-w-[150px] max-sm:h-auto max-lg:max-w-[120] max-lg:h-[120px]"
-            style={{
-              objectFit: "cover",
-              objectPosition: "center",
-            }}
-          />
-          <div className="flex flex-col items-start gap-2 lg:p-2">
-            <p className="text-xs text-zinc-500">Healthy Oat Recipes</p>
-            <p className="text-lg sm:text-xl font-bold w-full sm:max-w-[300px]">
-              Cranberry-Orange Energy Balls Are the Perfect High-Fiber Fall
-              Snack
-            </p>
-            <div className="flex gap-2 items-center">
-              <span className="flex items-center gap-[1px] text-green-700">
-                <FaStar />
-                <FaStar />
-                <FaStar />
-                <FaStar />
-                <FaStar />
-              </span>
-              <Separator
-                orientation="vertical"
-                className="h-[18px] w-[0.5px] bg-gray-400"
-              />
-              <span className="flex items-center gap-1 text-xs text-zinc-500">
-                <TbClockHour3 className="text-green-700" />
-                30 mins
-              </span>
-            </div>
-            <p className="font-lora text-xs text-zinc-500">
-              By Amanda Holstein
-            </p>
-          </div>
-        </div>
-        <div className="max-lg:w-full flex lg:flex-col items-start gap-4 max-lg:border-none border border-zinc-500 max-sm:border-b max-sm:pb-4 max-sm:border-gray-600">
-          <Image
-            src="/assets/recipes/recipe-cat8.webp"
-            alt="a recipe photo of the Potato Curry"
-            width={300}
-            height={300}
-            className="max-sm:max-w-[150px] max-sm:h-auto max-lg:max-w-[120] max-lg:h-[120px]"
-            style={{
-              objectFit: "cover",
-              objectPosition: "center",
-            }}
-          />
-          <div className="flex flex-col items-start gap-2 lg:p-2">
-            <p className="text-xs text-zinc-500">
-              Healthy Chicken Casserole Recipes
-            </p>
-            <p className="text-lg sm:text-xl font-bold w-full sm:max-w-[300px]">
-              Creamy Chicken Florentine Casserole Is the Ultimate Comfort Food
-            </p>
-            <div className="flex gap-2 items-center">
-              <span className="flex items-center gap-[1px] text-green-700">
-                <FaStar />
-                <FaStar />
-                <FaStar />
-                <FaStar />
-                <FaStar />
-              </span>
-              <Separator
-                orientation="vertical"
-                className="h-[18px] w-[0.5px] bg-gray-400"
-              />
-              <span className="flex items-center gap-1 text-xs text-zinc-500">
-                <TbClockHour3 className="text-green-700" /> 1hr
-              </span>
-            </div>
-            <p className="font-lora text-xs text-zinc-500">By Julia Levy</p>
-          </div>
-        </div>
-      </div>
+      <Suspense fallback={<BottomNewsSkeleton />}>
+        <BottomNewsItem />
+      </Suspense>
     </div>
   );
 };

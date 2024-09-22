@@ -6,6 +6,7 @@ import { FaStar } from "react-icons/fa";
 import { TbClockHour3 } from "react-icons/tb";
 import Link from "next/link";
 import HomeDietDiabetesItem from "./HomeDietDiabetesItem";
+import { MainDiabetSkeleton } from "./skelettons/MainDiabetSkeleton";
 
 const DiabeteDiet = () => {
   return (
@@ -17,7 +18,7 @@ const DiabeteDiet = () => {
         Diabets Diet Center <ArrowRight className="text-green-700" size={26} />
       </Link>
 
-      <Suspense fallback={<span>Loading...</span>}>
+      <Suspense fallback={<MainDiabetSkeleton />}>
         <HomeDietDiabetesItem />
       </Suspense>
       

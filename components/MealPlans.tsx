@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { Suspense } from "react";
 import MealPlansItem from "./MealPlansItem";
+import { NewsPlansSkeleton } from "./skelettons/NewsPlansSkeleton";
 
 const MealPlans = () => {
   const slug = "meal-plans";
@@ -13,7 +14,7 @@ const MealPlans = () => {
         Meal Plans <ArrowRight className="text-green-700" size={26} />
       </Link>
       <div className="w-full flex max-md:flex-col items-start gap-8 justify-between">
-        <Suspense key={slug + lim} fallback={<span>Loading...</span>}>
+        <Suspense key={slug + lim} fallback={<NewsPlansSkeleton />}>
           <MealPlansItem slug={slug} lim={lim} />
         </Suspense>
       </div>

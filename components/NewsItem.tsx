@@ -15,13 +15,13 @@ const NewsItem = async () => {
     <div className="flex max-sm:flex-col items-start gap-6">
       {articles.map((article) => (
         <Link
-          key={article._id}
-          href={`/news/${article.slug}-${article.articleID}`}
+          key={article?._id}
+          href={`/news/${article?.slug}-${article?.articleID}`}
           className="max-sm:w-full flex flex-col items-start gap-4 pt-4"
         >
           <Image
-            src={article.imageArt}
-            alt={article.title}
+            src={article?.imageArt}
+            alt={article?.title}
             width={400}
             height={400}
             className="max-sm:w-full max-sm:h-auto"
@@ -29,12 +29,12 @@ const NewsItem = async () => {
               objectFit: "cover",
               objectPosition: "center",
             }}
-            aria-label={article.title}
+            aria-label={article?.title}
           />
           <div className="flex flex-col items-start gap-2">
-            <p className="text-xs text-zinc-500 max-w-[150px] truncate">{article.title}</p>
+            <p className="text-xs text-zinc-500 max-w-[300px] truncate">{article?.desc}</p>
             <p className="text-lg sm:text-xl font-bold w-full sm:max-w-[400px]">
-              {article.title}
+              {article?.title}
             </p>
             <div className="flex gap-2 items-center">
               <span className="flex items-center gap-[1px] text-green-700">
@@ -50,7 +50,7 @@ const NewsItem = async () => {
               />
               <span className="flex items-center gap-1 text-xs text-zinc-500">
                 <TbClockHour3 className="text-green-700" />{" "}
-                {timeAgo(article.createdAt)}
+                {timeAgo(article?.createdAt)}
               </span>
             </div>
             <p className="font-lora text-xs text-zinc-500">By Sophie Miller</p>

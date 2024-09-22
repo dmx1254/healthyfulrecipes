@@ -75,8 +75,8 @@ const ArticlePage = ({ article }: { article: ArticleResponse }) => {
     <div className="font-poppins w-full min-h-screen max-w-2xl lg:max-w-6xl flex flex-col items-center justify-center mx-auto gap-2 my-4 lg:my-8">
       <div className="flex flex-col items-start mx-auto">
         <div className="w-full flex flex-col items-start gap-4">
-          <p className="text-3xl sm:text-4xl md:text-5xl font-bold">{article.title}</p>
-          <p className="font-normal text-justify">{article.desc}</p>
+          <p className="w-full max-w-[800px] text-2xl sm:text-3xl md:text-4xl font-bold">{article.title}</p>
+          <p className="w-full max-w-[600px] font-normal text-justify">{article.desc}</p>
           <div className="w-full max-w-[600px] flex flex-col items-start gap-2">
             {article.imageArt && (
               <Image

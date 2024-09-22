@@ -6,6 +6,7 @@ import { TbClockHour3 } from "react-icons/tb";
 import Image from "next/image";
 import Link from "next/link";
 import HealthyRecipesItem from "./HealthyRecipesItem";
+import MainHealthyRecipes from "./skelettons/MainHealthyRecipes";
 
 const HealthyRecipes = () => {
   const slug = "healthy-recipes";
@@ -19,7 +20,7 @@ const HealthyRecipes = () => {
         Healthy Recipes <ArrowRight className="text-green-700" size={26} />
       </Link>
 
-      <Suspense key={slug + limit} fallback={<span>Loading...</span>}>
+      <Suspense key={slug + limit} fallback={<MainHealthyRecipes />}>
         <HealthyRecipesItem slug={slug} lim={limit} />
       </Suspense>
     </div>

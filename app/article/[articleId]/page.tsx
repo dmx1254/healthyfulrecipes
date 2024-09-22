@@ -1,5 +1,6 @@
 import ArticlePage from "@/components/ArticlePage";
 import ArticleSinglePage from "@/components/ArticleSinglePage";
+import ArticleDetailSkeleton from "@/components/skelettons/ArticleDetailSkeleton";
 import { Params } from "@/lib/type";
 import React, { Suspense } from "react";
 
@@ -12,7 +13,7 @@ const SingleArticlePage = async ({ params }: { params: Params }) => {
   // console.log(slugId);
   return (
     <div className="flex flex-col items-center justify-center p-4 max-w-7xl mx-auto">
-      <Suspense key={slug + slugId} fallback={<span>Loading...</span>}>
+      <Suspense key={slug + slugId} fallback={<ArticleDetailSkeleton />}>
         <ArticleSinglePage slug={slug} slugId={slugId} />
       </Suspense>
     </div>

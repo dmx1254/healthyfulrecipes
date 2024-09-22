@@ -1,16 +1,19 @@
 import Image from "next/image";
 import React from "react";
-// import { FaStar } from "react-icons/fa";
-// import { Separator } from "./ui/separator";
-// import { TbClockHour3 } from "react-icons/tb";
+
 import { getLastThreePostByUsingCat } from "@/lib/api/posts";
 import { PostBlogResponse } from "@/lib/type";
 import Link from "next/link";
-// import { timeAgo } from "@/lib/utils";
 
-const MealPlansItem = async ({ slug, lim }: { slug: string; lim: number }) => {
+const HealthyLifeStyleItem = async ({
+  slug,
+  lim,
+}: {
+  slug: string;
+  lim: number;
+}) => {
   const posts: PostBlogResponse[] = await getLastThreePostByUsingCat(slug, lim);
-//   console.log(posts);
+  //   console.log(posts);
   return (
     <div className="flex max-sm:flex-col items-start gap-6">
       {posts?.map((post) => (
@@ -63,4 +66,4 @@ const MealPlansItem = async ({ slug, lim }: { slug: string; lim: number }) => {
   );
 };
 
-export default MealPlansItem;
+export default HealthyLifeStyleItem;

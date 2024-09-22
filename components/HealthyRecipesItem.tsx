@@ -34,13 +34,14 @@ const HealthyRecipesItem = async ({
           key={post._id}
           className={clsx("w-full flex items-start gap-4", {
             "border-b pb-8 border-gray-300": index < postLength,
+            "pt-2": index > 0,
           })}
         >
           <Image
             src={post.postImage}
             alt={post.title}
-            width={230}
-            height={230}
+            width={200}
+            height={200}
             className="max-sm:max-w-[150px] max-sm:h-auto"
             style={{
               objectFit: "cover",

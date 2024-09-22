@@ -2,6 +2,7 @@ import React, { Suspense } from "react";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import HomeNewsItem from "./HomeNewsItem";
+import { MainNewsSkeletons } from "./skelettons/MainNewsSkeletons";
 
 const News = () => {
   return (
@@ -10,7 +11,7 @@ const News = () => {
         News <ArrowRight className="text-green-700" size={26} />
       </Link>
       <div className="w-full flex max-md:flex-col items-start gap-8 justify-between">
-        <Suspense fallback={<span>Loading...</span>}>
+        <Suspense fallback={<MainNewsSkeletons />}>
           <HomeNewsItem />
         </Suspense>
       </div>

@@ -107,6 +107,7 @@ export async function getThreeLatestNews() {
       .select("_id")
       .select("imageArt")
       .select("title")
+      .select("desc")
       .select("createdAt")
       .select("updatedAt")
       .select("articleID")
@@ -116,6 +117,95 @@ export async function getThreeLatestNews() {
   } catch (error: any) {
     console.log(error);
     // throw new Error(error);
+  }
+}
+
+export async function getThreeLatestArticles() {
+  // noStore();
+  try {
+    const latestTrheeArticles = await ArticleModel.find({
+      subCat: { $ne: "news" },
+    })
+      .sort({ createdAt: -1 })
+      .limit(3)
+      .select("_id")
+      .select("imageArt")
+      .select("title")
+      .select("desc")
+      .select("createdAt")
+      .select("updatedAt")
+      .select("articleID")
+      .select("slug");
+
+    return JSON.parse(JSON.stringify(latestTrheeArticles));
+  } catch (error: any) {
+    console.log(error);
+    // throw new Error(error);
+  }
+}
+
+export async function getNewsAfterThree() {
+  // noStore();
+  try {
+    const latestTrheeNews = await ArticleModel.find({
+      subCat: "news",
+    })
+      .sort({ createdAt: -1 })
+      .skip(3)
+      .select("_id")
+      .select("imageArt")
+      .select("title")
+      .select("desc")
+      .select("createdAt")
+      .select("updatedAt")
+      .select("articleID")
+      .select("slug");
+
+    return JSON.parse(JSON.stringify(latestTrheeNews));
+  } catch (error: any) {
+    console.log(error);
+    // throw new Error(error);
+  }
+}
+
+export async function getArticlesAfterThree() {
+  // noStore();
+  try {
+    const latestArticles = await ArticleModel.find({
+      subCat: { $ne: "news" },
+    })
+      .sort({ createdAt: -1 })
+      .skip(3)
+      .select("_id")
+      .select("imageArt")
+      .select("title")
+      .select("desc")
+      .select("createdAt")
+      .select("updatedAt")
+      .select("articleID")
+      .select("slug");
+
+    return JSON.parse(JSON.stringify(latestArticles));
+  } catch (error: any) {
+    console.log(error);
+    // throw new Error(error);
+  }
+}
+
+export async function getMealsPlansAfterThree(slug: string) {
+  try {
+    const latestTrheeMealPlans = await CategoryModel.findOne({
+      slug: slug,
+    }).populate({
+      path: "posts",
+      options: { skip: 3 },
+    });
+    const articles = latestTrheeMealPlans.posts;
+    const posts = JSON.parse(JSON.stringify(articles));
+    // console.log(posts);
+    return posts;
+  } catch (error) {
+    console.log(error);
   }
 }
 
@@ -199,16 +289,16 @@ export async function getSingleArticle(slug: string, slugId: string) {
   }
 }
 
-// export async function getPostId() {
-//   try {
-//     const mealPlansID = await PostModel.find({
-//       category: "66e5b145026646bb9e5dbf62",
-//     }).select("_id");
-//     return JSON.parse(JSON.stringify(mealPlansID));
-//   } catch (error) {
-//     console.log(error);
-//   }
-// }
+export async function getPostId() {
+  try {
+    const mealPlansID = await PostModel.find({
+      category: "66e5a083026646bb9e5dbf1f",
+    }).select("_id");
+    return JSON.parse(JSON.stringify(mealPlansID));
+  } catch (error) {
+    console.log(error);
+  }
+}
 
 export async function getLastThreePostByUsingCat(slug: string, lim: number) {
   try {
@@ -280,5 +370,33 @@ export async function addReviewToPost(review: ReviewRate) {
   } catch (error: any) {
     console.log(error);
     // throw new Error(error);
+  }
+}
+
+export async function getOneRandomPost() {
+  try {
+    const randomPost = await PostModel.aggregate([
+      {
+        $sample: { size: 1 },
+      },
+    ]);
+    return JSON.parse(JSON.stringify(randomPost));
+  } catch (error: any) {
+    console.log(error);
+    throw new Error(error);
+  }
+}
+
+export async function getFourRandomArticles() {
+  try {
+    const randomPost = await ArticleModel.aggregate([
+      {
+        $sample: { size: 5 },
+      },
+    ]);
+    return JSON.parse(JSON.stringify(randomPost));
+  } catch (error: any) {
+    console.log(error);
+    throw new Error(error);
   }
 }

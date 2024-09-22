@@ -8,9 +8,15 @@ import { PostBlogResponse } from "@/lib/type";
 import Link from "next/link";
 // import { timeAgo } from "@/lib/utils";
 
-const MealPlansItem = async ({ slug, lim }: { slug: string; lim: number }) => {
+const HealthyRecipeItem = async ({
+  slug,
+  lim,
+}: {
+  slug: string;
+  lim: number;
+}) => {
   const posts: PostBlogResponse[] = await getLastThreePostByUsingCat(slug, lim);
-//   console.log(posts);
+  //   console.log(posts);
   return (
     <div className="flex max-sm:flex-col items-start gap-6">
       {posts?.map((post) => (
@@ -33,7 +39,7 @@ const MealPlansItem = async ({ slug, lim }: { slug: string; lim: number }) => {
           />
           <div className="flex flex-col items-start gap-2">
             <p className="text-xs text-zinc-500 max-w-[300px] truncate">
-              {post.descriptions}
+            {post.descriptions}
             </p>
             <p className="text-lg sm:text-xl font-bold w-full sm:max-w-[400px]">
               {post.title}
@@ -63,4 +69,4 @@ const MealPlansItem = async ({ slug, lim }: { slug: string; lim: number }) => {
   );
 };
 
-export default MealPlansItem;
+export default HealthyRecipeItem;

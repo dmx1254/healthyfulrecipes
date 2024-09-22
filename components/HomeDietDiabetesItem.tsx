@@ -18,23 +18,23 @@ const HomeDietDiabetesItem = async () => {
         {articles?.slice(1, 5).map((art) => (
           <Link
             href={`/diabetes-diet-center/${art.slug}-${art.articleID}`}
-            key={art._id}
+            key={art?._id}
             className="flex items-start gap-2"
           >
             <Image
-              src={art.imageArt}
-              alt={art.title}
+              src={art?.imageArt}
+              alt={art?.title}
               width={150}
               height={150}
               style={{
                 objectFit: "cover",
                 objectPosition: "center",
               }}
-              aria-label={art.title}
+              aria-label={art?.title}
             />
             <div className="flex flex-col items-start gap-2">
               <p className="text-sm w-full md:max-w-[180px] whitespace-normal text-black font-bold border-b border-transparent">
-                {art.title}
+                {art?.title}
               </p>
               <p className="font-lora text-xs text-gray-500 w-full md:max-w-[180px]">
                 {/* By Deborah Murphy, M.S., RDN */}
@@ -45,12 +45,12 @@ const HomeDietDiabetesItem = async () => {
         ))}
       </div>
       <Link
-        href={`/diabetes-diet-center/${art.slug}-${art.articleID}`}
+        href={`/diabetes-diet-center/${art?.slug}-${art?.articleID}`}
         className="flex flex-col items-start gap-2 max-lg:self-center"
       >
         <Image
-          src={art.imageArt}
-          alt={art.title}
+          src={art?.imageArt}
+          alt={art?.title}
           width={750}
           height={700}
           style={{
@@ -60,7 +60,7 @@ const HomeDietDiabetesItem = async () => {
         />
         <div className="flex flex-col items-start gap-2 max-w-[750px]">
           <p className="text-xs text-zinc-500">Healthy Salad Recipes</p>
-          <p className="text-xl font-bold w-full">{art.title}</p>
+          <p className="text-xl font-bold w-full">{art?.title}</p>
           {/* <div className="flex gap-2 items-center">
               <span className="flex items-center gap-[1px] text-green-700">
                 <FaStar />

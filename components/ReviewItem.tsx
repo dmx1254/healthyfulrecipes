@@ -34,7 +34,7 @@ const ReviewItem = ({ review }: { review: ReviewResponse }) => {
         >
           <BiSolidDish size={24} />
         </span>
-        <span className="text-base/7 font-bold">HealthyFullRecipes Member</span>
+        <span className="text-base/7 font-bold">HealthyFulRecipes Member</span>
       </div>
       <div className="flex items-center gap-6">
         <div className="flex items-center gap-1">
