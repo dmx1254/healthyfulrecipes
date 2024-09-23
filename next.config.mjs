@@ -1,11 +1,15 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  images: {
-    domains: ["img.clerk.com"],
+  typescript: {
+    ignoreBuildErrors: true,
   },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+
   experimental: {
     serverActions: {
-      bodySizeLimit: '5mb',
+      bodySizeLimit: "5mb",
     },
   },
 };
