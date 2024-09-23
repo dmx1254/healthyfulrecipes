@@ -12,13 +12,13 @@ const MobileAccordion = ({ nav }: { nav: NavUrls<SubCatUrl> }) => {
     <Accordion type="single" collapsible className="w-full">
       <AccordionItem value="item-1" className="border-none">
         <AccordionTrigger className="text-base" showIcon={false}>{nav.title}</AccordionTrigger>
-        <div className="flex flex-col items-start gap-2">
+        {/* <div className="flex flex-col items-start gap-2">
           {nav.subcategory.map((subcat) => (
             <AccordionContent key={subcat.subCatId}>
               {subcat.name}
             </AccordionContent>
           ))}
-        </div>
+        </div> */}
       </AccordionItem>
     </Accordion>
   );

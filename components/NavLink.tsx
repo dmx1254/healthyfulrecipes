@@ -33,8 +33,8 @@ const NavLink = ({ screenHeight }: { screenHeight: number }) => {
         <div
           key={id}
           className="relative flex flex-col "
-          onMouseEnter={() => handleMouseRecupTitle(id)}
-          onMouseLeave={handleResetNavAndItem}
+          // onMouseEnter={() => handleMouseRecupTitle(id)}
+          // onMouseLeave={handleResetNavAndItem}
         >
           <Link
             className="font-[500] text-sm uppercase mt-2"
@@ -42,15 +42,15 @@ const NavLink = ({ screenHeight }: { screenHeight: number }) => {
           >
             {title}
           </Link>
-          {id === item ? (
+          {/* {id === item ? (
             <div
               className="flex flex-col z-10 items-start gap-6 pt-6 px-4 pb-4 mx-4 bg-white absolute min-w-[220px] top-[100%] left-[-40%] rounded"
               style={{
                 boxShadow:
                   "rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px",
               }}
-              onMouseEnter={() => handleMouseRecupTitle(id)}
-              onMouseLeave={handleResetNavAndItem}
+              // onMouseEnter={() => handleMouseRecupTitle(id)}
+              // onMouseLeave={handleResetNavAndItem}
             >
               {subcategories?.map(({ name, subCatUrl, subCatId }) => (
                 <Link
@@ -62,7 +62,7 @@ const NavLink = ({ screenHeight }: { screenHeight: number }) => {
                 </Link>
               ))}
             </div>
-          ) : null}
+          ) : null} */}
         </div>
       ))}
     </div>
