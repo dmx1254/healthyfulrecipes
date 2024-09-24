@@ -163,3 +163,9 @@ export type ReviewResponse = {
   createdAt: Date;
   updatedAt: Date;
 };
+
+export interface NewsLetter {
+  fullName?: string;
+  email: string;
+  plans: string[];
+}

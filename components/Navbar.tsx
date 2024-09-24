@@ -137,7 +137,7 @@ const Navbar = () => {
                   )}
 
                   <Separator orientation="vertical" />
-                  <Link href="/newsletters" className="capitalize text-xs">
+                  <Link href="#newsletter" className="capitalize text-xs">
                     newsletters
                   </Link>
                   <Separator orientation="vertical" />
@@ -222,7 +222,7 @@ const Navbar = () => {
                       }}
                       className="rounded-full"
                     />
-                    <span className="flex text-xs items-center gap-1">
+                    <span className="flex text-xs items-center gap-1 max-sm:hidden">
                       My Account <GoTriangleDown />
                     </span>
                   </div>

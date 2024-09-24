@@ -13,6 +13,7 @@ import {
 import { FaXTwitter } from "react-icons/fa6";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import NewsLetterDialog from "./NewsLetterDialog";
 
 export default function Footer() {
   const pathname = usePathname();
@@ -20,11 +21,11 @@ export default function Footer() {
     pathname !== "/sign-in" &&
     pathname !== "/user-profile" &&
     pathname !== "/sign-up" && (
-      <footer className="w-full flex flex-col items-center justify-center mx-auto">
+      <footer className="w-full flex flex-col items-center justify-center mx-auto select-none">
         <div className="w-full bg-[#F2F2F2] py-12 px-4">
           <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-start justify-around gap-12">
             <div className="flex flex-col items-start">
-            <Image
+              <Image
                 src="/healthyfulrecipes-logo.png"
                 alt="healthyfulrecipes logo"
                 width={150}
@@ -35,12 +36,7 @@ export default function Footer() {
                 }}
                 className="w-[115] h-[50px] mb-8"
               />
-              <Button
-                variant="ghost"
-                className="border-[2px] py-3 px-8 rounded-none border-green-800 text-sm font-bold uppercase transition duration-200 ease-in-out hover:bg-green-800 hover:text-white"
-              >
-                NEWSLETTERS
-              </Button>
+              <NewsLetterDialog />
               <div className="flex flex-col items-start mt-8 gap-4">
                 <h3 className="font-semibold">Follow Us</h3>
                 <div className="flex space-x-4">
@@ -67,17 +63,20 @@ export default function Footer() {
             </div>
             <div className="flex flex-wrap justify-between gap-8 lg:gap-12 lg:mt-16">
               <div className="flex flex-col items-start gap-4 text-sm font-semibold">
-                <h3>HEALTHY RECIPES</h3>
-                <h3>MEAL PLANS</h3>
-                <h3>HEALTHY EATING</h3>
-                <h3>HEALTHY COOKING</h3>
-                <h3>HEALTHY LIFESTYLE</h3>
-                <h3>SPECIAL DIETS</h3>
-                <h3>DIABETES</h3>
-                <h3>NEWS</h3>
+                <Link href="/recipes">HEALTHY RECIPES</Link>
+                <Link href="/meal-plans">MEAL PLANS</Link>
+                <Link href="healthy-eating">HEALTHY EATING</Link>
+                <Link href="/healthy-lifestyle">HEALTHY LIFESTYLE</Link>
+                <Link href="/special-diets">SPECIAL DIETS</Link>
+                <Link href="/diabetes-diet-center">DIABETES</Link>
+                <Link href="/news">NEWS</Link>
+                <Link href="/article">ARTICLES</Link>
               </div>
               <div className="flex flex-col items-start">
-                <Link href="#" className="block mb-2 text-sm text-gray-600 ">
+                <Link
+                  href="/about-us"
+                  className="block mb-2 text-sm text-gray-600 "
+                >
                   About Us
                 </Link>
                 <Link href="#" className="block mb-2 text-sm text-gray-600 ">
@@ -133,7 +132,8 @@ export default function Footer() {
               }}
             />
             <p className="text-sm text-gray-600">
-              EatingWell is part of the Dotdash Meredith publishing family.
+              HealthyFulRecipes is your partner in creating vibrant, wholesome
+              meals that bring joy to every bite.
             </p>
           </div>
         </div>

@@ -26,6 +26,12 @@ const SinglePost = async ({
 }) => {
   const post: PostBlogResponse = await getSinglePost(slug, slugId);
   // console.log(post);
+
+  const totalStars = 5;
+  const allStarsReviews = post?.reviews?.reduce(
+    (acc, pst) => acc + pst.rating,
+    0
+  );
   return (
     <div className="font-poppins w-full max-w-7xl flex flex-col items-center justify-center mx-auto p-4 my-6 sm:my-12">
       <div className="flex flex-col items-start max-w-3xl gap-4">
@@ -35,17 +41,25 @@ const SinglePost = async ({
         <div className="w-full inline-flex items-center gap-2">
           <div className="flex font-lora">
             <div className="inline-flex gap-0">
-              <FaStar size={16} className="text-green-900" />
-              <FaStar size={16} className="text-green-900" />
-              <FaStar size={16} className="text-green-900" />
-              <FaStar size={16} className="text-green-900" />
-              <FaRegStar size={16} />
+              {[...Array(totalStars)].map((_, index) =>
+                index < Math.floor(allStarsReviews / post?.reviews.length) ? (
+                  <FaStar key={index} className="text-green-900" size={20} />
+                ) : (
+                  <FaRegStar key={index} className="text-zinc-500" size={20} />
+                )
+              )}
             </div>
-            <span className="text-sm mx-1">4.0</span>
-            <span className="text-gray-500 text-sm">(4)</span>
+            <span className="text-sm mx-1">
+              {`${Math.floor(allStarsReviews / post?.reviews.length)}.0`}
+            </span>
+            <span className="text-gray-500 text-sm">
+              ({Math.floor(allStarsReviews / post?.reviews.length)})
+            </span>
           </div>
           <Separator orientation="vertical" className="h-[16px] w-[0.5px]" />
-          <span className="text-sm uppercase font-semibold">2 reviews</span>
+          <span className="text-sm uppercase font-semibold">
+            {post?.reviews?.length} reviews
+          </span>
         </div>
         <div className="flex flex-col items-start gap-4 w-full">
           {post.descriptions.map((pt, index) => (
@@ -102,36 +116,36 @@ const SinglePost = async ({
         </div>
         <div className="w-full max-w-[600px] flex flex-col items-start p-4 bg-[#E4F1EF]">
           <div className="w-full flex items-center gap-4 pb-4 border-b border-gray-300">
-            {post.activeInfos[0].prepTime && (
+            {post.activeInfos[0]?.prepTime && (
               <div className="flex flex-col items-start gap-2">
                 <span className="font-semibold">Prep Time:</span>
                 <span className="font-normal">
-                  {post.activeInfos[0].prepTime}
+                  {post?.activeInfos[0]?.prepTime}
                 </span>
               </div>
             )}
-            {post.activeInfos[0].totalTime && (
+            {post?.activeInfos[0]?.activeTime && (
               <div className="flex flex-col items-start gap-2">
                 <span className="font-semibold">Active Time:</span>
                 <span className="font-normal">
-                  {post.activeInfos[0].totalTime}
+                  {post?.activeInfos[0]?.activeTime}
                 </span>
               </div>
             )}
-            {post.activeInfos[0].totalTime && (
+            {post?.activeInfos[0]?.totalTime && (
               <div className="flex flex-col items-start gap-2">
                 <span className="font-semibold">Total Time:</span>
                 <span className="font-normal">
-                  {post.activeInfos[0].totalTime}
+                  {post?.activeInfos[0]?.totalTime}
                 </span>
               </div>
             )}
 
-            {post.activeInfos[0].servings && (
+            {post?.activeInfos[0]?.servings && (
               <div className="flex flex-col items-start gap-2">
                 <span className="font-semibold">Total Time:</span>
                 <span className="font-normal">
-                  {post.activeInfos[0].servings}
+                  {post?.activeInfos[0]?.servings}
                 </span>
               </div>
             )}
@@ -140,7 +154,7 @@ const SinglePost = async ({
           <div className="w-full max-w-[600px] flex flex-col gap-2 items-start pt-4">
             <span className="font-semibold">Nutrition Profile:</span>
             <div className="flex flex-wrap gap-4">
-              {post.nutritions.map((nutri, ind) => (
+              {post?.nutritions.map((nutri, ind) => (
                 <span key={ind} className="font-normal">
                   {nutri}
                 </span>
@@ -149,8 +163,8 @@ const SinglePost = async ({
           </div>
         </div>
         <div className="w-full max-w-[600px] flex flex-col items-start gap-4 my-4">
-          {post.nutritionsImage &&
-            post.nutritionsImage.map((nutriImg, index) => (
+          {post?.nutritionsImage &&
+            post?.nutritionsImage.map((nutriImg, index) => (
               <Image
                 key={index}
                 src={nutriImg}
@@ -169,7 +183,7 @@ const SinglePost = async ({
 
         <div className="w-full max-w-[600px] flex flex-col items-start my-8">
           <h4 className="text-3xl lg:text-4xl font-bold mb-2">Ingredients</h4>
-          {post.ingredients.map((ingre) => (
+          {post?.ingredients.map((ingre) => (
             <p key={ingre._id} className="relative w-full text-base/6 mt-3">
               <span className="absolute h-1 w-1 rounded-full bg-green-700 top-[50%] translate-y-[-50%] left-[-1.5%]" />
               {`${ingre.qty} ${ingre.title}`}
@@ -179,7 +193,7 @@ const SinglePost = async ({
         <div className="w-full max-w-[600px] flex flex-col items-start gap-4">
           <h4 className="text-3xl lg:text-4xl font-bold mb-2">Directions</h4>
 
-          {post.steps.map((step) => (
+          {post?.steps.map((step) => (
             <div
               key={step._id}
               className="w-full max-w-[600px] flex flex-col items-start gap-2"
@@ -225,8 +239,8 @@ const SinglePost = async ({
           )}
         >
           <div className="w-full max-w-[600px] flex items-center justify-between gap-2">
-            {post.nutritionFact &&
-              post.nutritionFact.map((nutriFact) => (
+            {post?.nutritionFact &&
+              post?.nutritionFact.map((nutriFact) => (
                 <p
                   key={nutriFact._id}
                   className="w-full flex flex-col items-start my-6 text-base gap-2 font-normal"
@@ -242,7 +256,7 @@ const SinglePost = async ({
             Serving Size: ¼ cup dip & about ⅓ cup peppers
           </p> */}
 
-          {post.nutritionInformations.reduce(
+          {post?.nutritionInformations.reduce(
             (acc, item) => acc + item.percent,
             0
           ) >= 50 ? (
@@ -262,7 +276,7 @@ const SinglePost = async ({
               )}
               {post.nutritionInformations && (
                 <div className="w-full flex flex-wrap gap-2 text-base font-normal">
-                  {post.nutritionInformations.map((nutiInfo) => (
+                  {post?.nutritionInformations.map((nutiInfo) => (
                     <p key={nutiInfo._id} className="">
                       {nutiInfo.nutrition},&nbsp;
                       {nutiInfo.amount}
@@ -273,7 +287,7 @@ const SinglePost = async ({
             </div>
           )}
         </div>
-        <ReviewForm postID={post._id} />
+        <ReviewForm postID={post._id} totalReviews={post?.reviews.length} />
         <div className="w-full flex flex-col items-start gap-4 my-8">
           {post?.reviews.map((review) => (
             <ReviewItem key={review._id} review={review} />

@@ -1,6 +1,12 @@
-import mongoose from "mongoose";
+import mongoose, { Document, Schema } from "mongoose";
 
-const newslettersSchema = new mongoose.Schema(
+interface INewsletter extends Document {
+  email: string;
+  fullname: string;
+  plans: string[];
+}
+
+const newslettersSchema = new Schema(
   {
     email: {
       type: String,
@@ -8,22 +14,16 @@ const newslettersSchema = new mongoose.Schema(
       lowercase: true,
       trim: true,
     },
-    dealyrecipes:{
-      type: Boolean,
-      default: false,
+    fullname: {
+      type: String,
+      default: "",
     },
-    nourishforweight:{
-      type: Boolean,
-      default: false,
-    },
-    plantPowered:{
-      type: Boolean,
-      default: false,
-    },
-    thePrep:{
-      type: Boolean,
-      default: false,
-    }
+    plans: [
+      {
+        type: [String],
+        default: [],
+      },
+    ],
   },
   {
     timestamps: true,
@@ -31,6 +31,7 @@ const newslettersSchema = new mongoose.Schema(
 );
 
 const NewsLettersModel =
-  mongoose.models.newsletter || mongoose.model("newsletter", newslettersSchema);
+  mongoose.models.newsletter ||
+  mongoose.model<INewsletter>("newsletter", newslettersSchema);
 
 export default NewsLettersModel;

@@ -4,7 +4,14 @@ import { CategoryModel } from "../models/posts.models";
 import { unstable_noStore as noStore } from "next/cache";
 
 import { connectDB } from "../db";
-import { ArticleBlog, CatType, PostBlog, ReviewRate } from "../type";
+import {
+  ArticleBlog,
+  CatType,
+  NewsLetter,
+  PostBlog,
+  ReviewRate,
+} from "../type";
+import NewsLettersModel from "../models/newsletters.models";
 
 connectDB();
 
@@ -395,6 +402,18 @@ export async function getFourRandomArticles() {
       },
     ]);
     return JSON.parse(JSON.stringify(randomPost));
+  } catch (error: any) {
+    console.log(error);
+    throw new Error(error);
+  }
+}
+
+// Newsletter
+
+export async function subscribeNewsLetter(data: NewsLetter) {
+  try {
+    const userSubscribing = await NewsLettersModel.create(data);
+    return JSON.parse(JSON.stringify(userSubscribing));
   } catch (error: any) {
     console.log(error);
     throw new Error(error);

@@ -31,7 +31,13 @@ const formSchema = z.object({
   message: z.string().optional(),
 });
 
-const ReviewForm = ({ postID }: { postID: string }) => {
+const ReviewForm = ({
+  postID,
+  totalReviews,
+}: {
+  postID: string;
+  totalReviews: number;
+}) => {
   const { isLoaded, isSignedIn, user } = useUser();
   const [tabIndex, setTabIndex] = useState<string[]>([]);
   const [numReview, setNumReview] = useState<number>(0);
@@ -119,7 +125,7 @@ const ReviewForm = ({ postID }: { postID: string }) => {
 
   return (
     <div className="w-full max-w-[600px]  flex flex-col items-start gap-2 mt-12">
-      <p className="text-3xl font-bold mb-2">Reviews (2)</p>
+      <p className="text-3xl font-bold mb-2">Reviews ({totalReviews})</p>
       <div className="w-full bg-[#E4F1EF]">
         <div className="flex flex-col items-start bg-white rounded p-4 gap-4 m-4">
           <div className="w-full flex items-center gap-2">
