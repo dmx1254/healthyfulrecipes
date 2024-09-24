@@ -35,10 +35,10 @@ const Mobilesheet = () => {
           ))}
         </div>
         <div className="flex flex-col items-start gap-4 my-4">
-          <button className="flex items-center gap-2">
+          <Link href="/sign-in" className="flex items-center gap-2">
             <CircleUserRound size={20} className="text-gray-500" />
             <span className="text-sm">Log In</span>
-          </button>
+          </Link>
           <Link href="/newsletters" className="capitalize text-sm">
             newsletters
           </Link>
