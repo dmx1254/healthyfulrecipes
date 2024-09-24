@@ -12,7 +12,7 @@ const ArticleItem = async () => {
   const articles: ArticleResponse[] = await getThreeLatestArticles();
 //   console.log(articles);
   return (
-    <div className="flex max-sm:flex-col items-start gap-6">
+    <div className="flex max-md:flex-col items-start gap-6">
       {articles.map((article) => (
         <Link
           key={article?._id}

@@ -11,7 +11,7 @@ import BottomArticleItem from "@/components/BottomArticleItem";
 
 const ArticlePage = () => {
   return (
-    <div className="w-full max-w-6xl flex flex-col items-center mx-auto p-4">
+    <div className="w-full max-w-6xl flex flex-col items-center justify-center mx-auto p-4">
       <div className="w-full flex flex-col items-center gap-2">
         <h2 className="text-4xl font-bold">Articles</h2>
         <p className="text-center text-base/7">

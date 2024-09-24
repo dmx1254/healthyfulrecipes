@@ -220,7 +220,7 @@ const Navbar = () => {
                         objectFit: "cover",
                         objectPosition: "center",
                       }}
-                      className="rounded-full"
+                      className="rounded-full max-sm:w-[28px] max-sm:h-[28px]"
                     />
                     <span className="flex text-xs items-center gap-1 max-sm:hidden">
                       My Account <GoTriangleDown />

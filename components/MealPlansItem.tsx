@@ -12,7 +12,7 @@ const MealPlansItem = async ({ slug, lim }: { slug: string; lim: number }) => {
   const posts: PostBlogResponse[] = await getLastThreePostByUsingCat(slug, lim);
 //   console.log(posts);
   return (
-    <div className="flex max-sm:flex-col items-start gap-6">
+    <div className="flex max-md:flex-col items-start gap-6">
       {posts?.map((post) => (
         <Link
           key={post._id}

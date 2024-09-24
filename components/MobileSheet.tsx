@@ -7,6 +7,8 @@ import MobileAccordion from "./MobileAccordion";
 import { navUrls } from "@/lib/data";
 import Link from "next/link";
 
+import { SignOutButton } from "@clerk/nextjs";
+
 import {
   FaFacebookF,
   FaFlipboard,
@@ -15,8 +17,10 @@ import {
   FaYoutube,
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import { useUser } from "@clerk/nextjs";
 
 const Mobilesheet = () => {
+  const { isSignedIn } = useUser();
   return (
     <Sheet>
       <SheetTrigger>
@@ -35,10 +39,15 @@ const Mobilesheet = () => {
           ))}
         </div>
         <div className="flex flex-col items-start gap-4 my-4">
-          <Link href="/sign-in" className="flex items-center gap-2">
-            <CircleUserRound size={20} className="text-gray-500" />
-            <span className="text-sm">Log In</span>
-          </Link>
+          {isSignedIn ? (
+            <SignOutButton><span className="font-semibold select-none">Log Out</span></SignOutButton>
+          ) : (
+            <Link href="/sign-in" className="flex items-center gap-2">
+              <CircleUserRound size={20} className="text-gray-500" />
+              <span className="text-sm">Log In</span>
+            </Link>
+          )}
+
           <Link href="/newsletters" className="capitalize text-sm">
             newsletters
           </Link>

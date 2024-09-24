@@ -27,7 +27,7 @@ const BottomNewsItem = async () => {
             }}
           />
           <div className="w-full flex flex-col items-start gap-2 lg:p-2">
-            <p className="w-full text-xs text-zinc-500 truncate">{art?.desc}</p>
+            <p className="w-full max-lg:hidden text-xs text-zinc-500 truncate">{art?.desc}</p>
             <p className="w-full text-lg sm:text-xl font-bold lg:max-w-[300px] line-clamp-2">
               {art?.title}
             </p>
