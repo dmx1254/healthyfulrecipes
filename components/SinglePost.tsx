@@ -50,15 +50,19 @@ const SinglePost = async ({
               )}
             </div>
             <span className="text-sm mx-1">
-              {`${Math.floor(allStarsReviews / post?.reviews.length)}.0`}
+              {`${Math.floor(allStarsReviews / post?.reviews.length) || 0}${
+                Math.floor(allStarsReviews / post?.reviews.length) > 0
+                  ? ".0"
+                  : ""
+              }`}
             </span>
             <span className="text-gray-500 text-sm">
-              ({Math.floor(allStarsReviews / post?.reviews.length)})
+              ({Math.floor(allStarsReviews / post?.reviews.length) || 0})
             </span>
           </div>
           <Separator orientation="vertical" className="h-[16px] w-[0.5px]" />
           <span className="text-sm uppercase font-semibold">
-            {post?.reviews?.length} reviews
+            {post?.reviews?.length} review{post?.reviews?.length > 1 ? "s" : ""}
           </span>
         </div>
         <div className="flex flex-col items-start gap-4 w-full">

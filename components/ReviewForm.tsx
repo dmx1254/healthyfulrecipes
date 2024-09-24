@@ -125,7 +125,9 @@ const ReviewForm = ({
 
   return (
     <div className="w-full max-w-[600px]  flex flex-col items-start gap-2 mt-12">
-      <p className="text-3xl font-bold mb-2">Reviews ({totalReviews})</p>
+      <p className="text-3xl font-bold mb-2">
+        Reviews ({totalReviews > 0 ? totalReviews : 0})
+      </p>
       <div className="w-full bg-[#E4F1EF]">
         <div className="flex flex-col items-start bg-white rounded p-4 gap-4 m-4">
           <div className="w-full flex items-center gap-2">
