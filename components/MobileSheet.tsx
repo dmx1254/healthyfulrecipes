@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { AlignJustify, CircleUserRound } from "lucide-react";
@@ -20,9 +20,10 @@ import { FaXTwitter } from "react-icons/fa6";
 import { useUser } from "@clerk/nextjs";
 
 const Mobilesheet = () => {
+  const [open, setOpen] = useState<boolean>(false);
   const { isSignedIn } = useUser();
   return (
-    <Sheet>
+    <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger>
         <AlignJustify />
       </SheetTrigger>
@@ -31,7 +32,7 @@ const Mobilesheet = () => {
         className="flex flex-col items-start mx-auto h-full overflow-y-auto"
       >
         <div className="w-full flex flex-col items-start gap-6">
-          <MobileSearch />
+          <MobileSearch setOpen={setOpen} />
         </div>
         <div className="w-full flex flex-col items-start gap-1.5">
           {navUrls.map((nav) => (
@@ -40,7 +41,9 @@ const Mobilesheet = () => {
         </div>
         <div className="flex flex-col items-start gap-4 my-4">
           {isSignedIn ? (
-            <SignOutButton><span className="font-semibold select-none">Log Out</span></SignOutButton>
+            <SignOutButton>
+              <span className="font-semibold select-none">Log Out</span>
+            </SignOutButton>
           ) : (
             <Link href="/sign-in" className="flex items-center gap-2">
               <CircleUserRound size={20} className="text-gray-500" />

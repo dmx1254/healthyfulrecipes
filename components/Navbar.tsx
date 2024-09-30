@@ -21,7 +21,7 @@ import {
 import Image from "next/image";
 
 const Navbar = () => {
-  const { isLoaded, isSignedIn, user } = useUser();
+  const { isSignedIn } = useUser();
   const [screenHeight, setScreenHeight] = useState<number>(0);
   const [isSearchActive, setIsSearchActive] = useState<boolean>(false);
   const pathname = usePathname();
@@ -37,26 +37,10 @@ const Navbar = () => {
       window.removeEventListener("scroll", handleHeight);
     };
   });
-  const handleHideSearch = () =>{
+
+  const handleHideSearch = () => {
     setIsSearchActive(false);
-  }
-
-  // useEffect(() => {
-  //   if (screenHeight >= 30 && screenHeight <= 50) {
-  //     window.scrollTo({
-  //       top: 70,
-  //       behavior: "smooth",
-  //     });
-  //   }
-
-  //   if (screenHeight >= 50 && screenHeight <= 70) {
-  //     window.scrollTo({
-  //       top: 0,
-  //       behavior: "smooth",
-  //     });
-  //   }
-  // }, [screenHeight]);
-
+  };
   return (
     pathname !== "/sign-in" &&
     pathname !== "/sign-up" && (
@@ -92,13 +76,19 @@ const Navbar = () => {
               {isSearchActive ? (
                 ""
               ) : (
-                <button onClick={() => setIsSearchActive(true)} className="border-none outline-none">
+                <button
+                  onClick={() => setIsSearchActive(true)}
+                  className="border-none outline-none"
+                >
                   <Search size={20} className="text-gray-500" />
                 </button>
               )}
               {isSearchActive ? (
                 <>
-                  <SearchComp isSearchActive={isSearchActive} handleHideSearch={handleHideSearch} />
+                  <SearchComp
+                    isSearchActive={isSearchActive}
+                    handleHideSearch={handleHideSearch}
+                  />
                   <button onClick={() => setIsSearchActive(false)}>
                     <X size={22} className="text-gray-800" />
                   </button>
@@ -168,7 +158,7 @@ const Navbar = () => {
             </Link>
             {isSearchActive && screenHeight >= 50 ? (
               <>
-                <SearchComp isSearchActive={isSearchActive} />
+                <SearchComp isSearchActive={isSearchActive} handleHideSearch={handleHideSearch} />
                 <button onClick={() => setIsSearchActive(false)}>
                   <X size={22} className="text-gray-800 ml-2" />
                 </button>
