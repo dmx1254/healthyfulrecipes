@@ -89,7 +89,7 @@ const NewsLetterDialog = () => {
         NEWSLETTERS
       </DialogTrigger>
       <DialogContent
-        className="font-poppins w-full max-w-[410px] flex flex-col items-center p-0 m-0 overflow-y-auto"
+        className="font-poppins w-full max-w-[410px] flex flex-col items-center p-0 m-0 h-full overflow-y-auto"
         isRounded={false}
         isShowIcon={false}
       >
@@ -104,7 +104,7 @@ const NewsLetterDialog = () => {
             <X size={32} />
           </button>
         </div>
-        <div className="flex flex-col items-center gap-4 px-6 py-0">
+        <div className="flex flex-col items-center gap-3 sm:gap-4 px-6 py-0">
           <Link href="/">
             <Image
               src="/healthyfulrecipes-logo.png"
@@ -173,7 +173,7 @@ const NewsLetterDialog = () => {
             </span>
           </div>
           <button
-            className="text-center outline-none bg-green-800 text-white w-full p-4 mt-8 transition duration-200 ease-in-out hover:bg-black/90 mb-6"
+            className="text-center outline-none bg-green-800 text-white w-full p-3 sm:p-4 mt-4 sm:mt-8 transition duration-200 ease-in-out hover:bg-black/90 mb-6"
             onClick={subscribeToNewsLetter}
           >
             {isLoading ? "Is subscribing..." : "SIGN UP"}

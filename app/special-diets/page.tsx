@@ -1,4 +1,5 @@
 import React, { Suspense } from "react";
+import { Metadata } from "next";
 
 import {
   FaFacebookF,
@@ -13,6 +14,29 @@ import { NewsPlansSkeleton } from "@/components/skelettons/NewsPlansSkeleton";
 import SpecialDietItem from "@/components/SpecialDietItem";
 import BottomNewsSkeleton from "@/components/skelettons/BottomNewsSkeleton";
 import BottomSpecialDietPost from "@/components/BottomSpecialDietPost";
+
+export const metadata: Metadata = {
+  title: "Special Diets",
+  description: "We're here to help you choose foods that will help you feel your best, whether it's for a healthy heart, a gluten-free diet, weight loss goals or a low-carb diet.",
+  keywords:["special diets", "gluten-free", "keto diet", "vegetarian", " vegan diet", "low carb", "dairy-free"],
+  robots:{
+    index: true,
+    follow: true,
+    "max-snippet": -1,
+    "max-image-preview": "large",
+    nocache: true,
+    noimageindex: false,
+    googleBot:{
+      index: true,
+      follow: true,
+      noimageindex: false,
+      nocache: true,
+      "max-snippet": -1,
+      "max-image-preview": "large",
+    }
+  },
+};
+
 
 const SpecicialDiet = () => {
   const slug = "special-diets";

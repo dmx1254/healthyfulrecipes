@@ -13,6 +13,30 @@ import { NewsPlansSkeleton } from "@/components/skelettons/NewsPlansSkeleton";
 import BottomNewsSkeleton from "@/components/skelettons/BottomNewsSkeleton";
 import HealthyEatingItem from "@/components/HealthyEatingItem";
 import BottomHealthyEatingPost from "@/components/BottomHealthyEatingPost";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Healthy Eating",
+  description: "Learn to eat healthy with our expert tips and delicious inspiration to help you prepare healthy food for you and your family.",
+  keywords:["healthy eating", "balanced eating", "nutritious diet", "clean eating", "healthy food choices"],
+  robots:{
+    index: true,
+    follow: true,
+    "max-snippet": -1,
+    "max-image-preview": "large",
+    nocache: true,
+    noimageindex: false,
+    googleBot:{
+      index: true,
+      follow: true,
+      noimageindex: false,
+      nocache: true,
+      "max-snippet": -1,
+      "max-image-preview": "large",
+    }
+  },
+};
+
 
 const HealthyEating = () => {
   const slug = "healthy-eating";

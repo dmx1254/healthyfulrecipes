@@ -77,7 +77,7 @@ export default function SignupPage() {
             <Link href="/" className="text-gray-800 border-b border-black/80">
               Privacy Policy
             </Link>
-            . If you live in the US you will also opt in to EatingWell email
+            . If you live in the US you will also opt in to HealthyFulRecipes email
             communication.
           </div>
         </div>

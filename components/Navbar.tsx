@@ -37,6 +37,9 @@ const Navbar = () => {
       window.removeEventListener("scroll", handleHeight);
     };
   });
+  const handleHideSearch = () =>{
+    setIsSearchActive(false);
+  }
 
   // useEffect(() => {
   //   if (screenHeight >= 30 && screenHeight <= 50) {
@@ -89,13 +92,13 @@ const Navbar = () => {
               {isSearchActive ? (
                 ""
               ) : (
-                <button onClick={() => setIsSearchActive(true)}>
+                <button onClick={() => setIsSearchActive(true)} className="border-none outline-none">
                   <Search size={20} className="text-gray-500" />
                 </button>
               )}
               {isSearchActive ? (
                 <>
-                  <SearchComp isSearchActive={isSearchActive} />
+                  <SearchComp isSearchActive={isSearchActive} handleHideSearch={handleHideSearch} />
                   <button onClick={() => setIsSearchActive(false)}>
                     <X size={22} className="text-gray-800" />
                   </button>
@@ -140,10 +143,10 @@ const Navbar = () => {
                   <Link href="#newsletter" className="capitalize text-xs">
                     newsletters
                   </Link>
-                  <Separator orientation="vertical" />
+                  {/* <Separator orientation="vertical" />
                   <Link href="/sweepstakes" className="capitalize text-xs">
                     sweepstakes
-                  </Link>
+                  </Link> */}
                 </div>
               )}
             </div>

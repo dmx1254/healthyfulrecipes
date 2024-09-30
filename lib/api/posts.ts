@@ -103,6 +103,19 @@ export async function getSingleNews(slug: string, slugId: string) {
   }
 }
 
+export async function getSingleHealthyEating(slug: string, slugId: string) {
+  // noStore();
+  try {
+    const article = await ArticleModel.findOne({ slug });
+    const singleArticle = JSON.parse(JSON.stringify(article));
+    // console.log(slug);
+    return singleArticle;
+  } catch (error: any) {
+    console.log(error);
+    // throw new Error(error);
+  }
+}
+
 export async function getThreeLatestNews() {
   // noStore();
   try {
@@ -201,16 +214,12 @@ export async function getArticlesAfterThree() {
 
 export async function getMealsPlansAfterThree(slug: string) {
   try {
-    const latestTrheeMealPlans = await CategoryModel.findOne({
-      slug: slug,
-    }).populate({
-      path: "posts",
-      options: { skip: 3 },
-    });
-    const articles = latestTrheeMealPlans.posts;
-    const posts = JSON.parse(JSON.stringify(articles));
+    const latestTrheeMealPlans = await ArticleModel.find({
+      subCat: slug,
+    }).skip(3);
+    const articles = JSON.parse(JSON.stringify(latestTrheeMealPlans));
     // console.log(posts);
-    return posts;
+    return articles;
   } catch (error) {
     console.log(error);
   }
@@ -319,6 +328,39 @@ export async function getLastThreePostByUsingCat(slug: string, lim: number) {
     const posts = JSON.parse(JSON.stringify(articles));
     // console.log(posts);
     return posts;
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+export async function getPostBySearch(searchTerm: string) {
+  // console.log("searchTerm: " + searchTerm);
+  try {
+    const myPosts = await PostModel.aggregate([
+      {
+        $match: {
+          title: { $regex: searchTerm, $options: "i" },
+        },
+      },
+    ]);
+
+    const posts = JSON.parse(JSON.stringify(myPosts));
+    return posts;
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+export async function getLastThreeArticlesByUsingCat(
+  slug: string,
+  lim: number
+) {
+  try {
+    const threeLatestArticles = await ArticleModel.find({
+      subCat: slug,
+    }).limit(3);
+    const articles = JSON.parse(JSON.stringify(threeLatestArticles));
+    return articles;
   } catch (error) {
     console.log(error);
   }

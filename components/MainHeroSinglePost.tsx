@@ -21,9 +21,9 @@ const MainHeroSinglePost = async () => {
         aria-label={post[0]?.title}
       />
       <div className="flex flex-col items-start gap-2 max-md:p-4">
-        <p className="text-xs text-zinc-500 uppercase -mb-1 whitespace-normal max-w-[700px]">
+        {/* <p className="text-xs text-zinc-500 uppercase -mb-1 whitespace-normal max-w-[700px]">
           Healthy butternut recipes
-        </p>
+        </p> */}
         <p className="text-2xl font-bold whitespace-normal max-w-[700px]">
           {post[0]?.title}
         </p>

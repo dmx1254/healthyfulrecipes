@@ -67,13 +67,9 @@ export default function Footer() {
                 <Link href="/meal-plans">MEAL PLANS</Link>
                 <Link href="healthy-eating">HEALTHY EATING</Link>
                 <Link href="/healthy-lifestyle">HEALTHY LIFESTYLE</Link>
-                <Link href="/special-diets">SPECIAL DIETS</Link>
-                <Link href="/diabetes-diet-center">DIABETES</Link>
-                <Link href="/news">NEWS</Link>
-                <Link href="/article">ARTICLES</Link>
               </div>
-              <div className="flex flex-col items-start">
-                <Link
+              <div className="flex flex-col items-start gap-4 text-sm font-semibold">
+                {/* <Link
                   href="/about-us"
                   className="block mb-2 text-sm text-gray-600 "
                 >
@@ -85,7 +81,7 @@ export default function Footer() {
                 <Link href="#" className="block mb-2 text-sm text-gray-600 ">
                   Product Reviews
                 </Link>
-                <Link href="#" className="block mb-2 text-sm text-gray-600 ">
+                <Link href="/terms-of-service" className="block mb-2 text-sm text-gray-600 ">
                   Terms of Service
                 </Link>
                 <Link href="#" className="block mb-2 text-sm text-gray-600 ">
@@ -100,13 +96,38 @@ export default function Footer() {
                     objectFit: "cover",
                     objectPosition: "center",
                   }}
-                />
+                /> */}
+                <Link href="/special-diets">SPECIAL DIETS</Link>
+                <Link href="/diabetes-diet-center">DIABETES</Link>
+                <Link href="/news">NEWS</Link>
+                <Link href="/article">ARTICLES</Link>
               </div>
               <div className="flex flex-col items-start">
-                <Link href="#" className="block mb-2 text-sm text-gray-600 ">
+                <Link
+                  href="/about-us"
+                  className="block mb-2 text-sm text-gray-600 "
+                >
+                  About Us
+                </Link>
+                <Link
+                  href="/terms-of-service"
+                  className="block mb-2 text-sm text-gray-600 "
+                >
+                  Terms of Service
+                </Link>
+                <Link
+                  href="privacy-policy"
+                  className="block mb-2 text-sm text-gray-600 "
+                >
+                  Privacy Policy
+                </Link>
+                {/* <Link href="#" className="block mb-2 text-sm text-gray-600 ">
                   Diversity & Inclusion
                 </Link>
-                <Link href="#" className="block mb-2 text-sm text-gray-600 ">
+                <Link
+                  href="privacy-policy"
+                  className="block mb-2 text-sm text-gray-600 "
+                >
                   Privacy Policy
                 </Link>
                 <Link href="#" className="block mb-2 text-sm text-gray-600 ">
@@ -114,7 +135,7 @@ export default function Footer() {
                 </Link>
                 <Link href="#" className="block mb-2 text-sm text-gray-600 ">
                   Careers
-                </Link>
+                </Link> */}
               </div>
             </div>
           </div>
@@ -122,7 +143,7 @@ export default function Footer() {
         <div className="w-full bg-white py-4 px-4">
           <div className="flex max-sm:flex-col items-center gap-1 max-w-6xl  max-lg:text-center lg:ml-60">
             <Image
-              src="/assets/trust/seal.svg"
+              src="/healthyfulrecipes-logo.png"
               alt="trussite"
               width={80}
               height={80}

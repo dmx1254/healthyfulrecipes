@@ -111,3 +111,11 @@ export const numDateConverted = (date: Date): string => {
   });
   return dateConvert;
 };
+
+const colors = ["#0284c7", "#2563eb", "#0891b2", "#d97706", "#ea580c"];
+const color = Math.floor(Math.random() * colors.length);
+export const choosedColor = colors[color];
+
+export type SearchParamsType = {
+  [key: string]: string | string[] | undefined;
+};

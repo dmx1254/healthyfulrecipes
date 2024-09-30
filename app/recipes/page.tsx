@@ -1,9 +1,5 @@
 import React, { Suspense } from "react";
-
-import { Separator } from "@/components/ui/separator";
-import Image from "next/image";
-import { FaStar } from "react-icons/fa";
-import { TbClockHour3 } from "react-icons/tb";
+import { Metadata } from "next";
 
 import {
   FaFacebookF,
@@ -19,6 +15,12 @@ import HealthyRecipeItem from "@/components/HealthyRecipeItem";
 import { NewsPlansSkeleton } from "@/components/skelettons/NewsPlansSkeleton";
 import BottomHealthyRecipePost from "@/components/BottomHealthyRecipePost";
 
+export const metadata: Metadata = {
+  title: "Healthy Recipes",
+  description: "Healthy, delicious recipes, including quick dinner, easy lunch ideas, snacks, breakfast, soup and more, from the food and nutrition experts."
+};
+
+
 const RecipePage = () => {
   const slug = "healthy-recipes";
   const lim = 3;
@@ -29,7 +31,7 @@ const RecipePage = () => {
         <p className="w-full max-w-5xl text-center text-base/7">
           Healthy, delicious recipes, including quick dinner, easy lunch ideas,
           snacks, breakfast, soup and more, from the food and nutrition experts
-          at EatingWell.
+          at HealthyFulRecipes.
         </p>
         {/* <div className="mt-4 text-center text-sm/10">
         <span className="uppercase text-gray-800 font-semibold mx-6">

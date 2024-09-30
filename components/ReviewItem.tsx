@@ -8,7 +8,13 @@ import { FaStar, FaRegStar } from "react-icons/fa";
 import { AiFillLike } from "react-icons/ai";
 import clsx from "clsx";
 
-const ReviewItem = ({ review }: { review: ReviewResponse }) => {
+const ReviewItem = ({
+  review,
+  choosedColor,
+}: {
+  review: ReviewResponse;
+  choosedColor: string;
+}) => {
   const [helpNum, setHelpNum] = useState<number>(0);
   //   console.log(review);
   const totalStars = 5;
@@ -16,10 +22,6 @@ const ReviewItem = ({ review }: { review: ReviewResponse }) => {
   const handleItem = () => {
     setHelpNum((prevHelpNum) => (prevHelpNum > 0 ? 0 : 1));
   };
-
-  const colors = ["#0284c7", "#2563eb", "#0891b2", "#d97706", "#ea580c"];
-  const color = Math.floor(Math.random() * colors.length);
-  const choosedColor = colors[color];
 
   return (
     <div className="w-full max-w-[600px] font-poppins flex flex-col items-start gap-3 pb-4 border-b border-gray-300">

@@ -16,6 +16,8 @@ import NutriInfoAccordion from "./NutriInfoAccordion";
 import clsx from "clsx";
 import ReviewForm from "./ReviewForm";
 import ReviewItem from "./ReviewItem";
+import { choosedColor } from "@/lib/utils";
+import NotFound from "@/app/not-found";
 
 const SinglePost = async ({
   slug,
@@ -27,11 +29,16 @@ const SinglePost = async ({
   const post: PostBlogResponse = await getSinglePost(slug, slugId);
   // console.log(post);
 
+  if (!post) return <NotFound />;
+
   const totalStars = 5;
   const allStarsReviews = post?.reviews?.reduce(
     (acc, pst) => acc + pst.rating,
     0
   );
+
+  const color = choosedColor;
+
   return (
     <div className="font-poppins w-full max-w-7xl flex flex-col items-center justify-center mx-auto p-4 my-6 sm:my-12">
       <div className="flex flex-col items-start max-w-3xl gap-4">
@@ -128,6 +135,14 @@ const SinglePost = async ({
                 </span>
               </div>
             )}
+            {post?.activeInfos[0]?.yield && (
+              <div className="flex flex-col items-start gap-2">
+                <span className="font-semibold">Yield:</span>
+                <span className="font-normal">
+                  {post?.activeInfos[0]?.yield}
+                </span>
+              </div>
+            )}
             {post?.activeInfos[0]?.activeTime && (
               <div className="flex flex-col items-start gap-2">
                 <span className="font-semibold">Active Time:</span>
@@ -147,7 +162,7 @@ const SinglePost = async ({
 
             {post?.activeInfos[0]?.servings && (
               <div className="flex flex-col items-start gap-2">
-                <span className="font-semibold">Total Time:</span>
+                <span className="font-semibold">Servings:</span>
                 <span className="font-normal">
                   {post?.activeInfos[0]?.servings}
                 </span>
@@ -294,7 +309,7 @@ const SinglePost = async ({
         <ReviewForm postID={post._id} totalReviews={post?.reviews.length} />
         <div className="w-full flex flex-col items-start gap-4 my-8">
           {post?.reviews.map((review) => (
-            <ReviewItem key={review._id} review={review} />
+            <ReviewItem key={review._id} review={review} choosedColor={color} />
           ))}
         </div>
       </div>

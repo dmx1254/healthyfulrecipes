@@ -72,7 +72,7 @@ const ArticlePage = ({ article }: { article: ArticleResponse }) => {
   };
 
   return (
-    <div className="font-poppins w-full min-h-screen max-w-2xl lg:max-w-6xl flex flex-col items-center justify-center mx-auto gap-2 my-4 lg:my-8">
+    <div className="font-lora antialiased w-full min-h-screen max-w-2xl lg:max-w-6xl flex flex-col items-center justify-center mx-auto gap-2 my-4 lg:my-8">
       <div className="flex flex-col items-start mx-auto">
         <div className="w-full flex flex-col items-start gap-4">
           <p className="w-full max-w-[800px] text-2xl sm:text-3xl md:text-4xl font-bold">{article.title}</p>
@@ -146,7 +146,7 @@ const ArticlePage = ({ article }: { article: ArticleResponse }) => {
         </div>
 
         <div className="w-full flex max-lg:flex-col items-center lg:items-start gap-8 -mt-2">
-          <div className="lg:sticky lg:top-36 flex flex-col items-start p-4 w-full lg:max-w-[250px] bg-[#F2f2f2]">
+          <div className="lg:sticky lg:top-36 flex flex-col items-start p-4 w-full lg:max-w-[250px] bg-[#F2f2f2] mt-6">
             <h3 className="text-xl font-bold my-2">In this Article</h3>
             <div className="flex flex-col items-start gap-4 pl-4 lg:border-l border-zinc-500">
               {article?.articlePosts.map((article) => (
@@ -221,9 +221,9 @@ const ArticlePage = ({ article }: { article: ArticleResponse }) => {
                         {subArt.description && (
                           <div className="relative w-full text-justify ml-0 sm:ml-4">
                             {subArt.description}
-                            {index === 0 && (
+                            {/* {index === 0 && (
                               <span className="max-lg:hidden absolute h-[5px] w-[5px] rounded-full bg-green-500 top-[4%] left-[-1.5%]" />
-                            )}
+                            )} */}
                           </div>
                         )}
                       </div>

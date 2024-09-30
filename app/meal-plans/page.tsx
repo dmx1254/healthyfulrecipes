@@ -1,4 +1,5 @@
 import React, { Suspense } from "react";
+import { Metadata } from "next";
 
 import { Separator } from "@/components/ui/separator";
 import Image from "next/image";
@@ -14,6 +15,28 @@ import MealPlansItem from "@/components/MealPlansItem";
 import BottomNewsSkeleton from "@/components/skelettons/BottomNewsSkeleton";
 import BottomMealsPlansPost from "@/components/BottomMealsPlansPost";
 // import { getPostId } from "@/lib/api/posts";
+
+export const metadata: Metadata = {
+  title: "Meal Plans",
+  description: "Our delicious meal plans are designed by registered dietitians and food experts to help you lose weight, eat more fiber, go vegan and more. Browse dozens of meal plans to find one that's right for you.",
+  keywords:["meal plans", "weekly meal plan", "healthy meal prep", "diet plan", "meal planning",],
+  robots:{
+    index: true,
+    follow: true,
+    "max-snippet": -1,
+    "max-image-preview": "large",
+    nocache: true,
+    noimageindex: false,
+    googleBot:{
+      index: true,
+      follow: true,
+      noimageindex: false,
+      nocache: true,
+      "max-snippet": -1,
+      "max-image-preview": "large",
+    }
+  },
+};
 
 const MealPlans = () => {
   const slug = "meal-plans";
@@ -79,7 +102,6 @@ const MealPlans = () => {
         <BottomMealsPlansPost slug={slug} />
       </Suspense>
     </div>
-    
   );
 };
 

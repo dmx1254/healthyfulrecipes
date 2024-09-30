@@ -1,23 +1,23 @@
-import React from 'react';
-import { Skeleton } from '../ui/skeleton';
+import React from "react";
+import { Skeleton } from "../ui/skeleton";
 
 const ArticleDetailSkeleton = () => {
   return (
     <div className="font-poppins w-full max-w-7xl flex flex-col items-center justify-center mx-auto p-4 my-6 sm:my-12">
       <div className="flex flex-col items-start max-w-3xl gap-4">
         <div className="w-full">
-          <Skeleton className="h-10 w-3/4" />
+          <Skeleton className="h-10 w-[300px] lg:w-[600px]" />
         </div>
         <div className="w-full">
-          <Skeleton className="h-4 w-3/4" />
+          <Skeleton className="h-10 w-[300px] lg:w-[600px]" />
         </div>
 
         <div className="w-full inline-flex items-center gap-2">
-          <Skeleton className="h-5 w-16" />
-          <Skeleton className="h-5 w-5" />
-          <Skeleton className="h-5 w-5" />
-          <Skeleton className="h-5 w-5" />
-          <Skeleton className="h-5 w-5" />
+          <Skeleton className="h-5 w-16 lg:w-80" />
+          <Skeleton className="h-5 w-5 lg:w-70" />
+          <Skeleton className="h-5 w-5 lg:w-70" />
+          <Skeleton className="h-5 w-5 lg:w-70" />
+          <Skeleton className="h-5 w-5 lg:w-70" />
         </div>
 
         <div className="flex flex-col items-start gap-4 w-full">
@@ -61,6 +61,6 @@ const ArticleDetailSkeleton = () => {
       </div>
     </div>
   );
-}
+};
 
 export default ArticleDetailSkeleton;
