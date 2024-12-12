@@ -22,7 +22,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  applicationName: "HealthyFulRecipes",
+  applicationName: "healthyfulrecipe",
   keywords: [
     "healthy recipes",
     "meal plans",
@@ -80,12 +80,11 @@ export const metadata: Metadata = {
   description:
     "Welcome to HealthyFul recipes , your trusted source for delicious, healthy recipes that bring joy to your table and wellness to your life. For over five years, we’ve been dedicated to transforming everyday ingredients into meals that not only satisfy your taste buds but also support your health. Whether you’re just starting your journey towards healthier eating or you’re looking to expand your culinary skills, our carefully curated recipes make it easy and enjoyable to cook nourishing, flavorful dishes.",
   icons: {
-    icon: "/healthyfulrecipes-logo.png",
-    shortcut: "/healthyfulrecipes-logo.png",
-    apple: "/healthyfulrecipes-logo.png",
-    
+    icon: "/healthyfulrecipe.png",
+    shortcut: "/healthyfulrecipe.png",
+    apple: "/healthyfulrecipe.png",
   },
-  metadataBase: new URL("https://healthyfulrecipes.vercel.app"),
+  metadataBase: new URL("https://www.healthyfulrecipe.com"),
   alternates: {
     canonical: "/",
   },
@@ -95,26 +94,26 @@ export const metadata: Metadata = {
       "Welcome to HealthyFul recipes , your trusted source for delicious, healthy recipes that bring joy to your table and wellness to your life. For over five years, we’ve been dedicated to transforming everyday ingredients into meals that not only satisfy your taste buds but also support your health. Whether you’re just starting your journey towards healthier eating or you’re looking to expand your culinary skills, our carefully curated recipes make it easy and enjoyable to cook nourishing, flavorful dishes.",
     images: [
       {
-        url: "https://healthyfulrecipes.vercel.app/creamy-pasta.png",
+        url: "https://www.healthyfulrecipe.com/creamy-pasta.png",
         width: 600,
         height: 600,
         alt: "Creamy Chicken Pasta with Brussels Sprouts & Artichokes",
       },
       {
-        url: "https://healthyfulrecipes.vercel.app/garlic-lim.png",
+        url: "https://www.healthyfulrecipe.com/garlic-lim.png",
         width: 600,
         height: 460,
         alt: "Garlic-Lime Pork with Farro & Spinach",
       },
       {
-        url: "https://healthyfulrecipes.vercel.app/healthyfulrecipes-logo.png",
+        url: "https://www.healthyfulrecipe.com/healthyfulrecipe-logo.png",
         width: 400,
         height: 400,
-        alt: "healthyfulrecipes logo",
+        alt: "healthyfulrecipe logo",
       },
     ],
-    url: "https://healthyfulrecipes.vercel.app",
-    siteName: "healthyfulrecipes",
+    url: "https://www.healthyfulrecipe.com",
+    siteName: "healthyfulrecipe",
 
     locale: "en-US",
     type: "website",
@@ -133,7 +132,7 @@ export const metadata: Metadata = {
     // siteId: '@votre_site',  Facultatif, utilisé pour vos propres partages
     creator: "Sophie miller", // Facultatif, utilisé pour vos propres partages
     images: {
-      url: "https://healthyfulrecipes.vercel.app/healthyfulrecipes-logo.png", // URL de l'image à afficher dans la carte
+      url: "https://www.healthyfulrecipe.com/healthyfulrecipe-logo.png", // URL de l'image à afficher dans la carte
       alt: "HealthyFul Recipes: Delicious Meals for a Healthier You", // Texte alternatif pour l'image
     },
   },

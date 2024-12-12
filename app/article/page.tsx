@@ -8,6 +8,29 @@ import { MainNewsSkeletons } from "@/components/skelettons/MainNewsSkeletons";
 import BottomNewsSkeleton from "@/components/skelettons/BottomNewsSkeleton";
 import ArticleItem from "@/components/ArticleItem";
 import BottomArticleItem from "@/components/BottomArticleItem";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Articles",
+  description: "healthyfulrecipe covers what's happening in the world of food & nutrition articles. You'll find our expert take on the latest health studies, food recalls, new grocery items and products we're loving right now, people doing good things in the world of food, and so much more.",
+  keywords:["health articles", "nutrition articles", "healthy living tips", "wellness insights", "diet tips"],
+  robots:{
+    index: true,
+    follow: true,
+    "max-snippet": -1,
+    "max-image-preview": "large",
+    nocache: true,
+    noimageindex: false,
+    googleBot:{
+      index: true,
+      follow: true,
+      noimageindex: false,
+      nocache: true,
+      "max-snippet": -1,
+      "max-image-preview": "large",
+    }
+  },
+};
 
 const ArticlePage = () => {
   return (
@@ -15,8 +38,8 @@ const ArticlePage = () => {
       <div className="w-full flex flex-col items-center gap-2">
         <h2 className="text-4xl font-bold">Articles</h2>
         <p className="text-center text-base/7">
-          HealthyFulRecipes covers what's happening in the world of food &
-          nutrition news. You'll find our expert take on the latest health
+          healthyfulrecipe covers what's happening in the world of food &
+          nutrition articles. You'll find our expert take on the latest health
           studies, food recalls, new grocery items and products we're loving
           right now, people doing good things in the world of food, and so much
           more. Our science-based journalism will help you make better-informed

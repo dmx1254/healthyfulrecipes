@@ -26,8 +26,8 @@ export default function Footer() {
           <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-start justify-around gap-12">
             <div className="flex flex-col items-start">
               <Image
-                src="/healthyfulrecipes-logo.png"
-                alt="healthyfulrecipes logo"
+                src="/healthyfulrecipe-logo.png"
+                alt="healthyfulrecipe logo"
                 width={150}
                 height={150}
                 style={{
@@ -143,7 +143,7 @@ export default function Footer() {
         <div className="w-full bg-white py-4 px-4">
           <div className="flex max-sm:flex-col items-center gap-1 max-w-6xl  max-lg:text-center lg:ml-60">
             <Image
-              src="/healthyfulrecipes-logo.png"
+              src="/healthyfulrecipe-logo.png"
               alt="trussite"
               width={80}
               height={80}
@@ -153,7 +153,7 @@ export default function Footer() {
               }}
             />
             <p className="text-sm text-gray-600">
-              HealthyFulRecipes is your partner in creating vibrant, wholesome
+              healthyfulrecipe is your partner in creating vibrant, wholesome
               meals that bring joy to every bite.
             </p>
           </div>

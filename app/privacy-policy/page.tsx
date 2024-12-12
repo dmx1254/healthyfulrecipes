@@ -13,10 +13,10 @@ const PrivacyPolicy = () => {
           </h2>
           <p className="text-xl md:text-2xl">Effective Date: 25/09/2024</p>
           <p className="w-full text-base md:text-lg text-justify">
-            At HealthyfulRecipes, accessible from{" "}
+            At healthyfulrecipe, accessible from{" "}
             <strong>
               <a
-                href="https://healthyfulrecipes.vercel.app"
+                href="https://www.healthyfulrecipe.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="underline"
@@ -27,7 +27,7 @@ const PrivacyPolicy = () => {
             , we are committed to protecting your privacy and ensuring the
             security of your personal information. This Privacy Policy document
             outlines the types of information that is collected and recorded by
-            HealthyfulRecipes and how we use it.
+            healthyfulrecipe and how we use it.
           </p>
         </div>
         <div className="flex flex-col items-start gap-4 mt-8 md:mt-12">
@@ -39,10 +39,10 @@ const PrivacyPolicy = () => {
             any other information you provide voluntarily when you subscribe to
             our newsletter, leave comments, or contact us directly at{" "}
             <a
-              href="mailto:contact@healthyfulrecipes.com"
+              href="mailto:contact@healthyfulrecipe.com"
               className="text-green-800 font-bold"
             >
-              contact@healthyfulrecipes.com
+              contact@healthyfulrecipe.com
             </a>{" "}
             Non-Personal Information: We collect data such as your IP address,
             browser type, referring/exit pages, and timestamps when you access
@@ -79,7 +79,7 @@ const PrivacyPolicy = () => {
         <div className="flex flex-col items-start gap-4 mt-8 md:mt-12">
           <h3 className="text-2xl md:text-3xl font-bold">3. Cookies</h3>
           <p className="w-full text-base md:text-lg text-justify">
-            HealthyfulRecipes uses cookies to store information about visitors'
+            healthyfulrecipe uses cookies to store information about visitors'
             preferences and to optimize your user experience based on your
             browser type and other information. You have the option to disable
             cookies through your browser settings, but doing so may limit some
@@ -110,10 +110,10 @@ const PrivacyPolicy = () => {
             these emails at any time by clicking the "unsubscribe" link at the
             bottom of our emails or by contacting us at{" "}
             <a
-              href="mailto:contact@healthyfulrecipes.com"
+              href="mailto:contact@healthyfulrecipe.com"
               className="text-green-800 font-bold"
             >
-              contact@healthyfulrecipes.com
+              contact@healthyfulrecipe.com
             </a>{" "}
           </p>
         </div>
@@ -147,10 +147,10 @@ const PrivacyPolicy = () => {
             information that we hold. If you would like to make any changes or
             request the deletion of your data, please contact us at{" "}
             <a
-              href="mailto:contact@healthyfulrecipes.com"
+              href="mailto:contact@healthyfulrecipe.com"
               className="text-green-800 font-bold"
             >
-              contact@healthyfulrecipes.com
+              contact@healthyfulrecipe.com
             </a>{" "}
           </p>
         </div>
@@ -173,14 +173,14 @@ const PrivacyPolicy = () => {
             If you have any questions about these Terms of Service, please
             contact us at:
             <br />
-            <p>HealthyfulRecipes</p>
+            <p>healthyfulrecipe</p>
             <p>
               Email:{" "}
               <a
-                href="mailto:contact@healthyfulrecipes.com"
+                href="mailto:contact@healthyfulrecipe.com"
                 className="text-green-800 font-bold"
               >
-                contact@healthyfulrecipes.com
+                contact@healthyfulrecipe.com
               </a>
             </p>
           </div>

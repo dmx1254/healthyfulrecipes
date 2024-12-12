@@ -22,7 +22,24 @@ import BottomHealthyLifestylePost from "@/components/BottomHealthyLifestylePost"
 
 export const metadata: Metadata = {
   title: "Healthy Lifestyle",
-  description: "Learn how to not only eat healthy, but live a well-rounded, healthy / lifestyle with our expert tips and inspirational stories."
+  description: "Learn how to not only eat healthy, but live a well-rounded, healthy / lifestyle with our expert tips and inspirational stories.",
+  keywords:["healthy lifestyle", "wellness", "fitness tips", "healthy living", "wellness tips","lifestyle changes"],
+  robots:{
+    index: true,
+    follow: true,
+    "max-snippet": -1,
+    "max-image-preview": "large",
+    nocache: true,
+    noimageindex: false,
+    googleBot:{
+      index: true,
+      follow: true,
+      noimageindex: false,
+      nocache: true,
+      "max-snippet": -1,
+      "max-image-preview": "large",
+    }
+  },
 };
 
 

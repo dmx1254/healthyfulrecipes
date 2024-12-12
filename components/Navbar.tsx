@@ -60,8 +60,8 @@ const Navbar = () => {
           >
             <Link href="/">
               <Image
-                src="/healthyfulrecipes-logo.png"
-                alt="healthyfulrecipes logo"
+                src="/healthyfulrecipe.png"
+                alt="healthyfulrecipe logo"
                 width={150}
                 height={150}
                 style={{
@@ -144,8 +144,8 @@ const Navbar = () => {
           <div className="max-lg:hidden flex items-center w-full">
             <Link href="/">
               <Image
-                src="/healthyfulrecipes-logo.png"
-                alt="healthyfulrecipes logo"
+                src="/healthyfulrecipe.png"
+                alt="healthyfulrecipe logo"
                 width={150}
                 height={150}
                 style={{
@@ -188,8 +188,8 @@ const Navbar = () => {
           <Mobilesheet />
           <Link href="/">
             <Image
-              src="/healthyfulrecipes-logo.png"
-              alt="healthyfulrecipes logo"
+              src="/healthyfulrecipe.png"
+              alt="healthyfulrecipe logo"
               width={150}
               height={150}
               style={{

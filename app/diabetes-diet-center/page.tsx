@@ -13,6 +13,29 @@ import { NewsPlansSkeleton } from "@/components/skelettons/NewsPlansSkeleton";
 import DiabeteDietCenterItem from "@/components/DiabeteDietCenterItem";
 import BottomNewsSkeleton from "@/components/skelettons/BottomNewsSkeleton";
 import BottomDiabetDietCenter from "@/components/BottomDiabetDietCenter";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Diabetes Diet Center",
+  description: "Learn how to eat better and live healthier with recipes, meal plans and articles to help you manage your diabetes deliciously every day.",
+  keywords:["diabetes diet", "diabetic-friendly recipes", "diabetes management", "clean eating", "low-sugar meals", "blood sugar control"],
+  robots:{
+    index: true,
+    follow: true,
+    "max-snippet": -1,
+    "max-image-preview": "large",
+    nocache: true,
+    noimageindex: false,
+    googleBot:{
+      index: true,
+      follow: true,
+      noimageindex: false,
+      nocache: true,
+      "max-snippet": -1,
+      "max-image-preview": "large",
+    }
+  },
+};
 
 const Diabetes = () => {
   const slug = "diabetes-diet-center";
@@ -24,7 +47,7 @@ const Diabetes = () => {
         <p className="w-full max-w-5xl text-center text-base/7">
           Learn how to eat better and live healthier with recipes, meal plans
           and articles to help you manage your diabetes deliciously every day,
-          from EatingWell's food and nutrition experts.
+          from healthyfulrecipe's food and nutrition experts.
         </p>
         {/* <div className="mt-4 text-center text-sm/10">
         <span className="uppercase text-gray-800 font-semibold mx-6">

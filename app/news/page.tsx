@@ -1,10 +1,6 @@
 import React, { Suspense } from "react";
 
-import { Separator } from "@/components/ui/separator";
-import Image from "next/image";
-import { FaStar } from "react-icons/fa";
-import { TbClockHour3 } from "react-icons/tb";
-
+import { Metadata } from "next";
 import { FaFacebookF, FaPinterestP } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { IoMdMail } from "react-icons/io";
@@ -14,13 +10,36 @@ import { MainNewsSkeletons } from "@/components/skelettons/MainNewsSkeletons";
 import BottomNewsItem from "@/components/BottomNewsItem";
 import BottomNewsSkeleton from "@/components/skelettons/BottomNewsSkeleton";
 
+export const metadata: Metadata = {
+  title: "News",
+  description: "healthyfulrecipe covers what's happening in the world of food & nutrition news.",
+  keywords:["health news", "wellness news", "nutrition updates", "health trends", "fitness news"],
+  robots:{
+    index: true,
+    follow: true,
+    "max-snippet": -1,
+    "max-image-preview": "large",
+    nocache: true,
+    noimageindex: false,
+    googleBot:{
+      index: true,
+      follow: true,
+      noimageindex: false,
+      nocache: true,
+      "max-snippet": -1,
+      "max-image-preview": "large",
+    }
+  },
+};
+
+
 const NewsPage = () => {
   return (
     <div className="w-full max-w-6xl flex flex-col items-center mx-auto p-4">
       <div className="w-full flex flex-col items-center gap-2">
         <h2 className="text-4xl font-bold">News</h2>
         <p className="text-center text-base/7">
-          HealthyFulRecipes covers what's happening in the world of food &
+          healthyfulrecipe covers what's happening in the world of food &
           nutrition news. You'll find our expert take on the latest health
           studies, food recalls, new grocery items and products we're loving
           right now, people doing good things in the world of food, and so much

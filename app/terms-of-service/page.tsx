@@ -14,11 +14,11 @@ const PrivacyPolicy = () => {
           </h2>
           <p className="text-xl md:text-2xl">Effective Date: 25/09/2024</p>
           <p className="w-full text-base md:text-lg text-justify">
-            Welcome to HealthyfulRecipes. By accessing and using our website
+            Welcome to healthyfulrecipe. By accessing and using our website
             (accessible from{" "}
             <strong>
               <a
-                href="https://healthyfulrecipes.vercel.app"
+                href="https://www.healthyfulrecipe.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="underline"
@@ -37,7 +37,7 @@ const PrivacyPolicy = () => {
             1. Acceptance of Terms
           </h3>
           <p className="w-full text-base md:text-lg text-justify">
-            By visiting and using HealthyfulRecipes, you agree to these terms
+            By visiting and using healthyfulrecipe, you agree to these terms
             and conditions, as well as our Privacy Policy. These terms apply to
             all visitors, users, and others who access or use the website
           </p>
@@ -50,12 +50,12 @@ const PrivacyPolicy = () => {
             You are permitted to:
             <ul className="list-disc my-5 text-base ml-6 marker:text-green-800">
               <li>
-                View and read the content provided on HealthyfulRecipes for
+                View and read the content provided on healthyfulrecipe for
                 personal, non-commercial use.
               </li>
               <li>
                 Share links to our blog posts on social media, provided proper
-                credit is given to HealthyfulRecipes.
+                credit is given to healthyfulrecipe.
               </li>
               <ol className="ml-4 list-decimal marker:text-black">
                 You are not permitted to:
@@ -96,9 +96,9 @@ const PrivacyPolicy = () => {
             4. Intellectual Property
           </h3>
           <p className="w-full text-base md:text-lg text-justify">
-            All content on HealthyfulRecipes, including but not limited to text,
+            All content on healthyfulrecipe, including but not limited to text,
             images, recipes, graphics, logos, and website design, is the
-            intellectual property of HealthyfulRecipes unless otherwise noted.
+            intellectual property of healthyfulrecipe unless otherwise noted.
             This content is protected by copyright, trademark, and other
             intellectual property laws. You may not:
             <br />
@@ -111,7 +111,7 @@ const PrivacyPolicy = () => {
           <h3 className="text-2xl md:text-3xl font-bold">5. External Links</h3>
           <p className="w-full text-base md:text-lg text-justify">
             Our website may contain links to third-party websites that are not
-            owned or controlled by HealthyfulRecipes. We have no control over
+            owned or controlled by healthyfulrecipe. We have no control over
             the content, privacy policies, or practices of any third-party
             sites. We are not responsible for any issues arising from your use
             of third-party websites.
@@ -123,12 +123,12 @@ const PrivacyPolicy = () => {
             6. Limitation of Liability
           </h3>
           <p className="w-full text-base md:text-lg text-justify">
-            HealthyfulRecipes is provided on an "as-is" basis without any
+            healthyfulrecipe is provided on an "as-is" basis without any
             warranties, either express or implied. We make no representations or
             warranties in relation to the accuracy, completeness, or
             availability of the content provided on this site.
             <br />
-            To the fullest extent permitted by law, HealthyfulRecipes will not
+            To the fullest extent permitted by law, healthyfulrecipe will not
             be liable for any indirect, incidental, consequential, or punitive
             damages arising from your use of or inability to use the website or
             the content provided.
@@ -151,7 +151,7 @@ const PrivacyPolicy = () => {
           <h3 className="text-2xl md:text-3xl font-bold">8. Termination</h3>
           <p className="w-full text-base md:text-lg text-justify">
             We reserve the right to suspend or terminate your access to
-            HealthyfulRecipes at any time, without notice, for any violation of
+            healthyfulrecipe at any time, without notice, for any violation of
             these terms or any other reason at our discretion.
           </p>
         </div>
@@ -171,14 +171,14 @@ const PrivacyPolicy = () => {
             If you have any questions about these Terms of Service, please
             contact us at:
             <br />
-            <p>HealthyfulRecipes</p>
+            <p>healthyfulrecipe</p>
             <p>
               Email:{" "}
               <a
-                href="mailto:contact@healthyfulrecipes.com"
+                href="mailto:contact@healthyfulrecipe.com"
                 className="text-green-800 font-bold"
               >
-                contact@healthyfulrecipes.com
+                contact@healthyfulrecipe.com
               </a>
             </p>
           </div>

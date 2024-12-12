@@ -29,10 +29,10 @@ const NewsLetterDialog = () => {
   //   console.log(user);
 
   const plansNutri = [
-    "HealthyFulRecipes Nourish for Weight Loss",
-    "HealthyFulRecipes Daily Recipe",
-    "HealthyFulRecipes Daily Nosh",
-    "HealthyFulRecipes ThePrep",
+    "healthyfulrecipe Nourish for Weight Loss",
+    "healthyfulrecipe Daily Recipe",
+    "healthyfulrecipe Daily Nosh",
+    "healthyfulrecipe ThePrep",
     "Plant Powered",
   ];
 
@@ -107,8 +107,8 @@ const NewsLetterDialog = () => {
         <div className="flex flex-col items-center gap-3 sm:gap-4 px-6 py-0">
           <Link href="/">
             <Image
-              src="/healthyfulrecipes-logo.png"
-              alt="healthyfulrecipes logo"
+              src="/healthyfulrecipe-logo.png"
+              alt="healthyfulrecipe logo"
               width={150}
               height={150}
               style={{

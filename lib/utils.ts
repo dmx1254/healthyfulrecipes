@@ -9,14 +9,14 @@ export const localization = {
   signUp: {
     start: {
       subtitle:
-        "Sign up to rate and review your favorite HealthyFulRecipes recipes.",
+        "Sign up to rate and review your favorite healthyfulrecipe recipes.",
     },
   },
 
   signIn: {
     start: {
       subtitle:
-        "Welcome back! Please sign in to rate and review your favorite HealthyFulRecipes recipes.",
+        "Welcome back! Please sign in to rate and review your favorite healthyfulrecipe recipes.",
     },
   },
 };

@@ -17,7 +17,25 @@ import BottomHealthyRecipePost from "@/components/BottomHealthyRecipePost";
 
 export const metadata: Metadata = {
   title: "Healthy Recipes",
-  description: "Healthy, delicious recipes, including quick dinner, easy lunch ideas, snacks, breakfast, soup and more, from the food and nutrition experts."
+  description: "Healthy, delicious recipes, including quick dinner, easy lunch ideas, snacks, breakfast, soup and more, from the food and nutrition experts.",
+  keywords:["healthy recipes", "healthy meals", "nutritious recipes", "balanced diet", "quick healthy recipes"],
+  robots:{
+    index: true,
+    follow: true,
+    "max-snippet": -1,
+    "max-image-preview": "large",
+    nocache: true,
+    noimageindex: false,
+    googleBot:{
+      index: true,
+      follow: true,
+      noimageindex: false,
+      nocache: true,
+      "max-snippet": -1,
+      "max-image-preview": "large",
+    }
+  },
+
 };
 
 
@@ -31,7 +49,7 @@ const RecipePage = () => {
         <p className="w-full max-w-5xl text-center text-base/7">
           Healthy, delicious recipes, including quick dinner, easy lunch ideas,
           snacks, breakfast, soup and more, from the food and nutrition experts
-          at HealthyFulRecipes.
+          at healthyfulrecipe.
         </p>
         {/* <div className="mt-4 text-center text-sm/10">
         <span className="uppercase text-gray-800 font-semibold mx-6">

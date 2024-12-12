@@ -22,11 +22,11 @@ export default function SignupPage() {
         <div className="flex flex-col items-center">
           <div className="flex flex-col items-center p-2 max-w-[300px]">
             {/* <h2 className="logo-text text-3xl font-bold text-green-600 mb-12">
-              HealthyFulRecipes
+              healthyfulrecipe
             </h2> */}
             <h3 className="text-2xl font-bold mb-2">Create an account</h3>
             {/* <p className="mb-2">
-              Sign up to rate and review your favorite HealthyFulRecipes
+              Sign up to rate and review your favorite healthyfulrecipe
               recipes.
             </p> */}
           </div>
@@ -77,7 +77,7 @@ export default function SignupPage() {
             <Link href="/" className="text-gray-800 border-b border-black/80">
               Privacy Policy
             </Link>
-            . If you live in the US you will also opt in to HealthyFulRecipes email
+            . If you live in the US you will also opt in to healthyfulrecipe email
             communication.
           </div>
         </div>

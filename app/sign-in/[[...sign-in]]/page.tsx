@@ -21,7 +21,7 @@ export default function SigninPage() {
         <div className="flex flex-col items-center">
           <div className="flex flex-col items-center p-2">
             {/* <h2 className="logo-text text-2xl font-bold text-green-600 mb-12">
-              HealthyFulRecipes
+              healthyfulrecipe
             </h2> */}
             <h3 className="text-2xl font-bold mb-6">Login</h3>
           </div>
