@@ -21,7 +21,7 @@ const poppins = Poppins({
   variable: "--font-poppins",
 });
 
-import logo from "@/public/healthyfulrecipe.png";
+import logo from "@/public/healthyfulrecipe.png"
 
 export const metadata: Metadata = {
   applicationName: "healthyfulrecipe",
@@ -82,9 +82,9 @@ export const metadata: Metadata = {
   description:
     "Welcome to HealthyFul recipes , your trusted source for delicious, healthy recipes that bring joy to your table and wellness to your life. For over five years, we’ve been dedicated to transforming everyday ingredients into meals that not only satisfy your taste buds but also support your health. Whether you’re just starting your journey towards healthier eating or you’re looking to expand your culinary skills, our carefully curated recipes make it easy and enjoyable to cook nourishing, flavorful dishes.",
   icons: {
-    icon: "/logo.png",
-    shortcut: "/logo.png",
-    apple: "/logo.png",
+    icon: "/healthyfulrecipe.png",
+    shortcut: "/healthyfulrecipe.png",
+    apple: "/healthyfulrecipe.png",
   },
   metadataBase: new URL("https://www.healthyfulrecipe.com"),
   alternates: {
