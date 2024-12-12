@@ -78,9 +78,9 @@ export const metadata: Metadata = {
       "max-image-preview": "large",
     },
   },
-  title: "HealthyFul Recipes: Delicious Meals for a Healthier You",
+  title: "Healthyful recipe: Delicious Meals for a Healthier You",
   description:
-    "Welcome to HealthyFul recipes , your trusted source for delicious, healthy recipes that bring joy to your table and wellness to your life. For over five years, we’ve been dedicated to transforming everyday ingredients into meals that not only satisfy your taste buds but also support your health. Whether you’re just starting your journey towards healthier eating or you’re looking to expand your culinary skills, our carefully curated recipes make it easy and enjoyable to cook nourishing, flavorful dishes.",
+    "Welcome to Healthyful recipe , your trusted source for delicious, healthy recipes that bring joy to your table and wellness to your life. For over five years, we’ve been dedicated to transforming everyday ingredients into meals that not only satisfy your taste buds but also support your health. Whether you’re just starting your journey towards healthier eating or you’re looking to expand your culinary skills, our carefully curated recipes make it easy and enjoyable to cook nourishing, flavorful dishes.",
   icons: {
     icon: "/healthyfulrecipe.png",
     shortcut: "/healthyfulrecipe.png",
@@ -91,9 +91,9 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "HealthyFul Recipes: Delicious Meals for a Healthier You",
+    title: "Healthyful recipe: Delicious Meals for a Healthier You",
     description:
-      "Welcome to HealthyFul recipes , your trusted source for delicious, healthy recipes that bring joy to your table and wellness to your life. For over five years, we’ve been dedicated to transforming everyday ingredients into meals that not only satisfy your taste buds but also support your health. Whether you’re just starting your journey towards healthier eating or you’re looking to expand your culinary skills, our carefully curated recipes make it easy and enjoyable to cook nourishing, flavorful dishes.",
+      "Welcome to Healthyful recipe , your trusted source for delicious, healthy recipes that bring joy to your table and wellness to your life. For over five years, we’ve been dedicated to transforming everyday ingredients into meals that not only satisfy your taste buds but also support your health. Whether you’re just starting your journey towards healthier eating or you’re looking to expand your culinary skills, our carefully curated recipes make it easy and enjoyable to cook nourishing, flavorful dishes.",
     images: [
       {
         url: "https://www.healthyfulrecipe.com/creamy-pasta.png",
@@ -128,14 +128,14 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image", // Type de carte
-    title: "HealthyFul Recipes: Delicious Meals for a Healthier You", // Titre de votre contenu
+    title: "Healthyful recipe: Delicious Meals for a Healthier You", // Titre de votre contenu
     description:
-      "Welcome to HealthyFul recipes , your trusted source for delicious, healthy recipes that bring joy to your table and wellness to your life. For over five years, we’ve been dedicated to transforming everyday ingredients into meals that not only satisfy your taste buds but also support your health. Whether you’re just starting your journey towards healthier eating or you’re looking to expand your culinary skills, our carefully curated recipes make it easy and enjoyable to cook nourishing, flavorful dishes.", // Description
+      "Welcome to Healthyful recipe , your trusted source for delicious, healthy recipes that bring joy to your table and wellness to your life. For over five years, we’ve been dedicated to transforming everyday ingredients into meals that not only satisfy your taste buds but also support your health. Whether you’re just starting your journey towards healthier eating or you’re looking to expand your culinary skills, our carefully curated recipes make it easy and enjoyable to cook nourishing, flavorful dishes.", // Description
     // siteId: '@votre_site',  Facultatif, utilisé pour vos propres partages
     creator: "Sophie miller", // Facultatif, utilisé pour vos propres partages
     images: {
       url: "https://www.healthyfulrecipe.com/healthyfulrecipe-logo.png", // URL de l'image à afficher dans la carte
-      alt: "HealthyFul Recipes: Delicious Meals for a Healthier You", // Texte alternatif pour l'image
+      alt: "Healthyful recipe: Delicious Meals for a Healthier You", // Texte alternatif pour l'image
     },
   },
 };
