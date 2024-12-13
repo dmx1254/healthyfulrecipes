@@ -6,7 +6,6 @@ import React from "react";
 
 const MainHeroSinglePost = async () => {
   const post: PostBlogResponse[] = await getOneRandomPost();
-  //   console.log(post);
   return (
     <Link
       href={`/${post[0]?.slug}-${post[0]?.postId}`}

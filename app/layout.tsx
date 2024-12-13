@@ -22,6 +22,14 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
+  title: "Healthyful recipe: Delicious Meals for a Healthier You",
+  description:
+    "Welcome to Healthyful recipe , your trusted source for delicious, healthy recipes that bring joy to your table and wellness to your life. For over five years, we’ve been dedicated to transforming everyday ingredients into meals that not only satisfy your taste buds but also support your health. Whether you’re just starting your journey towards healthier eating or you’re looking to expand your culinary skills, our carefully curated recipes make it easy and enjoyable to cook nourishing, flavorful dishes.",
+  icons: {
+    icon: "/favicon.png",
+    shortcut: "/favicon.png",
+    apple: "/apple-touch-icon.png",
+  },
   applicationName: "healthyfulrecipe",
   keywords: [
     "healthy recipes",
@@ -76,14 +84,7 @@ export const metadata: Metadata = {
       "max-image-preview": "large",
     },
   },
-  title: "Healthyful recipe: Delicious Meals for a Healthier You",
-  description:
-    "Welcome to Healthyful recipe , your trusted source for delicious, healthy recipes that bring joy to your table and wellness to your life. For over five years, we’ve been dedicated to transforming everyday ingredients into meals that not only satisfy your taste buds but also support your health. Whether you’re just starting your journey towards healthier eating or you’re looking to expand your culinary skills, our carefully curated recipes make it easy and enjoyable to cook nourishing, flavorful dishes.",
-  icons: {
-    icon: "https://www.healthyfulrecipe.com/healthyfulrecipe.png",
-    shortcut: "https://www.healthyfulrecipe.com/healthyfulrecipe.png",
-    apple: "https://www.healthyfulrecipe.com/healthyfulrecipe.png",
-  },
+
   metadataBase: new URL("https://www.healthyfulrecipe.com"),
   alternates: {
     canonical: "/",

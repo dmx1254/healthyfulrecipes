@@ -429,6 +429,7 @@ export async function getOneRandomPost() {
         $sample: { size: 1 },
       },
     ]);
+    const posts = await PostModel.find();
     return JSON.parse(JSON.stringify(randomPost));
   } catch (error: any) {
     console.log(error);
