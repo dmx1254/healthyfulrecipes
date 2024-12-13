@@ -26,7 +26,7 @@ export default function Footer() {
           <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-start justify-around gap-12">
             <div className="flex flex-col items-start">
               <Image
-                src="/healthyfulrecipe-logo.png"
+                src="/healthyfulrecipe.png"
                 alt="healthyfulrecipe logo"
                 width={150}
                 height={150}
@@ -121,21 +121,7 @@ export default function Footer() {
                 >
                   Privacy Policy
                 </Link>
-                {/* <Link href="#" className="block mb-2 text-sm text-gray-600 ">
-                  Diversity & Inclusion
-                </Link>
-                <Link
-                  href="privacy-policy"
-                  className="block mb-2 text-sm text-gray-600 "
-                >
-                  Privacy Policy
-                </Link>
-                <Link href="#" className="block mb-2 text-sm text-gray-600 ">
-                  Advertise
-                </Link>
-                <Link href="#" className="block mb-2 text-sm text-gray-600 ">
-                  Careers
-                </Link> */}
+                
               </div>
             </div>
           </div>
@@ -143,7 +129,7 @@ export default function Footer() {
         <div className="w-full bg-white py-4 px-4">
           <div className="flex max-sm:flex-col items-center gap-1 max-w-6xl  max-lg:text-center lg:ml-60">
             <Image
-              src="/healthyfulrecipe-logo.png"
+              src="/healthyfulrecipe.png"
               alt="trussite"
               width={80}
               height={80}

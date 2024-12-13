@@ -21,8 +21,6 @@ const poppins = Poppins({
   variable: "--font-poppins",
 });
 
-import logo from "@/public/healthyfulrecipe.png"
-
 export const metadata: Metadata = {
   applicationName: "healthyfulrecipe",
   keywords: [
@@ -82,9 +80,9 @@ export const metadata: Metadata = {
   description:
     "Welcome to Healthyful recipe , your trusted source for delicious, healthy recipes that bring joy to your table and wellness to your life. For over five years, we’ve been dedicated to transforming everyday ingredients into meals that not only satisfy your taste buds but also support your health. Whether you’re just starting your journey towards healthier eating or you’re looking to expand your culinary skills, our carefully curated recipes make it easy and enjoyable to cook nourishing, flavorful dishes.",
   icons: {
-    icon: "/healthyfulrecipe.png",
-    shortcut: "/healthyfulrecipe.png",
-    apple: "/healthyfulrecipe.png",
+    icon: "https://www.healthyfulrecipe.com/healthyfulrecipe.png",
+    shortcut: "https://www.healthyfulrecipe.com/healthyfulrecipe.png",
+    apple: "https://www.healthyfulrecipe.com/healthyfulrecipe.png",
   },
   metadataBase: new URL("https://www.healthyfulrecipe.com"),
   alternates: {
@@ -108,7 +106,7 @@ export const metadata: Metadata = {
         alt: "Garlic-Lime Pork with Farro & Spinach",
       },
       {
-        url: "https://www.healthyfulrecipe.com/healthyfulrecipe-logo.png",
+        url: "https://www.healthyfulrecipe.com/healthyfulrecipe.png",
         width: 400,
         height: 400,
         alt: "healthyfulrecipe logo",
@@ -134,7 +132,7 @@ export const metadata: Metadata = {
     // siteId: '@votre_site',  Facultatif, utilisé pour vos propres partages
     creator: "Sophie miller", // Facultatif, utilisé pour vos propres partages
     images: {
-      url: "https://www.healthyfulrecipe.com/healthyfulrecipe-logo.png", // URL de l'image à afficher dans la carte
+      url: "https://www.healthyfulrecipe.com/healthyfulrecipe.png", // URL de l'image à afficher dans la carte
       alt: "Healthyful recipe: Delicious Meals for a Healthier You", // Texte alternatif pour l'image
     },
   },

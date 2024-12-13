@@ -27,7 +27,7 @@ const MainHeroSinglePost = async () => {
         <p className="text-2xl font-bold whitespace-normal max-w-[700px]">
           {post[0]?.title}
         </p>
-        <p className="text-sm max-w-[700px] line-clamp-3">{post[0].descriptions}</p>
+        <p className="text-sm max-w-[700px] line-clamp-3">{post[0]?.descriptions}</p>
       </div>
     </Link>
   );

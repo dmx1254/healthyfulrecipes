@@ -41,7 +41,7 @@ const ArticlePage = ({ article }: { article: ArticleResponse }) => {
         // console.log("newPos", newPos.title);
 
         if (newPos.top + 200 <= window.innerHeight && newPos.bottom > 0) {
-          setItem(newPos.title);
+          setItem(newPos.title || "");
           setItemTop(newPos.top);
         }
       }

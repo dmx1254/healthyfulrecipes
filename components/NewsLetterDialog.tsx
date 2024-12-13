@@ -107,7 +107,7 @@ const NewsLetterDialog = () => {
         <div className="flex flex-col items-center gap-3 sm:gap-4 px-6 py-0">
           <Link href="/">
             <Image
-              src="/healthyfulrecipe-logo.png"
+              src="/healthyfulrecipe.png"
               alt="healthyfulrecipe logo"
               width={150}
               height={150}
